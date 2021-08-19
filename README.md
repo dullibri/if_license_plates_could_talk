@@ -6,6 +6,7 @@ German license plates' geographical information is used to link them to income a
 2. Collecting data on crime rates in different regions of Germany
 3. Collecting data on income in different regions of Germany
 4. Merging the above data sets
+5. ...
 
 ## Data sources:
 
