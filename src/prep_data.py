@@ -20,8 +20,8 @@ def prep_data():
     df_plate = data.license_plate.prep_data()
     df_plate.to_csv(os.path.join("..", "data", "processed", "license_plate", "license_plate.csv"))
 
-    print(5)
-
+    #merge
+    
     df = df_plate.merge(df_income, on = "kreis_key", how = "outer")
     df = df.merge(df_crime, on = "kreis_key", how = "outer")
     df = df.merge(df_population, on = "kreis_key", how = "outer")
