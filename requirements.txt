@@ -6,3 +6,6 @@ xlrd
 geopandas
 numpy
 matplotlib
+dash_core_components
+dash_html_components
+plotly
