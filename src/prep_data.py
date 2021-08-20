@@ -17,7 +17,7 @@ def prep_data():
 
     
     df_population = data.population.prep_data()
-    df_population.to_csv(os.path.join("..", "data", "processed", "income", "income.csv"))
+    df_population.to_csv(os.path.join("..", "data", "processed", "population", "population.csv"))
 
     df_plate = data.license_plate.prep_data()
     df_plate.to_csv(os.path.join("..", "data", "processed", "license_plate", "license_plate.csv"))
