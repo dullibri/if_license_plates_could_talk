@@ -1,0 +1,402 @@
+,kreis_key,kreis_name,income_pp_2018,income_2018,crimes_2018,population_2018
+0,1001,"      Flensburg, kreisfreie Stadt",18773,1671015,8156.0,89012
+1,1002,"      Kiel, Landeshauptstadt, kreisfreie Stadt",19392,4804347,24621.0,247746
+2,1003,"      Lübeck, Hansestadt, kreisfreie Stadt",20120,4361215,22685.0,216758
+3,1004,"      Neumünster, kreisfreie Stadt",19775,1570313,10688.0,79411
+4,1051,"      Dithmarschen, Landkreis",22498,2999606,7224.0,133329
+5,1053,"      Herzogtum Lauenburg, Landkreis",23652,4651537,10035.0,196669
+6,1054,"      Nordfriesland, Landkreis",25129,4158424,8964.0,165485
+7,1055,"      Ostholstein, Landkreis",23179,4649342,12542.0,200583
+8,1056,"      Pinneberg, Landkreis",24708,7746661,17961.0,313527
+9,1057,"      Plön, Landkreis",23369,3008556,5473.0,128745
+10,1058,"      Rendsburg-Eckernförde, Landkreis",23410,6388495,12478.0,272899
+11,1059,"      Schleswig-Flensburg, Landkreis",22510,4496751,9382.0,199764
+12,1060,"      Segeberg, Landkreis",23323,6414503,17114.0,275029
+13,1061,"      Steinburg, Landkreis",21991,2891389,6986.0,131480
+14,1062,"      Stormarn, Landkreis",25737,6249928,12585.0,242834
+15,2000,  Hamburg,25029,45949850,216569.0,1835882
+16,3101,"      Braunschweig, kreisfreie Stadt",22612,5611318,21355.0,248158
+17,3102,"      Salzgitter, kreisfreie Stadt",20016,2096640,6359.0,104748
+18,3103,"      Wolfsburg, kreisfreie Stadt",24712,3065057,9086.0,124033
+19,3151,"      Gifhorn, Landkreis",23879,4190789,6889.0,175500
+21,3153,"      Goslar, Landkreis",21306,2925026,8887.0,137289
+22,3154,"      Helmstedt, Landkreis",23466,2147484,5468.0,91514
+23,3155,"      Northeim, Landkreis",22303,2964251,6692.0,132906
+25,3157,"      Peine, Landkreis",22202,2967681,6707.0,133667
+26,3158,"      Wolfenbüttel, Landkreis",22655,2723137,4521.0,120199
+27,3159,"      Göttingen, Landkreis",21130,6931763,20510.0,328055
+28,3241,"      Region Hannover, Landkreis",21859,25250290,105931.0,1155150
+29,3251,"      Diepholz, Landkreis",23428,5071048,9986.0,216449
+30,3252,"      Hameln-Pyrmont, Landkreis",22142,3286485,8367.0,148428
+31,3254,"      Hildesheim, Landkreis",21685,5998487,15953.0,276617
+32,3255,"      Holzminden, Landkreis",21438,1523351,3415.0,71060
+33,3256,"      Nienburg (Weser), Landkreis",21191,2573178,6651.0,121428
+34,3257,"      Schaumburg, Landkreis",22019,3475338,8457.0,157832
+35,3351,"      Celle, Landkreis",21170,3786168,10714.0,178850
+36,3352,"      Cuxhaven, Landkreis",22110,4381236,10155.0,198157
+37,3353,"      Harburg, Landkreis",25687,6476891,12849.0,252144
+38,3354,"      Lüchow-Dannenberg, Landkreis",20823,1007666,2350.0,48391
+39,3355,"      Lüneburg, Landkreis",21334,3907292,12169.0,183151
+40,3356,"      Osterholz, Landkreis",23123,2620088,5197.0,113311
+41,3357,"      Rotenburg (Wümme), Landkreis",22600,3693173,8950.0,163416
+42,3358,"      Heidekreis, Landkreis",21370,2979541,10506.0,139427
+43,3359,"      Stade, Landkreis",23076,4672849,10475.0,202495
+44,3360,"      Uelzen, Landkreis",21172,1961778,5365.0,92658
+45,3361,"      Verden, Landkreis",23780,3250553,7356.0,136691
+46,3401,"      Delmenhorst, kreisfreie Stadt",19411,1505572,6038.0,77564
+47,3402,"      Emden, kreisfreie Stadt",19003,957784,4122.0,50401
+48,3403,"      Oldenburg (Oldenburg), kreisfreie Stadt",20091,3368218,12997.0,167646
+49,3404,"      Osnabrück, kreisfreie Stadt",21428,3526278,17602.0,164561
+50,3405,"      Wilhelmshaven, kreisfreie Stadt",18511,1412349,9159.0,76297
+51,3451,"      Ammerland, Landkreis",22451,2777782,4782.0,123724
+52,3452,"      Aurich, Landkreis",20679,3926875,9248.0,189899
+53,3453,"      Cloppenburg, Landkreis",20747,3498639,6491.0,168637
+54,3454,"      Emsland, Landkreis",21529,6989254,18758.0,324647
+55,3455,"      Friesland, Landkreis",21071,2075176,5180.0,98485
+56,3456,"      Grafschaft Bentheim, Landkreis",20452,2785190,7747.0,136185
+57,3457,"      Leer, Landkreis",19703,3337260,8404.0,169378
+58,3458,"      Oldenburg, Landkreis",23338,3034722,6019.0,130034
+59,3459,"      Osnabrück, Landkreis",23030,8215838,16064.0,356742
+60,3460,"      Vechta, Landkreis",22694,3201449,6481.0,141069
+61,3461,"      Wesermarsch, Landkreis",21936,1948398,4474.0,88823
+62,3462,"      Wittmund, Landkreis",21235,1206320,3206.0,56807
+63,4011,"      Bremen, kreisfreie Stadt",22116,12576863,62101.0,568679
+64,4012,"      Bremerhaven, kreisfreie Stadt",18296,2073517,12206.0,113330
+65,5111,"      Düsseldorf, kreisfreie Stadt",26087,16129059,62734.0,618287
+66,5112,"      Duisburg, kreisfreie Stadt",17126,8534844,44070.0,498350
+67,5113,"      Essen, kreisfreie Stadt",20626,12029994,50065.0,583251
+68,5114,"      Krefeld, kreisfreie Stadt",21591,4898230,21679.0,226860
+69,5116,"      Mönchengladbach, kreisfreie Stadt",20841,5456500,19938.0,261821
+70,5117,"      Mülheim an der Ruhr, kreisfreie Stadt",23153,3960906,11285.0,171073
+71,5119,"      Oberhausen, kreisfreie Stadt",18719,3952157,15884.0,211126
+72,5120,"      Remscheid, kreisfreie Stadt",22325,2473419,6851.0,110789
+73,5122,"      Solingen, kreisfreie Stadt",23285,3704162,9809.0,159082
+74,5124,"      Wuppertal, kreisfreie Stadt",21480,7603541,31829.0,353986
+75,5154,"      Kleve, Kreis",20716,6445102,20042.0,311122
+76,5158,"      Mettmann, Kreis",25684,12470569,27965.0,485547
+77,5162,      Rhein-Kreis Neuss,25324,11401019,27544.0,450208
+78,5166,"      Viersen, Kreis",23204,6934027,16926.0,298834
+79,5170,"      Wesel, Kreis",22230,10230883,25582.0,460238
+80,5314,"      Bonn, kreisfreie Stadt",23471,7660295,27996.0,326374
+81,5315,"      Köln, kreisfreie Stadt",22402,24262272,125349.0,1083029
+82,5316,"      Leverkusen, kreisfreie Stadt",21756,3561559,11964.0,163708
+83,5334,      Städteregion Aachen (einschl. Stadt Aachen),20504,11374961,44993.0,554767
+85,5358,"      Düren, Kreis",21194,5580583,16109.0,263306
+86,5362,      Rhein-Erft-Kreis,22675,10626711,32695.0,468649
+87,5366,"      Euskirchen, Kreis",21862,4208010,9620.0,192484
+88,5370,"      Heinsberg, Kreis",20631,5234359,14450.0,253714
+89,5374,      Oberbergischer Kreis,23194,6325384,11833.0,272720
+90,5378,      Rheinisch-Bergischer Kreis,26493,7508028,12203.0,283400
+91,5382,      Rhein-Sieg-Kreis,24038,14408768,29422.0,599418
+92,5512,"      Bottrop, kreisfreie Stadt",20250,2376802,6901.0,117374
+93,5513,"      Gelsenkirchen, kreisfreie Stadt",16450,4285018,22234.0,260480
+94,5515,"      Münster, kreisfreie Stadt",22954,7206090,25753.0,313939
+95,5554,"      Borken, Kreis",22433,8304700,22234.0,370197
+96,5558,"      Coesfeld, Kreis",23879,5244800,10908.0,219645
+97,5562,"      Recklinghausen, Kreis",20426,12583574,41841.0,616043
+98,5566,"      Steinfurt, Kreis",22402,10015495,24255.0,447090
+99,5570,"      Warendorf, Kreis",23839,6618125,12152.0,277621
+100,5711,"      Bielefeld, kreisfreie Stadt",23037,7675232,23242.0,333169
+101,5754,"      Gütersloh, Kreis",25241,9176951,16512.0,363566
+102,5758,"      Herford, Kreis",22732,5709357,11296.0,251161
+103,5762,"      Höxter, Kreis",22021,3107500,5899.0,141116
+104,5766,"      Lippe, Kreis",22592,7878407,13361.0,348730
+105,5770,"      Minden-Lübbecke, Kreis",23052,7168257,13884.0,310959
+106,5774,"      Paderborn, Kreis",21601,6612600,16267.0,306126
+107,5911,"      Bochum, kreisfreie Stadt",20048,7319098,32020.0,365079
+108,5913,"      Dortmund, kreisfreie Stadt",19318,11335983,66327.0,586805
+109,5914,"      Hagen, kreisfreie Stadt",20024,3769975,14134.0,188272
+110,5915,"      Hamm, kreisfreie Stadt",18453,3305790,13355.0,179148
+111,5916,"      Herne, kreisfreie Stadt",17889,2798401,13576.0,156432
+112,5954,      Ennepe-Ruhr-Kreis,24441,7930644,18647.0,324483
+113,5958,      Hochsauerlandkreis,24345,6354733,12908.0,261033
+114,5962,      Märkischer Kreis,24762,10220665,21477.0,412752
+115,5966,"      Olpe, Kreis",28007,3775055,6026.0,134792
+116,5970,"      Siegen-Wittgenstein, Kreis",23302,6480118,16922.0,278094
+117,5974,"      Soest, Kreis",22746,6864608,16172.0,301798
+118,5978,"      Unna, Kreis",21494,8476284,23665.0,394358
+119,6411,"      Darmstadt, kreisfreie Stadt",23290,3696836,11200.0,158731
+120,6412,"      Frankfurt am Main, kreisfreie Stadt",23436,17576261,117719.0,749967
+121,6413,"      Offenbach am Main, kreisfreie Stadt",18739,2392996,10530.0,127701
+122,6414,"      Wiesbaden, Landeshauptstadt, kreisfreie Stadt",25338,7056472,20364.0,278498
+123,6431,"      Bergstraße, Landkreis",24752,6664283,9332.0,269237
+124,6432,"      Darmstadt-Dieburg, Landkreis",24905,7389956,9109.0,296724
+125,6433,"      Groß-Gerau, Landkreis",22014,6008945,11000.0,272965
+126,6434,      Hochtaunuskreis,35041,8279567,9983.0,236280
+127,6435,      Main-Kinzig-Kreis,24607,10299900,18514.0,418579
+128,6436,      Main-Taunus-Kreis,28550,6776509,10462.0,237352
+129,6437,      Odenwaldkreis,22564,2181914,2708.0,96698
+130,6438,"      Offenbach, Landkreis",24880,8779895,16016.0,352892
+131,6439,      Rheingau-Taunus-Kreis,26153,4887448,5163.0,186880
+132,6440,      Wetteraukreis,24647,7539119,11098.0,305886
+133,6531,"      Gießen, Landkreis",21363,5724515,16260.0,267966
+134,6532,      Lahn-Dill-Kreis,23693,6017223,8780.0,253971
+135,6533,"      Limburg-Weilburg, Landkreis",22913,3941684,7226.0,172027
+136,6534,"      Marburg-Biedenkopf, Landkreis",21581,5317780,9880.0,246407
+137,6535,      Vogelsbergkreis,22146,2351104,3808.0,106165
+138,6611,"      Kassel, kreisfreie Stadt",19781,3979223,18025.0,201161
+139,6631,"      Fulda, Landkreis",22798,5065441,8890.0,222184
+140,6632,"      Hersfeld-Rotenburg, Landkreis",21905,2649685,5353.0,120965
+141,6633,"      Kassel, Landkreis",23090,5464278,6913.0,236654
+142,6634,      Schwalm-Eder-Kreis,22399,4042757,6451.0,180488
+143,6635,"      Waldeck-Frankenberg, Landkreis",22456,3527879,5441.0,157105
+144,6636,      Werra-Meißner-Kreis,21156,2138046,4718.0,101059
+145,7111,"      Koblenz, kreisfreie Stadt",21953,2501169,11476.0,113934
+146,7131,"      Ahrweiler, Landkreis",23954,3097777,7700.0,129321
+147,7132,"      Altenkirchen (Westerwald), Landkreis",22104,2845787,6759.0,128748
+148,7133,"      Bad Kreuznach, Landkreis",22561,3560467,9295.0,157815
+149,7134,"      Birkenfeld, Landkreis",22010,1776751,3890.0,80724
+150,7135,"      Cochem-Zell, Landkreis",22784,1404058,2545.0,61625
+151,7137,"      Mayen-Koblenz, Landkreis",22718,4859590,10007.0,213907
+152,7138,"      Neuwied, Landkreis",23438,4260966,9760.0,181798
+153,7140,      Rhein-Hunsrück-Kreis,24205,2491595,4931.0,102938
+154,7141,      Rhein-Lahn-Kreis,22578,2762240,5971.0,122345
+155,7143,      Westerwaldkreis,26109,5256191,9114.0,201318
+156,7211,"      Trier, kreisfreie Stadt",21216,2340630,10795.0,110325
+157,7231,"      Bernkastel-Wittlich, Landkreis",22627,2538701,5650.0,112198
+158,7232,      Eifelkreis Bitburg-Prüm,22680,2231402,3783.0,98387
+159,7233,"      Vulkaneifel, Landkreis",22332,1354506,2836.0,60654
+160,7235,"      Trier-Saarburg, Landkreis",23861,3549074,5320.0,148739
+161,7311,"      Frankenthal (Pfalz), kreisfreie Stadt",21859,1059901,3800.0,48489
+162,7312,"      Kaiserslautern, kreisfreie Stadt",19288,1924292,12062.0,99765
+163,7313,"      Landau in der Pfalz, kreisfreie Stadt",21619,1004919,4318.0,46485
+164,7314,"      Ludwigshafen am Rhein, kreisfreie Stadt",19842,3368704,16528.0,169779
+165,7315,"      Mainz, kreisfreie Stadt",22597,4883564,18569.0,216114
+166,7316,"      Neustadt an der Weinstraße, kreisfreie Stadt",25966,1382700,4035.0,53251
+167,7317,"      Pirmasens, kreisfreie Stadt",19741,799863,3538.0,40518
+168,7318,"      Speyer, kreisfreie Stadt",25219,1277439,4664.0,50655
+169,7319,"      Worms, kreisfreie Stadt",21280,1770594,6556.0,83206
+170,7320,"      Zweibrücken, kreisfreie Stadt",20654,707202,2383.0,34240
+171,7331,"      Alzey-Worms, Landkreis",23385,3013966,5213.0,128882
+172,7332,"      Bad Dürkheim, Landkreis",26863,3564715,6753.0,132700
+173,7333,      Donnersbergkreis,22077,1658024,3582.0,75102
+174,7334,"      Germersheim, Landkreis",23173,2984123,7327.0,128776
+175,7335,"      Kaiserslautern, Landkreis",21713,2298417,4933.0,105853
+176,7336,"      Kusel, Landkreis",21080,1489189,3966.0,70645
+177,7337,"      Südliche Weinstraße, Landkreis",24538,2711137,5021.0,110489
+178,7338,      Rhein-Pfalz-Kreis,26784,4122527,6742.0,153915
+179,7339,"      Mainz-Bingen, Landkreis",26326,5537411,10582.0,210337
+180,7340,"      Südwestpfalz, Landkreis",23469,2236453,2599.0,95294
+181,8111,"      Stuttgart, Landeshauptstadt, Stadtkreis",25788,16344151,53828.0,633787
+182,8115,"      Böblingen, Landkreis",25597,9998191,19237.0,390594
+183,8116,"      Esslingen, Landkreis",25582,13638992,24477.0,533153
+184,8117,"      Göppingen, Landkreis",24173,6207622,9540.0,256799
+185,8118,"      Ludwigsburg, Landkreis",26203,14236177,21739.0,543307
+186,8119,"      Rems-Murr-Kreis, Landkreis",25631,10906476,18018.0,425518
+187,8121,"      Heilbronn, Universitätsstadt, Stadtkreis",36883,4630170,8720.0,125537
+188,8125,"      Heilbronn, Landkreis",24968,8536947,10361.0,341920
+189,8126,"      Hohenlohekreis, Landkreis",24642,2752520,4104.0,111701
+190,8127,"      Schwäbisch Hall, Landkreis",23637,4610037,6347.0,195032
+191,8128,"      Main-Tauber-Kreis, Landkreis",23546,3114017,5167.0,132255
+192,8135,"      Heidenheim, Landkreis",23046,3047594,5218.0,132239
+193,8136,"      Ostalbkreis, Landkreis",24599,7704580,11677.0,313212
+194,8211,"      Baden-Baden, Stadtkreis",32416,1780320,4170.0,54921
+195,8212,"      Karlsruhe, Stadtkreis",22814,7129395,27437.0,312506
+196,8215,"      Karlsruhe, Landkreis",24295,10773620,16618.0,443453
+197,8216,"      Rastatt, Landkreis",23646,5453197,10187.0,230617
+198,8221,"      Heidelberg, Stadtkreis",23703,3803769,16656.0,160478
+199,8222,"      Mannheim, Stadtkreis",22054,6807624,33320.0,308684
+200,8225,"      Neckar-Odenwald-Kreis, Landkreis",22648,3248924,4812.0,143456
+201,8226,"      Rhein-Neckar-Kreis, Landkreis",25278,13831887,24015.0,547185
+202,8231,"      Pforzheim, Stadtkreis",22510,2811805,9141.0,124916
+203,8235,"      Calw, Landkreis",24437,3858927,4404.0,157911
+204,8236,"      Enzkreis, Landkreis",26013,5167208,5453.0,198637
+205,8237,"      Freudenstadt, Landkreis",24843,2923884,3925.0,117696
+206,8311,"      Freiburg im Breisgau, Stadtkreis",22135,5089788,25551.0,229939
+207,8315,"      Breisgau-Hochschwarzwald, Landkreis",24865,6529564,11936.0,262600
+208,8316,"      Emmendingen, Landkreis",23587,3892947,6421.0,165048
+209,8317,"      Ortenaukreis, Landkreis",23948,10242878,27219.0,427706
+210,8325,"      Rottweil, Landkreis",25306,3521475,3906.0,139157
+211,8326,"      Schwarzwald-Baar-Kreis, Landkreis",24999,5294590,7734.0,211794
+212,8327,"      Tuttlingen, Landkreis",26022,3637199,5510.0,139775
+213,8335,"      Konstanz, Landkreis",25486,7255062,17287.0,284670
+214,8336,"      Lörrach, Landkreis",27462,6274374,18328.0,228477
+215,8337,"      Waldshut, Landkreis",25622,4366299,6713.0,170409
+216,8415,"      Reutlingen, Landkreis",24763,7088558,13628.0,286251
+217,8416,"      Tübingen, Landkreis",23613,5349286,9592.0,226543
+218,8417,"      Zollernalbkreis, Landkreis",25743,4853904,6427.0,188553
+219,8421,"      Ulm, Stadtkreis",25773,3246441,9269.0,125963
+220,8425,"      Alb-Donau-Kreis, Landkreis",23854,4659687,5506.0,195338
+221,8426,"      Biberach, Landkreis",24077,4791409,6982.0,199004
+222,8435,"      Bodenseekreis, Landkreis",26555,5721007,9358.0,215441
+223,8436,"      Ravensburg, Landkreis",24132,6848064,13499.0,283775
+224,8437,"      Sigmaringen, Landkreis",22902,2989406,6289.0,130533
+225,9161,      Ingolstadt,24352,3314647,9739.0,136113
+226,9162,"      München, Landeshauptstadt",32766,47961876,99802.0,1463774
+227,9163,      Rosenheim,23416,1479969,4950.0,63202
+228,9171,"      Altötting, Landkreis",23358,2587406,4501.0,110774
+229,9172,"      Berchtesgadener Land, Landkreis",22547,2376111,7959.0,105387
+230,9173,"      Bad Tölz-Wolfratshausen, Landkreis",26750,3394580,3970.0,126900
+231,9174,"      Dachau, Landkreis",25827,3959057,4883.0,153294
+232,9175,"      Ebersberg, Landkreis",27503,3890820,4406.0,141471
+233,9176,"      Eichstätt, Landkreis",24771,3269640,3175.0,131994
+234,9177,"      Erding, Landkreis",25170,3455109,5243.0,137272
+235,9178,"      Freising, Landkreis",24459,4367244,11383.0,178557
+236,9179,"      Fürstenfeldbruck, Landkreis",26361,5761962,7766.0,218576
+237,9180,"      Garmisch-Partenkirchen, Landkreis",24842,2193846,4485.0,88311
+238,9181,"      Landsberg am Lech, Landkreis",25998,3109529,3971.0,119606
+239,9182,"      Miesbach, Landkreis",29168,2900993,3821.0,99458
+240,9183,"      Mühldorf a.Inn, Landkreis",23859,2740664,3941.0,114868
+241,9184,"      München, Landkreis",31122,10819629,12171.0,347652
+242,9185,"      Neuburg-Schrobenhausen, Landkreis",24338,2346761,3376.0,96422
+243,9186,"      Pfaffenhofen a.d.Ilm, Landkreis",26045,3299810,4146.0,126698
+244,9187,"      Rosenheim, Landkreis",25784,6709432,11433.0,260216
+245,9188,"      Starnberg, Landkreis",35356,4802037,4941.0,135819
+246,9189,"      Traunstein, Landkreis",24434,4317256,5940.0,176690
+247,9190,"      Weilheim-Schongau, Landkreis",25481,3434900,4485.0,134800
+248,9261,      Landshut,24526,1760965,5506.0,71799
+249,9262,      Passau,21088,1099217,4409.0,52125
+250,9263,      Straubing,22207,1059061,3841.0,47690
+251,9271,"      Deggendorf, Landkreis",23020,2740187,5532.0,119034
+252,9272,"      Freyung-Grafenau, Landkreis",22058,1728217,1952.0,78350
+253,9273,"      Kelheim, Landkreis",23499,2859611,3697.0,121689
+254,9274,"      Landshut, Landkreis",24979,3945874,4027.0,157969
+255,9275,"      Passau, Landkreis",22094,4225938,6604.0,191274
+256,9276,"      Regen, Landkreis",21567,1673050,2261.0,77573
+257,9277,"      Rottal-Inn, Landkreis",23751,2862361,3790.0,120515
+258,9278,"      Straubing-Bogen, Landkreis",23480,2353775,2332.0,100244
+259,9279,"      Dingolfing-Landau, Landkreis",24859,2387022,3128.0,96024
+260,9361,      Amberg,21981,925593,2878.0,42109
+261,9362,      Regensburg,23093,3504472,13803.0,151752
+262,9363,      Weiden i.d.OPf.,22439,954382,3140.0,42532
+263,9371,"      Amberg-Sulzbach, Landkreis",22751,2342708,2793.0,102973
+264,9372,"      Cham, Landkreis",23002,2935291,3885.0,127611
+265,9373,"      Neumarkt i.d.OPf., Landkreis",24718,3289978,4100.0,133103
+266,9374,"      Neustadt a.d.Waldnaab, Landkreis",22309,2106431,3519.0,94419
+267,9375,"      Regensburg, Landkreis",24184,4664848,4502.0,192886
+268,9376,"      Schwandorf, Landkreis",22104,3245677,5735.0,146838
+269,9377,"      Tirschenreuth, Landkreis",22122,1606444,2611.0,72617
+270,9461,      Bamberg,22047,1706165,13246.0,77386
+271,9462,      Bayreuth,21069,1566049,5226.0,74328
+272,9463,      Coburg,24754,1020939,2840.0,41243
+273,9464,      Hof,20353,935029,3830.0,45940
+274,9471,"      Bamberg, Landkreis",23121,3395033,4271.0,146835
+275,9472,"      Bayreuth, Landkreis",22691,2353743,2818.0,103731
+276,9473,"      Coburg, Landkreis",26362,2290754,3109.0,86896
+277,9474,"      Forchheim, Landkreis",24725,2865433,3518.0,115890
+278,9475,"      Hof, Landkreis",22200,2121057,4448.0,95542
+279,9476,"      Kronach, Landkreis",23120,1556098,2381.0,67305
+280,9477,"      Kulmbach, Landkreis",23725,1706538,2500.0,71929
+281,9478,"      Lichtenfels, Landkreis",22301,1489916,2829.0,66808
+282,9479,"      Wunsiedel i.Fichtelgebirge, Landkreis",22480,1648502,3849.0,73332
+283,9561,      Ansbach,22559,941827,3116.0,41750
+284,9562,      Erlangen,24712,2754869,5815.0,111480
+285,9563,      Fürth,23795,3025274,5426.0,127137
+286,9564,      Nürnberg,22748,11755734,42591.0,516783
+287,9565,      Schwabach,26190,1068215,1574.0,40787
+288,9571,"      Ansbach, Landkreis",23483,4311617,5408.0,183603
+289,9572,"      Erlangen-Höchstadt, Landkreis",26313,3573425,3444.0,135803
+290,9573,"      Fürth, Landkreis",25388,2965052,5174.0,116790
+291,9574,"      Nürnberger Land, Landkreis",25830,4392566,5456.0,170059
+292,9575,"      Neustadt a.d.Aisch-Bad Windsheim, Landkreis",23283,2328382,2982.0,100003
+293,9576,"      Roth, Landkreis",24605,3113291,3388.0,126530
+294,9577,"      Weißenburg-Gunzenhausen, Landkreis",22892,2158725,3414.0,94301
+295,9661,      Aschaffenburg,24114,1693511,5127.0,70228
+296,9662,      Schweinfurt,21029,1130011,6344.0,53735
+297,9663,      Würzburg,24272,3088830,11084.0,127258
+298,9671,"      Aschaffenburg, Landkreis",24745,4307816,4456.0,174089
+299,9672,"      Bad Kissingen, Landkreis",22814,2355316,3642.0,103242
+300,9673,"      Rhön-Grabfeld, Landkreis",23050,1838107,2591.0,79743
+301,9674,"      Haßberge, Landkreis",22335,1888051,2618.0,84532
+302,9675,"      Kitzingen, Landkreis",23553,2135483,3665.0,90669
+303,9676,"      Miltenberg, Landkreis",23343,3002315,4142.0,128620
+304,9677,"      Main-Spessart, Landkreis",23587,2982484,3849.0,126444
+305,9678,"      Schweinfurt, Landkreis",23143,2663894,2640.0,115106
+306,9679,"      Würzburg, Landkreis",23740,3836059,4548.0,161587
+307,9761,      Augsburg,20053,5895422,21206.0,293993
+308,9762,      Kaufbeuren,22598,987203,2790.0,43686
+309,9763,      Kempten (Allgäu),22064,1513995,4375.0,68619
+310,9764,      Memmingen,27460,1198738,2708.0,43654
+311,9771,"      Aichach-Friedberg, Landkreis",25751,3427355,3310.0,133096
+312,9772,"      Augsburg, Landkreis",25088,6289130,7725.0,250686
+313,9773,"      Dillingen a.d.Donau, Landkreis",24400,2332410,2802.0,95590
+314,9774,"      Günzburg, Landkreis",24434,3057467,5048.0,125133
+315,9775,"      Neu-Ulm, Landkreis",24479,4243926,8473.0,173373
+316,9776,"      Lindau (Bodensee), Landkreis",26816,2183040,5193.0,81409
+317,9777,"      Ostallgäu, Landkreis",23686,3311287,4768.0,139797
+318,9778,"      Unterallgäu, Landkreis",25277,3621989,4415.0,143293
+319,9779,"      Donau-Ries, Landkreis",25092,3343948,5110.0,133270
+320,9780,"      Oberallgäu, Landkreis",24617,3814730,4483.0,154965
+321,10041,"      Saarbrücken, Regionalverband",19205,6336243,31546.0,329929
+322,10042,"      Merzig-Wadern, Landkreis",18790,1944936,5225.0,103511
+323,10043,"      Neunkirchen, Landkreis",19925,2645108,7798.0,132752
+324,10044,"      Saarlouis, Landkreis",20819,4070200,12601.0,195508
+325,10045,      Saarpfalz-Kreis,22452,3211004,7298.0,143017
+326,10046,"      St. Wendel, Landkreis",21849,1914715,3330.0,87632
+327,11000,  Berlin,20972,76112218,511677.0,3629161
+328,12051,"      Brandenburg an der Havel, kreisfreie Stadt",18473,1330136,6575.0,72005
+329,12052,"      Cottbus, kreisfreie Stadt",19172,1929195,9026.0,100628
+330,12053,"      Frankfurt (Oder), kreisfreie Stadt",18263,1060257,5430.0,58055
+331,12054,"      Potsdam, kreisfreie Stadt",21208,3751679,16168.0,176900
+332,12060,"      Barnim, Landkreis",20779,3777814,10719.0,181812
+333,12061,"      Dahme-Spreewald, Landkreis",21267,3576888,15124.0,168193
+334,12062,"      Elbe-Elster, Landkreis",19046,1962659,5607.0,103047
+335,12063,"      Havelland, Landkreis",20533,3312160,9959.0,161310
+336,12064,"      Märkisch-Oderland, Landkreis",20684,4004929,11888.0,193625
+337,12065,"      Oberhavel, Landkreis",21315,4488356,12678.0,210571
+338,12066,"      Oberspreewald-Lausitz, Landkreis",19809,2194862,7185.0,110799
+339,12067,"      Oder-Spree, Landkreis",20685,3692388,12841.0,178503
+340,12068,"      Ostprignitz-Ruppin, Landkreis",19058,1891017,7683.0,99223
+341,12069,"      Potsdam-Mittelmark, Landkreis",23093,4940474,11257.0,213939
+342,12070,"      Prignitz, Landkreis",19218,1477620,4602.0,76886
+343,12071,"      Spree-Neiße, Landkreis",20450,2350632,6608.0,114943
+344,12072,"      Teltow-Fläming, Landkreis",20241,3392224,10565.0,167593
+345,12073,"      Uckermark, Landkreis",18493,2218234,8100.0,119951
+348,13003,"      Kreisfreie Stadt Rostock, Hansestadt",18905,3944520,20168.0,208648
+349,13004,"      Kreisfreie Stadt Schwerin, Landeshauptstadt",19724,1889709,10645.0,95808
+364,13071,      Landkreis Mecklenburgische Seenplatte,19235,4998328,15300.0,259852
+365,13072,      Landkreis Rostock,20421,4387873,10462.0,214874
+366,13073,      Landkreis Vorpommern-Rügen,19462,4376998,15409.0,224904
+367,13074,      Landkreis Nordwestmecklenburg,19643,3081201,9395.0,156861
+368,13075,      Landkreis Vorpommern-Greifswald,18491,4380076,14165.0,236882
+369,13076,      Landkreis Ludwigslust-Parchim,20206,4295196,12431.0,212570
+399,14511,"      Chemnitz, Stadt",20366,5031323,23744.0,247046
+400,14521,      Erzgebirgskreis,20492,6947487,10129.0,339035
+401,14522,"      Mittelsachsen, Landkreis",20571,6318915,11877.0,307169
+402,14523,      Vogtlandkreis,20424,4670812,12891.0,228690
+403,14524,"      Zwickau, Landkreis",21056,6711786,15506.0,318760
+404,14612,"      Dresden, Stadt",20112,11119077,49152.0,552861
+405,14625,"      Bautzen, Landkreis",20632,6225710,14543.0,301757
+406,14626,"      Görlitz, Landkreis",19486,4983288,19335.0,255741
+407,14627,"      Meißen, Landkreis",21310,5168059,10574.0,242514
+408,14628,"      Sächsische Schweiz-Osterzgebirge, Landkreis",20914,5134760,11635.0,245515
+409,14713,"      Leipzig, Stadt",18825,11010802,72045.0,584919
+410,14729,"      Leipzig, Landkreis",21768,5613576,14180.0,257886
+411,14730,"      Nordsachsen, Landkreis",20340,4021905,12529.0,197734
+412,15001,"      Dessau-Roßlau, kreisfreie Stadt",20043,1637007,7985.0,81674
+413,15002,"      Halle (Saale), kreisfreie Stadt",17828,4264843,28925.0,239215
+414,15003,"      Magdeburg, kreisfreie Stadt",18904,4510295,26877.0,238588
+415,15081,      Altmarkkreis Salzwedel,20083,1689188,4857.0,84111
+416,15082,"      Anhalt-Bitterfeld, Landkreis",19584,3144436,11357.0,160559
+417,15083,"      Börde, Landkreis",20694,3563078,8893.0,172177
+418,15084,      Burgenlandkreis,19649,3557953,11719.0,181079
+419,15085,"      Harz, Landkreis",19907,4287323,16224.0,215373
+420,15086,"      Jerichower Land, Landkreis",20518,1850679,5979.0,90197
+421,15087,"      Mansfeld-Südharz, Landkreis",19092,2618171,9178.0,137131
+422,15088,      Saalekreis,20601,3811911,11095.0,185038
+423,15089,      Salzlandkreis,19095,3659612,12389.0,191650
+424,15090,"      Stendal, Landkreis",18947,2133181,7046.0,112584
+425,15091,"      Wittenberg, Landkreis",20118,2541470,8065.0,126328
+450,16051,"      Erfurt, kreisfreie Stadt",19333,4124431,24074.0,213344
+451,16052,"      Gera, kreisfreie Stadt",19558,1848356,10917.0,94506
+452,16053,"      Jena, kreisfreie Stadt",18919,2104843,7977.0,111253
+453,16054,"      Suhl, kreisfreie Stadt",22371,783022,3149.0,35001
+454,16055,"      Weimar, kreisfreie Stadt",19090,1236219,6574.0,64758
+455,16056,"      Eisenach, kreisfreie Stadt",19639,835442,3258.0,42540
+456,16061,"      Eichsfeld, Kreis",20065,2016764,4190.0,100513
+457,16062,"      Nordhausen, Kreis",18907,1593102,5843.0,84260
+458,16063,      Wartburgkreis,20932,2582883,4415.0,123395
+459,16064,      Unstrut-Hainich-Kreis,18942,1954945,6380.0,103208
+460,16065,      Kyffhäuserkreis,18508,1395787,4800.0,75414
+461,16066,"      Schmalkalden-Meiningen, Kreis",20946,2568988,6247.0,122650
+462,16067,"      Gotha, Kreis",19593,2654653,7307.0,135487
+463,16068,"      Sömmerda, Kreis",19482,1360657,3559.0,69841
+464,16069,"      Hildburghausen, Kreis",20495,1306332,2669.0,63738
+465,16070,      Ilm-Kreis,19306,2100234,5592.0,108786
+466,16071,"      Weimarer Land, Kreis",19800,1624400,4815.0,82039
+467,16072,"      Sonneberg, Kreis",21140,1189757,2902.0,56279
+468,16073,"      Saalfeld-Rudolstadt, Kreis",19922,2128924,5730.0,106862
+469,16074,      Saale-Holzland-Kreis,20183,1675597,4244.0,83021
+470,16075,      Saale-Orla-Kreis,19740,1602593,4473.0,81185
+471,16076,"      Greiz, Kreis",20392,2013059,5114.0,98717
+472,16077,"      Altenburger Land, Kreis",19883,1797063,6203.0,90384
