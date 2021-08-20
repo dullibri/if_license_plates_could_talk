@@ -1,5 +1,5 @@
 # data.csv
 
-license-plate | kreis_key | kreis_name | einw | crimes | income
+license-plate | kreis_key | kreis_name | einw | crimes_year | income_pp_year
 ---           | ---       | ---        | ---  | ---   |---
-   Kfz      |  [AGS](https://de.wikipedia.org/wiki/Amtlicher_Gemeindeschl%C3%BCssel) | Kreis | Bvölkerung 2020 (abs) | erfasste Kriminalfälle 2017 (abs.) | Arbeitnehmerentgelt 2019 in Millionen EURO
+   Kfz      |  [AGS](https://de.wikipedia.org/wiki/Amtlicher_Gemeindeschl%C3%BCssel) | Kreis | Bevölkerung 2020 (abs) | erfasste Kriminalfälle | Verfügbares Haushalteinkommen der Privathaushalte pro Einwohner
