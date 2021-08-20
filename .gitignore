@@ -2,3 +2,4 @@ env
 .vscode
 .DS_Store
 data/~$data_desc.xlsx
+*/__pycache__
