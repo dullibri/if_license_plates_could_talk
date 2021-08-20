@@ -12,11 +12,13 @@ def year_to_path(year):
 def prep_data_2013():
     df_2013 = pd.read_excel(year_to_path(2013), skiprows=6)[["Unnamed: 1", "Unnamed: 2", "Fälle"]].dropna(subset = ["Unnamed: 2"])
 
+
+
     df_2013.rename(columns = {"Unnamed: 1" : "Art", "Unnamed: 2" : "kreis_key", "Fälle" : "crimes_2013"}, inplace = True)
 
     df_2013 = df_2013[df_2013.Art == "Straftaten insgesamt"][["kreis_key", "crimes_2013"]]
 
-    df_2013.kreis_key = df_2013.kreis_key.astype(str).str.zfill(5)
+    df_2013.kreis_key = df_2013.kreis_key.astype(int).astype(str).str.zfill(5)
 
     df_2013.crimes_2013 = df_2013.crimes_2013.astype(int)
 
@@ -31,7 +33,7 @@ def prep_data_14_20(year):
 
     df.rename(columns = {"Gemeindeschlüssel" : "kreis_key", "Anzahl erfasste Faelle" : crime_clm,  "erfasste Fälle" : crime_clm, "Gemeindeschluessel" : "kreis_key", "erfasste Faelle" :crime_clm}, inplace = True)
 
-    df.kreis_key = df.kreis_key.astype(str).str.zfill(5)
+    df.kreis_key = df.kreis_key.astype(int).astype(str).str.zfill(5)
 
     df = df[["kreis_key", crime_clm]]
 
