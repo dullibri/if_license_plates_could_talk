@@ -10,8 +10,6 @@ def prep_data():
     df_crime = data.crime.prep_data()
     df_crime.to_csv(os.path.join("..", "data", "processed", "crime", "crime.csv"))
 
-    
-
     df_income = data.income.prep_data()
     df_income.to_csv(os.path.join("..", "data", "processed", "income", "income.csv"))
 

@@ -28,3 +28,6 @@ def prep_data():
     df_final = df.merge(df_raw[["kreis_key", "kreis_name"]].drop_duplicates(), on = "kreis_key")
 
     return df_final
+
+def load_data():
+    return pd.read_csv(os.path.join("..", "data", "processed", "population", "population.csv"))

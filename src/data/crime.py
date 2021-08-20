@@ -47,3 +47,6 @@ def prep_data():
         df = df.merge(df2, on = "kreis_key", how = "outer")
 
     return df
+
+def load_data():
+    return pd.read_csv(os.path.join("..", "data", "processed", "crime", "crime.csv"))

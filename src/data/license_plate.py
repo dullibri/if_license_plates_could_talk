@@ -2,6 +2,7 @@ import pandas as pd
 from bs4 import BeautifulSoup
 import requests
 import re
+import os
 
 def prep_data():
     wiki_kreise = requests.get("https://de.wikipedia.org/wiki/Liste_der_Landkreise_in_Deutschland")
@@ -81,3 +82,6 @@ def prep_data():
     df["kreis_key"].replace({"11001": "11000"}, inplace = True) # Fix regional code of Berlin ("11000")
 
     return df
+
+def load_data():
+    return pd.read_csv(os.path.join("..", "data", "processed", "license_plate", "license_plate.csv"))

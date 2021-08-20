@@ -19,3 +19,6 @@ def prep_data():
     df = df_piv[[len(i) == 5 for i in df_piv.kreis_key]] # drop rows that are not on "Kreis"-level
 
     return df
+
+def load_data():
+    return pd.read_csv(os.path.join("..", "data", "processed", "income", "income.csv"))
