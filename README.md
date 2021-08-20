@@ -16,7 +16,8 @@ German license plates' geographical information is used to link them to income a
 - PLZ
     - [Destatis Gemeindeverzeichnis](https://www.destatis.de/DE/Themen/Laender-Regionen/Regionales/Gemeindeverzeichnis/Administrativ/Archiv/GVAuszugQ/AuszugGV2QAktuell.html;jsessionid=8274FBC848E650875A15A3184CC48E06.live732)
 - Crime:
-    - [BKA](https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2017/BKATabellen/bkaTabellenLaenderKreiseStaedteFaelle.html)
+    - [BKA](https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2017/BKATabellen/bkaTabellenLaenderKreiseStaedteFaelle.html) (2013-2020)
 
 - Income:
+    - https://www.regionalstatistik.de/ (2000-2018)
     - https://www.statistikportal.de/de/vgrdl/ergebnisse-kreisebene/einkommen-kreise
