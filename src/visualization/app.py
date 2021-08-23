@@ -38,7 +38,7 @@ class VisApp:
             html.H1(children="IF_LICENSE_PLATES_COULD_TALK",
                     style={"margin-top": "30px"}),
             dbc.Container([
-                html.P("Merkmal:"),
+                html.P("Feature:"),
                 dcc.Dropdown(
                     id="feature_select",
                     options=[{
@@ -48,10 +48,11 @@ class VisApp:
                     value="crimes_pp"
                 )],  style={"margin-top": "20px"}),
             dbc.Container([
-                html.P("Jahr:"),
+                html.P("Year:"),
                 dcc.Slider(id="year", min=2017, max=2018, value=2018, marks={2017: "2017", 2018: "2018"})], style={"margin-top": "20px"}),
             html.Hr(),
-            dbc.Container(id="output"),
+            dcc.Loading(id="loading", type="circle",
+                        children=[dbc.Container(id="output")]),
             dcc.Store(id="state")
         ])
         self.setup_callbacks()
@@ -105,9 +106,6 @@ class VisApp:
         fig.update_geos(fitbounds="locations", visible=False)
         fig.update_layout(margin={"r": 0, "t": 0, "l": 0, "b": 0})
         fig.update_layout(hoverlabel={"bgcolor": "white"})
-
-        fig.update_geos(fitbounds="locations", visible=False)
-        fig.update_layout(margin={"r": 0, "t": 0, "l": 0, "b": 0})
 
         return dcc.Graph(
             id='map',
