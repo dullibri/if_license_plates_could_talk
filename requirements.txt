@@ -13,3 +13,4 @@ plotly
 sklearn
 statsmodels
 pyproj
+dash-bootstrap-components
