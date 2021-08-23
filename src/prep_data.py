@@ -7,6 +7,7 @@ import os
 
 
 def prep_data():
+    """Preprocess the raw data in data/raw. Returns dataframed indexed by license plate codes"""
 
     df_crime = data.crime.prep_data()
     df_crime.to_csv(os.path.join(

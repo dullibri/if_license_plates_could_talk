@@ -95,6 +95,7 @@ def prep_data():
 
 
 def load_data():
+    """Load data from csv stored in data/processed"""
     df = pd.read_csv(os.path.join("..", "data", "processed",
                      "license_plate", "license_plate.csv"), index_col=0, dtype={"kreis_key": "object"})
     return df

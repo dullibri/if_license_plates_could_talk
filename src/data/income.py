@@ -29,6 +29,7 @@ def prep_data():
 
 
 def load_data():
+    """Load data from csv stored in data/processed"""
     df = pd.read_csv(os.path.join("..", "data", "processed",
                      "income", "income.csv"), index_col=0)
     for col in df.columns:
