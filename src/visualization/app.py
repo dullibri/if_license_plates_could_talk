@@ -17,8 +17,6 @@ class VisApp:
         # setup data
         self.df = self.data_for_map()
 
-        self.cache = {}
-
         # configuration for visualization
 
         self.columns = {
@@ -94,25 +92,24 @@ class VisApp:
     def generate_map(self, feature, year):
         """Generate the map visualization for the given column"""
         col = f"{feature}_{year}"
-        if True:
 
-            fig = px.choropleth(self.df, geojson=self.df.geometry, locations=self.df.index, color=col, scope="europe",
-                                color_continuous_scale=self.columns[feature]["color_continuous_scale"],
-                                range_color=(self.df[col].min(
-                                )*0.8, self.df[col].max()),
-                                hover_name="kreis_name",
-                                labels={
-                                    f"crimes_pp_{year}": "Straftaten / EW",
-                                    f"income_pp_{year}": "Euro / EW"
-                                })
-            fig.update_geos(fitbounds="locations", visible=False)
-            fig.update_layout(margin={"r": 0, "t": 0, "l": 0, "b": 0})
-            fig.update_layout(hoverlabel={"bgcolor": "white"})
+        fig = px.choropleth(self.df, geojson=self.df.geometry, locations=self.df.index, color=col, scope="europe",
+                            color_continuous_scale=self.columns[feature]["color_continuous_scale"],
+                            range_color=(self.df[col].min(
+                            )*0.8, self.df[col].max()),
+                            hover_name="kreis_name",
+                            labels={
+                                f"crimes_pp_{year}": "Straftaten / EW",
+                                f"income_pp_{year}": "Euro / EW"
+                            })
+        fig.update_geos(fitbounds="locations", visible=False)
+        fig.update_layout(margin={"r": 0, "t": 0, "l": 0, "b": 0})
+        fig.update_layout(hoverlabel={"bgcolor": "white"})
 
-            fig.update_geos(fitbounds="locations", visible=False)
-            fig.update_layout(margin={"r": 0, "t": 0, "l": 0, "b": 0})
+        fig.update_geos(fitbounds="locations", visible=False)
+        fig.update_layout(margin={"r": 0, "t": 0, "l": 0, "b": 0})
 
-            return dcc.Graph(
-                id='map',
-                figure=fig
-            )
+        return dcc.Graph(
+            id='map',
+            figure=fig
+        )
