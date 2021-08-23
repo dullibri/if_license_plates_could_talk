@@ -1,3 +1,4 @@
+
 from re import S
 import dash
 import dash_core_components as dcc
@@ -111,5 +112,5 @@ class VisApp:
 
         return dcc.Graph(
             id='map',
-            figure=self.fig
+            figure=fig
         )

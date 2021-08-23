@@ -8,4 +8,4 @@ def fix_key(ser):
 
 def path_to_data_dir():
     """Returns absolute path to data directory"""
-    return os.path.join(os.path.dirname(__file__), "..", "..", "data")
+    return os.path.join(os.path.dirname(__file__), "..", "..", "..", "data")
