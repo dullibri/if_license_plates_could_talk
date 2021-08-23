@@ -6,6 +6,7 @@ import data.population
 import data.income
 import data.crime
 from datetime import datetime
+import sys
 
 
 class DataBase:
@@ -13,8 +14,9 @@ class DataBase:
 
     def __init__(self):
         """Initializing database, connecting to db, ..."""
-        self.con = sqlite3.connect(os.path.join(
-            "..", "data", "sqlite", "database.db"))
+        path = os.path.join(os.path.dirname(__file__),
+                            "..", "..", "data", "sqlite", "database.db")
+        self.con = sqlite3.connect(path)
 
     def populate_db(self):
         """Populate database with processed data"""

@@ -4,7 +4,7 @@ import data.utils
 
 
 def year_to_path(year):
-    data_path = os.path.join("..", "data", "raw", "crime")
+    data_path = os.path.join(data.utils.path_to_data_dir(), "raw", "crime")
 
     path = str(year)
     files = os.listdir(os.path.join(data_path, "bka", path))
@@ -49,7 +49,7 @@ def prep_data():
 
 
 def load_data():
-    df = pd.read_csv(os.path.join("..", "data", "processed",
+    df = pd.read_csv(os.path.join(data.utils.path_to_data_dir(), "processed",
                                   "crime", "crime.csv"), index_col=0)
     df.kreis_key = data.utils.fix_key(df.kreis_key)
     return df

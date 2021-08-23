@@ -3,6 +3,7 @@ import data.crime
 import data.income
 import data.population
 import data.license_plate
+import data.utils
 import os
 
 
@@ -10,8 +11,8 @@ def prep_data():
     """Preprocess the raw data in data/raw. Returns dataframed indexed by license plate codes"""
 
     df_crime = data.crime.prep_data()
-    df_crime.to_csv(os.path.join(
-        "..", "data", "processed", "crime", "crime.csv"))
+    df_crime.to_csv(os.path.join(data.utils.path_to_data_dir(),
+                    "processed", "crime", "crime.csv"))
 
     df_income = data.income.prep_data()
     df_income.to_csv(os.path.join(
@@ -19,10 +20,10 @@ def prep_data():
 
     df_population = data.population.prep_data()
     df_population.to_csv(os.path.join(
-        "..", "data", "processed", "population", "population.csv"))
+        data.utils.path_to_data_dir(), "processed", "population", "population.csv"))
 
     df_plate = data.license_plate.prep_data()
-    df_plate.to_csv(os.path.join("..", "data", "processed",
+    df_plate.to_csv(os.path.join(data.utils.path_to_data_dir(), "processed",
                     "license_plate", "license_plate.csv"))
     # merge
 
@@ -38,7 +39,7 @@ def prep_data():
         df[f"crimes_pp_{year}"] = pd.to_numeric(
             df[f"crimes_{year}"], errors="coerce") / pd.to_numeric(df[f"population_{year}"], errors="coerce")
 
-    df.to_csv(os.path.join("..", "data", "processed", "data.csv"))
+    df.to_csv(os.path.join(data.utils.path_to_data_dir(), "processed", "data.csv"))
 
     return df
 

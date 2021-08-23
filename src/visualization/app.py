@@ -17,6 +17,8 @@ class VisApp:
         # setup data
         self.df = self.data_for_map()
 
+        self.fig = None
+
         # configuration for visualization
 
         self.columns = {
@@ -109,5 +111,5 @@ class VisApp:
 
         return dcc.Graph(
             id='map',
-            figure=fig
+            figure=self.fig
         )

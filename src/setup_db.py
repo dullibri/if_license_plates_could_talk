@@ -1,5 +1,5 @@
-import data.database
-
+import data
+import sys
 
 if __name__ == "__main__":
-    data.database.db.populate_db()
+    data.db.populate_db()

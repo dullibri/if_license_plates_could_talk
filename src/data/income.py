@@ -4,7 +4,8 @@ import data.utils
 
 
 def prep_data():
-    path = os.path.join("..", "data", "raw", "income", "82411-01-03-4.csv")
+    path = os.path.join(data.utils.path_to_data_dir(),
+                        "raw", "income", "82411-01-03-4.csv")
     df_raw = pd.read_csv(path, encoding="ISO-8859-1",
                          skiprows=6, delimiter=";")
 
@@ -30,7 +31,7 @@ def prep_data():
 
 def load_data():
     """Load data from csv stored in data/processed"""
-    df = pd.read_csv(os.path.join("..", "data", "processed",
+    df = pd.read_csv(os.path.join(data.utils.path_to_data_dir(), "processed",
                      "income", "income.csv"), index_col=0)
     for col in df.columns:
         if col != "kreis_key":
