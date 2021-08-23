@@ -17,8 +17,6 @@ class VisApp:
         # setup data
         self.df = self.data_for_map()
 
-        self.cache = {}
-
         # configuration for visualization
 
         self.columns = {
@@ -40,7 +38,7 @@ class VisApp:
             html.H1(children="IF_LICENSE_PLATES_COULD_TALK",
                     style={"margin-top": "30px"}),
             dbc.Container([
-                html.P("Merkmal:"),
+                html.P("Feature:"),
                 dcc.Dropdown(
                     id="feature_select",
                     options=[{
@@ -50,10 +48,11 @@ class VisApp:
                     value="crimes_pp"
                 )],  style={"margin-top": "20px"}),
             dbc.Container([
-                html.P("Jahr:"),
-                dcc.Slider(id="year", min=2017, max=2019, value=2018, marks={2017: "2017", 2018: "2018", 2019: "2019"})], style={"margin-top": "20px"}),
+                html.P("Year:"),
+                dcc.Slider(id="year", min=2017, max=2018, value=2018, marks={2017: "2017", 2018: "2018"})], style={"margin-top": "20px"}),
             html.Hr(),
-            dbc.Container(id="output"),
+            dcc.Loading(id="loading", type="circle",
+                        children=[dbc.Container(id="output")]),
             dcc.Store(id="state")
         ])
         self.setup_callbacks()
@@ -94,25 +93,21 @@ class VisApp:
     def generate_map(self, feature, year):
         """Generate the map visualization for the given column"""
         col = f"{feature}_{year}"
-        if True:
 
-            fig = px.choropleth(self.df, geojson=self.df.geometry, locations=self.df.index, color=col, scope="europe",
-                                color_continuous_scale=self.columns[feature]["color_continuous_scale"],
-                                range_color=(self.df[col].min(
-                                )*0.8, self.df[col].max()),
-                                hover_name="kreis_name",
-                                labels={
-                                    f"crimes_pp_{year}": "Straftaten / EW",
-                                    f"income_pp_{year}": "Euro / EW"
-                                })
-            fig.update_geos(fitbounds="locations", visible=False)
-            fig.update_layout(margin={"r": 0, "t": 0, "l": 0, "b": 0})
-            fig.update_layout(hoverlabel={"bgcolor": "white"})
+        fig = px.choropleth(self.df, geojson=self.df.geometry, locations=self.df.index, color=col, scope="europe",
+                            color_continuous_scale=self.columns[feature]["color_continuous_scale"],
+                            range_color=(self.df[col].min(
+                            )*0.8, self.df[col].max()),
+                            hover_name="kreis_name",
+                            labels={
+                                f"crimes_pp_{year}": "Straftaten / EW",
+                                f"income_pp_{year}": "Euro / EW"
+                            })
+        fig.update_geos(fitbounds="locations", visible=False)
+        fig.update_layout(margin={"r": 0, "t": 0, "l": 0, "b": 0})
+        fig.update_layout(hoverlabel={"bgcolor": "white"})
 
-            fig.update_geos(fitbounds="locations", visible=False)
-            fig.update_layout(margin={"r": 0, "t": 0, "l": 0, "b": 0})
-
-            return dcc.Graph(
-                id='map',
-                figure=fig
-            )
+        return dcc.Graph(
+            id='map',
+            figure=fig
+        )
