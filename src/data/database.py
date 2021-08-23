@@ -40,7 +40,7 @@ class DataBase:
 
     def query(self, sql_query):
         """Execute a query. Returns result as pandas Dataframe"""
-        df = pd.read_sql_query(sql_query)
+        df = pd.read_sql_query(sql_query, self.con)
         return df
 
 
