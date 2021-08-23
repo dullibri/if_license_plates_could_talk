@@ -3,9 +3,12 @@ from bs4 import BeautifulSoup
 import requests
 import re
 import os
+import data.utils
+
 
 def prep_data():
-    wiki_kreise = requests.get("https://de.wikipedia.org/wiki/Liste_der_Landkreise_in_Deutschland")
+    wiki_kreise = requests.get(
+        "https://de.wikipedia.org/wiki/Liste_der_Landkreise_in_Deutschland")
 
     soup = BeautifulSoup(wiki_kreise.text, features="html.parser")
 
@@ -24,15 +27,18 @@ def prep_data():
                     <td>KARTE</td></tr>
                     <tr>"""
         tds = tr.find_all('td')
-        if(len(tds)>5):
+        if(len(tds) > 5):
             kreis_key = tds[0].text.strip()
-            kreis = tds[1].text.split(",")[0].strip()
-            license_plates = tds[2].text.replace(",", " ").replace("(", " ").replace(")", " ").split()
+            kreis_name = tds[1].text.split(",")[0].strip()
+            license_plates = tds[2].text.replace(",", " ").replace(
+                "(", " ").replace(")", " ").split()
 
             for license_plate in license_plates:
-                df_kreise = df_kreise.append({"license_plate": license_plate.strip(), "kreis_key": kreis_key}, ignore_index = True)
+                df_kreise = df_kreise.append(
+                    {"license_plate": license_plate.strip(), "kreis_key": kreis_key, "kreis_name": kreis_name}, ignore_index=True)
 
-    wiki_städte = requests.get("https://de.wikipedia.org/wiki/Liste_der_kreisfreien_St%C3%A4dte_in_Deutschland")
+    wiki_städte = requests.get(
+        "https://de.wikipedia.org/wiki/Liste_der_kreisfreien_St%C3%A4dte_in_Deutschland")
 
     soup = BeautifulSoup(wiki_städte.text, features="html.parser")
 
@@ -70,18 +76,25 @@ def prep_data():
         tds = tr.find_all('td')
         if(len(tds) > 12):
             kreis_key = tds[2].text.strip()
-            kreis = re.split("\(|\[", tds[1].text)[0].strip()
-            license_plates = tds[5].text.replace(",", " ").replace("(", " ").replace(")", " ").split()
+            kreis_name = re.split("\(|\[", tds[1].text)[0].strip()
+            license_plates = tds[5].text.replace(",", " ").replace(
+                "(", " ").replace(")", " ").split()
 
-            if(all(df_kreise["kreis_key"] != kreis_key)): # Avoid duplicates
+            if(all(df_kreise["kreis_key"] != kreis_key)):  # Avoid duplicates
                 for license_plate in license_plates:
-                    df_städte = df_städte.append({"license_plate": license_plate.strip(), "kreis_key": kreis_key}, ignore_index = True)
+                    df_städte = df_städte.append(
+                        {"license_plate": license_plate.strip(), "kreis_key": kreis_key, "kreis_name": kreis_name}, ignore_index=True)
 
     df = pd.concat([df_städte, df_kreise])
+    # Fix regional code of Berlin ("11000")
+    df["kreis_key"].replace({"11001": "11000"}, inplace=True)
 
-    df["kreis_key"].replace({"11001": "11000"}, inplace = True) # Fix regional code of Berlin ("11000")
+    df.kreis_key = data.utils.fix_key(df.kreis_key)
 
     return df
 
+
 def load_data():
-    return pd.read_csv(os.path.join("..", "data", "processed", "license_plate", "license_plate.csv"))
+    df = pd.read_csv(os.path.join("..", "data", "processed",
+                     "license_plate", "license_plate.csv"), index_col=0, dtype={"kreis_key": "object"})
+    return df

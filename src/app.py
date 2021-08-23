@@ -9,10 +9,9 @@ import geopandas as gpd
 import pyproj
 import dash_bootstrap_components as dbc
 
-external_stylesheets = [dbc.themes.BOOTSTRAP]
-
 class VisApp:
     def __init__(self):
+        """Setup Dash App"""
         # setup data
         self.df_coarse = self.data_for_map()
 
@@ -32,7 +31,7 @@ class VisApp:
         }
 
         # creating a dash app
-        self.app = dash.Dash(__name__, external_stylesheets=external_stylesheets)
+        self.app = dash.Dash(__name__, external_stylesheets=[dbc.themes.BOOTSTRAP])
         self.app.title = "IF_LICENSE_PLATS_COULD_TALK"
         self.app.layout = dbc.Container([
             html.H1(children="IF_LICENSE_PLATES_COULD_TALK", style={"margin-top": "30px"}),
@@ -55,9 +54,11 @@ class VisApp:
         self.setup_callbacks()
 
     def run(self):
-        self.app.run_server()
+        """Start Dash server in debug mode"""
+        self.app.run_server(debug=True)
     
     def generate_output(self, column):
+        """Generate map and histogram"""
         return [
             dbc.Row([
                 dbc.Col([
@@ -70,11 +71,12 @@ class VisApp:
         ]
 
     def setup_callbacks(self):
-            @self.app.callback(
-            dash.dependencies.Output("output", "children"),
-            [dash.dependencies.Input("dropdown", "value")])
-            def update_map(value):
-                return self.generate_output(value)
+        """Setup the callbacks for the Dash app"""
+        @self.app.callback(
+        dash.dependencies.Output("output", "children"),
+        [dash.dependencies.Input("dropdown", "value")])
+        def update_map(value):
+            return self.generate_output(value)
 
     def data_for_map(self):
         # TODO: Refactor this into data/...
@@ -117,6 +119,7 @@ class VisApp:
         return df_coarse
 
     def generate_map(self, column):
+        """Generate the map visualization for the given column"""
         fig = px.choropleth(self.df_coarse, geojson=self.df_coarse.geometry, locations=self.df_coarse.index, color=column, scope = "europe", 
         color_continuous_scale=self.columns[column]["color_continuous_scale"],
         range_color = (self.df_coarse[column].min()*0.8, self.df_coarse[column].max()),
@@ -135,6 +138,7 @@ class VisApp:
         )
     
     def generate_hist(self, column):
+        """Generate a histogramm for the values of the given column"""
         fig = px.histogram(self.df_coarse, x = column, nbins = self.columns[column]["nbins"], labels={
             "crimes_pp_2018" : "Straftaten / EW",
             "income_pp_2018" : "T€ / EW",
@@ -147,4 +151,5 @@ class VisApp:
 
 if __name__ == '__main__':
     app = VisApp()
+    server = app.app.server
     app.run()
