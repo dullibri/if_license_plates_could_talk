@@ -15,7 +15,7 @@ class DataBase:
     def __init__(self):
         """Initializing database, connecting to db, ..."""
         path = os.path.join(os.path.dirname(__file__),
-                            "..", "..", "data", "sqlite", "database.db")
+                            "..", "..", "..", "data", "sqlite", "database.db")
         self.con = sqlite3.connect(path)
 
     def populate_db(self):
@@ -60,6 +60,7 @@ class DataBase:
         return df
 
     def get_data(self):
+        """"""
         df_plate = self.query("SELECT * FROM license_plate")
         df_income = self.query("SELECT * FROM income")
         df_crime = self.query("SELECT * FROM crime")
