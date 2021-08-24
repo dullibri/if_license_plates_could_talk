@@ -43,7 +43,7 @@ def prep_data():
 
     # border vicinity
 
-    df_border = data.border_vicinity.load_data()
+    df_border = data.border_vicinity.prep_data()
     df_border.to_csv(os.path.join(data.utils.path_to_data_dir(),
                      "processed", "border", "border.csv"))
 

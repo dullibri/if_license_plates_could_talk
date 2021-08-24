@@ -23,5 +23,10 @@ feature_info = {
         "title": "Entfernung zur Grenze",
         "label": "Km",
         "time_dep": False
+    },
+    "fraud_pp": {
+        "title": "Betrugsfälle",
+        "label": "Betrugsfälle / EW",
+        "time_dep": True
     }
 }

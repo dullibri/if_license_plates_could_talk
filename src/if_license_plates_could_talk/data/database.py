@@ -46,10 +46,13 @@ class DataBase:
         for year in years:
             df_crime_rates[f"crimes_pp_{year}"] = df_crime_rates[f"crimes_{year}"] / \
                 df_crime_rates[f"population_{year}"]
+            df_crime_rates[f"fraud_pp_{year}"] = df_crime_rates[f"fraud_{year}"] / \
+                df_crime_rates[f"population_{year}"]
 
         cols = ["kreis_key"]
         cols = cols + [f"crimes_{year}" for year in years]
         cols = cols + [f"crimes_pp_{year}" for year in years]
+        cols = cols + [f"fraud_pp_{year}" for year in years]
 
         df_crime_rates = df_crime_rates[cols]
         df_crime_rates.to_sql("crime", self.con, if_exists="replace")

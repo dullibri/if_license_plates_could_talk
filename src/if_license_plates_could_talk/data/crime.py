@@ -3,6 +3,25 @@ import os
 from . import utils
 
 
+def fraud_filter(df, column="Straftat"):
+    """Construct filter for fraud crimes
+
+    Args:
+        df ([type]): [description]
+        column (str, optional): [description]. Defaults to "Straftat".
+
+    Returns:
+        [type]: [description]
+    """
+    fraud_cats = [
+        "Betrug §§ 263, 263a, 264, 264a, 265, 265a, 265b StGB davon:", "Betrug §§ 263, 263a, 264, 264a, 265, 265a, 265b StGB",
+        "Urkundenfälschung §§ 267-271, 273-279, 281 StGB", "Betrug §§ 263, 263a, 264, 264a, 265, 265a-e StGB"]
+    filt = df[column] == fraud_cats[0]
+    for cat in fraud_cats:
+        filt = filt | (df[column] == cat)
+    return filt
+
+
 def year_to_path(year):
     """Compute path of data on crimes for the given year
 
@@ -30,12 +49,22 @@ def prep_data_2013():
     df.rename(columns={
         "Unnamed: 1": "Straftat", "Unnamed: 2": "kreis_key", "Fälle": "crimes_2013"}, inplace=True)
     cats = df.Straftat.unique()
+
+    df.kreis_key = utils.fix_key(df.kreis_key)
+
     df_ges = df[df.Straftat ==
                 "Straftaten insgesamt"][["kreis_key", "crimes_2013"]]
-    df_ges.kreis_key = utils.fix_key(df_ges.kreis_key)
+
     df_ges.crimes_2013 = pd.to_numeric(df_ges.crimes_2013, errors="coerce")
 
+    df_fraud = df[fraud_filter(df)]
+    df_fraud = df_fraud.groupby("kreis_key").sum().reset_index()
+    df_fraud = df_fraud.rename(columns={"crimes_2013": "fraud_2013"})
+
+    df_ges = df_ges.merge(df_fraud, on="kreis_key")
+
     df_ges = utils.fix_goettingen(df_ges, "crimes_2013")
+    df_ges = utils.fix_goettingen(df_ges, "fraud_2013")
 
     return df_ges, list(cats)
 
@@ -47,22 +76,32 @@ def prep_data_14_20(year):
         year (int): year in the range 2014-2020
 
     Returns:
-        DataFrame: data on crimes in the given year 
+        DataFrame: data on crimes in the given year
     """
+    crime_clm = f"crimes_{year}"
+    fraud_clm = f"fraud_{year}"
+
     df = pd.read_csv(year_to_path(year), encoding="ISO-8859-1",
                      delimiter=";", skiprows=1, thousands=",")
     cats = df.Straftat.unique()
-    df = df[df.Straftat == "Straftaten insgesamt"]
-    crime_clm = f"crimes_{year}"
     df.rename(columns={"Gemeindeschlüssel": "kreis_key", "Anzahl erfasste Faelle": crime_clm,
               "erfasste Fälle": crime_clm, "Gemeindeschluessel": "kreis_key", "erfasste Faelle": crime_clm}, inplace=True)
     df.kreis_key = utils.fix_key(df.kreis_key)
-    df = df[["kreis_key", crime_clm]]
+
+    df_ges = df[df.Straftat == "Straftaten insgesamt"]
+    df_ges = df_ges[["kreis_key", crime_clm]]
+
+    df_fraud = df[["kreis_key", "Straftat", crime_clm]][fraud_filter(df)]
+    df_fraud = df_fraud.groupby("kreis_key").sum().reset_index()
+    df_fraud = df_fraud.rename(columns={crime_clm: fraud_clm})
+
+    df_ges = df_ges.merge(df_fraud, on="kreis_key")
 
     if year <= 2016:
-        df = utils.fix_goettingen(df, crime_clm)
+        df_ges = utils.fix_goettingen(df_ges, crime_clm)
+        df_ges = utils.fix_goettingen(df_ges, fraud_clm)
 
-    return df, list(cats)
+    return df_ges, list(cats)
 
 
 def prep_data():
