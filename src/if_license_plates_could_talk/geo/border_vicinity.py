@@ -9,7 +9,12 @@ import plotly.express as px
 
 
 class DistanceCalculator():
+    """Class to calculate distance between county and border of germany
+    """
+
     def __init__(self):
+        """Initialize
+        """
         self.df_geo = utils.load_geodata()
         self.crs = "epsg:32662"
         germany = self.df_geo.dissolve()
@@ -21,6 +26,7 @@ class DistanceCalculator():
         self.counter = 0
 
     def distance(self, kreis_key):
+        """Calculate distance between county and border"""
         self.counter += 1
         print(self.counter)
         kreis_geom = self.df_geo[self.df_geo["RS"] == kreis_key]
