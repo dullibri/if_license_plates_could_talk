@@ -1,5 +1,4 @@
 import visualization.app
-import data
 
 app = visualization.app.VisApp()
 server = app.app.server
