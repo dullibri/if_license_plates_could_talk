@@ -2,6 +2,7 @@ import sqlite3
 import os
 import pandas as pd
 
+from . import household
 from . import border_vicinity
 from . import license_plate
 from . import population
@@ -76,6 +77,11 @@ class DataBase:
         df_education = education.load_data()
         df_education.to_sql("education", self.con, if_exists="replace")
 
+        # household
+
+        df_household = household.load_data()
+        df_household.to_sql("household", self.con, if_exists="replace")
+
     def query(self, sql_query):
         """Execute a query.
 
@@ -100,12 +106,14 @@ class DataBase:
         df_population = self.query("SELECT * FROM population")
         df_border = self.query("SELECT * FROM border")
         df_education = self.query("SELECT * FROM education")
+        df_household = self.query("SELECT * FROM household")
 
         df_merged = df_regions.merge(df_income, on="kreis_key", how="outer")
         df_merged = df_merged.merge(df_crime, on="kreis_key", how="outer")
         df_merged = df_merged.merge(df_population, on="kreis_key", how="outer")
         df_merged = df_merged.merge(df_border, on="kreis_key", how="outer")
         df_merged = df_merged.merge(df_education, on="kreis_key", how="outer")
+        df_merged = df_merged.merge(df_household, on="kreis_key", how="outer")
 
         df_merged.to_csv(os.path.join(
             utils.path_to_data_dir(), "processed", "merged.csv"))
