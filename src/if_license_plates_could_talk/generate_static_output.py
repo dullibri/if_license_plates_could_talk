@@ -4,34 +4,13 @@ import pandas as pd
 import numpy as np
 import plotly.express as px
 import os
-import sys
-import pyproj
 import geo.utils
-sys.path.append("../src/if_license_plates_could_talk")
+from visualization.config import feature_info
 
 df_geo = geo.utils.load_geodata()
 df = data.db.get_data()
 
 df_comb = df_geo.merge(df, left_on="RS", right_on="kreis_key", how="left")
-
-feature_info = {
-    "crimes_pp": {
-        "title": "Erfasste Straftaten",
-        "label": "Straftaten / EW"
-    },
-    "income_pp": {
-        "title": "Verfügbares Einkommen der privaten Haushalte",
-        "label": "Euro / EW"
-    },
-    "population": {
-        "title": "Bevölkerung",
-        "label": "EW"
-    },
-    "border_vic": {
-        "title": "Entfernung zur Grenze",
-        "label": "Km"
-    }
-}
 
 
 def generate_static_map(feature, year=""):
@@ -79,8 +58,10 @@ if __name__ == "__main__":
     features_timedep = ["income_pp", "crimes_pp", "population"]
     features_timeless = ["border_vic"]
     years = range(2013, 2019)
-    for feature in features_timedep:
-        for year in years:
-            generate_static_map(feature, year)
-    for feature in features_timeless:
-        generate_static_map(feature, "")
+
+    for feature in feature_info:
+        if feature_info[feature]["time_dep"]:
+            for year in years:
+                generate_static_map(feature, year)
+        else:
+            generate_static_map(feature)
