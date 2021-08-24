@@ -55,9 +55,7 @@ def generate_static_map(feature, year=""):
 
 
 if __name__ == "__main__":
-    features_timedep = ["income_pp", "crimes_pp", "population"]
-    features_timeless = ["border_vic"]
-    years = range(2013, 2019)
+    years = range(2018, 2019)
 
     for feature in feature_info:
         if feature_info[feature]["time_dep"]:
