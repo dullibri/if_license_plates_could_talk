@@ -1,37 +1,23 @@
-## Welcome to GitHub Pages
+# if_license_plates_could_talk
 
-You can use the [editor on GitHub](https://github.com/dullibri/if_license_plates_could_talk/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+German license plates' geographical information is used to link them to income and crime. This will be done by:
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+1. Associating German license plates with official region codes [AGS](https://de.wikipedia.org/wiki/Amtlicher_Gemeindeschl%C3%BCssel)
+2. Collecting data on crime rates in different regions of Germany
+3. Collecting data on income in different regions of Germany
+4. Merging the above data sets
+5. ...
 
-### Markdown
+## Data sources:
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+- License plates:
+    - https://de.wikipedia.org/wiki/Liste_der_kreisfreien_St%C3%A4dte_in_Deutschland
+    - https://de.wikipedia.org/wiki/Liste_der_Landkreise_in_Deutschland
+- PLZ
+    - [Destatis Gemeindeverzeichnis](https://www.destatis.de/DE/Themen/Laender-Regionen/Regionales/Gemeindeverzeichnis/Administrativ/Archiv/GVAuszugQ/AuszugGV2QAktuell.html;jsessionid=8274FBC848E650875A15A3184CC48E06.live732)
+- Crime:
+    - [BKA](https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2017/BKATabellen/bkaTabellenLaenderKreiseStaedteFaelle.html) (2013-2020)
 
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/dullibri/if_license_plates_could_talk/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+- Income:
+    - https://www.regionalstatistik.de/ (2000-2018)
+    - https://www.statistikportal.de/de/vgrdl/ergebnisse-kreisebene/einkommen-kreise
