@@ -25,11 +25,11 @@ class VisApp:
         self.columns = {
             "crimes_pp": {
                 "title": "Erfasste Straftaten",
-                "color_continuous_scale": "Bluered_r"
+                "color_continuous_scale": "gray_r"
             },
             "income_pp": {
                 "title": "Verfügbares Einkommen der priv. Haushalte",
-                "color_continuous_scale": "Inferno"
+                "color_continuous_scale": "gray_r"
             }
         }
 
@@ -52,7 +52,7 @@ class VisApp:
                 )],  style={"margin-top": "20px"}),
             dbc.Container([
                 html.P("Year:"),
-                dcc.Slider(id="year", min=2017, max=2018, value=2018, marks={2017: "2017", 2018: "2018"})], style={"margin-top": "20px"}),
+                dcc.Slider(id="year", min=2013, max=2018, value=2018, marks={2017: "2017", 2018: "2018"})], style={"margin-top": "20px"}),
             html.Hr(),
             dcc.Loading(id="loading", type="circle",
                         children=[dbc.Container(id="output")]),

@@ -16,18 +16,28 @@ def prep_data():
 
     df_income = data.income.prep_data()
     df_income.to_csv(os.path.join(
-        "..", "data", "processed", "income", "income.csv"))
+        data.utils.path_to_data_dir(),  "processed", "income", "income.csv"))
 
     df_population = data.population.prep_data()
     df_population.to_csv(os.path.join(
         data.utils.path_to_data_dir(), "processed", "population", "population.csv"))
 
     df_plate = data.license_plate.prep_data()
+
+    # regions
+
+    df_regions = df_plate.drop(columns=["license_plate"])
+    df_regions = df_regions[["kreis_key", "kreis_name"]].drop_duplicates()
+    df_regions.to_csv(os.path.join(
+        data.utils.path_to_data_dir(), "processed", "regions", "regions.csv"))
+
+    df_plate = df_plate[["kreis_key", "license_plate"]].drop_duplicates()
     df_plate.to_csv(os.path.join(data.utils.path_to_data_dir(), "processed",
                     "license_plate", "license_plate.csv"))
+
     # merge
 
-    df = df_plate.merge(df_income, on="kreis_key", how="outer")
+    df = df_regions.merge(df_income, on="kreis_key", how="outer")
     df = df.merge(df_crime, on="kreis_key", how="outer")
     df = df.merge(df_population, on="kreis_key", how="outer")
 
@@ -47,4 +57,3 @@ def prep_data():
 if __name__ == "__main__":
     df = prep_data()
     print(df.info())
-    print(df.head())

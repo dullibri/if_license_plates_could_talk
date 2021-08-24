@@ -1,12 +1,13 @@
 import sqlite3
 import os
 import pandas as pd
-import data.license_plate
-import data.population
-import data.income
-import data.crime
+from . import license_plate
+from . import population
+from . import income
+from . import crime
+from . import regions
+from . import utils
 from datetime import datetime
-import sys
 
 
 class DataBase:
@@ -20,19 +21,18 @@ class DataBase:
 
     def populate_db(self):
         """Populate database with processed data"""
-
         # License Plates / Regions
 
-        df_plate = data.license_plate.load_data()
+        df_plate = license_plate.load_data()
         df_plate.to_sql("license_plate", self.con, if_exists="replace")
 
         # Population
 
-        df_population = data.population.load_data()
+        df_population = population.load_data()
         df_population.to_sql("population", self.con, if_exists="replace")
 
         # Crime
-        df_crime = data.crime.load_data()
+        df_crime = crime.load_data()
         # calculate crime rates
 
         df_crime_rates = df_crime.merge(df_population, on="kreis_key")
@@ -51,8 +51,13 @@ class DataBase:
         df_crime_rates.to_sql("crime", self.con, if_exists="replace")
 
         # Income
-        df_income = data.income.load_data()
+        df_income = income.load_data()
         df_income.to_sql("income", self.con, if_exists="replace")
+
+        # regions
+
+        df_regions = regions.load_data()
+        df_regions.to_sql("regions", self.con, if_exists="replace")
 
     def query(self, sql_query):
         """Execute a query. Returns result as pandas Dataframe"""
@@ -60,13 +65,16 @@ class DataBase:
         return df
 
     def get_data(self):
-        df_plate = self.query("SELECT * FROM license_plate")
+        df_regions = self.query("SELECT * FROM regions")
         df_income = self.query("SELECT * FROM income")
         df_crime = self.query("SELECT * FROM crime")
         df_population = self.query("SELECT * FROM population")
 
-        df_merged = df_plate.merge(df_income, on="kreis_key", how="outer")
+        df_merged = df_regions.merge(df_income, on="kreis_key", how="outer")
         df_merged = df_merged.merge(df_crime, on="kreis_key", how="outer")
         df_merged = df_merged.merge(df_population, on="kreis_key", how="outer")
+
+        df_merged.to_csv(os.path.join(
+            utils.path_to_data_dir(), "processed", "merged.csv"))
 
         return df_merged

@@ -3,7 +3,7 @@ from bs4 import BeautifulSoup
 import requests
 import re
 import os
-import data.utils
+from . import utils
 
 
 def prep_data():
@@ -89,13 +89,13 @@ def prep_data():
     # Fix regional code of Berlin ("11000")
     df["kreis_key"].replace({"11001": "11000"}, inplace=True)
 
-    df.kreis_key = data.utils.fix_key(df.kreis_key)
+    df.kreis_key = utils.fix_key(df.kreis_key)
 
     return df
 
 
 def load_data():
     """Load data from csv stored in data/processed"""
-    df = pd.read_csv(os.path.join(data.utils.path_to_data_dir(), "processed",
+    df = pd.read_csv(os.path.join(utils.path_to_data_dir(), "processed",
                      "license_plate", "license_plate.csv"), index_col=0, dtype={"kreis_key": "object"})
     return df

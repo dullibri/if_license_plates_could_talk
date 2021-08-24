@@ -1,10 +1,10 @@
 import pandas as pd
 import os
-import data.utils
+from . import utils
 
 
 def prep_data():
-    path = os.path.join(data.utils.path_to_data_dir(),
+    path = os.path.join(utils.path_to_data_dir(),
                         "raw", "income", "82411-01-03-4.csv")
     df_raw = pd.read_csv(path, encoding="ISO-8859-1",
                          skiprows=6, delimiter=";")
@@ -31,10 +31,10 @@ def prep_data():
 
 def load_data():
     """Load data from csv stored in data/processed"""
-    df = pd.read_csv(os.path.join(data.utils.path_to_data_dir(), "processed",
+    df = pd.read_csv(os.path.join(utils.path_to_data_dir(), "processed",
                      "income", "income.csv"), index_col=0)
     for col in df.columns:
         if col != "kreis_key":
             df[col] = pd.to_numeric(df[col], errors="coerce")
-    df.kreis_key = data.utils.fix_key(df.kreis_key)
+    df.kreis_key = utils.fix_key(df.kreis_key)
     return df

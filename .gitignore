@@ -3,3 +3,4 @@ env
 .DS_Store
 data/~$data_desc.xlsx
 src/**/__pycache__
+src/**/*.pyc

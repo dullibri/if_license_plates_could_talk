@@ -1,11 +1,12 @@
 import pandas as pd
 import os
-import data.utils
+
+from . import utils
 
 
 def prep_data():
     """Preprocess population data. Reads data in data/raw/population, outputs processed data in data/processed/population"""
-    path = os.path.join(data.utils.path_to_data_dir(),
+    path = os.path.join(utils.path_to_data_dir(),
                         "raw", "population", "12411-05-01-4.csv")
     df_raw = pd.read_csv(path, encoding="ISO-8859-1",
                          skiprows=6, delimiter=";")
@@ -31,19 +32,24 @@ def prep_data():
         columns={str(i): f"population_{i}" for i in df_raw.year.unique()})
 
     df = df_piv[[len(i) == 5 for i in df_piv.kreis_key]]
+
     df_final = df.merge(
         df_raw[["kreis_key", "kreis_name"]].drop_duplicates(), on="kreis_key")
+    df_final.drop(columns=["kreis_name"], inplace=True)
 
-    return df_final.drop(columns=["kreis_name"])
+    for year in range(2013, 2016):
+        df_final = utils.fix_goettingen(df_final, f"population_{year}")
+
+    return df_final
 
 
 def load_data():
     """Load data from csv stored in data/processed"""
-    df = pd.read_csv(os.path.join(data.utils.path_to_data_dir(), "processed",
+    df = pd.read_csv(os.path.join(utils.path_to_data_dir(), "processed",
                      "population", "population.csv"), index_col=0)
     for col in df.columns:
         if col != "kreis_key":
             df[col] = pd.to_numeric(df[col], errors="coerce")
 
-    df.kreis_key = data.utils.fix_key(df.kreis_key)
+    df.kreis_key = utils.fix_key(df.kreis_key)
     return df

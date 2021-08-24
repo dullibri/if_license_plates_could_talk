@@ -4,6 +4,7 @@ import pyproj
 
 
 def load_geodata():
+    """Load geo shapedata from disk"""
     df_geo = gpd.read_file(os.path.join(os.path.dirname(__file__), "..", "..", "..",
                                         "geo", "shapefiles", "VG250_KRS3", "VG250_KRS.shp"))
     df_geo.to_crs(pyproj.CRS.from_epsg(4326), inplace=True)
