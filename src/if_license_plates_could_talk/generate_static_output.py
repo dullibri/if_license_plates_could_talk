@@ -26,22 +26,32 @@ feature_info = {
     "population": {
         "title": "Bevölkerung",
         "label": "EW"
+    },
+    "border_vic": {
+        "title": "Grenznähe",
+        "label": "Km"
     }
 }
 
 
-def generate_static_map(feature, year):
+def generate_static_map(feature, year=""):
     """Generate static maps
 
     Args:
         feature (str): feature column
         year (int): [year
     """
-    col = f"{feature}_{year}"
-    title = feature_info[feature]["title"]
+    if year != "":
+        col = f"{feature}_{year}"
+        title_ = feature_info[feature]["title"]
+        title = f"{title_} ({year})"
+    else:
+        col = feature
+        title = feature_info[feature]["title"]
+
     fig = px.choropleth(df_comb, geojson=df_comb.geometry, locations=df_comb.index, color=col, scope="europe",
                         color_continuous_scale="gray_r",
-                        title=f"{title} ({year})",
+                        title=title,
                         range_color=(df_comb[col].min(
                         )*0.8, df[col].max()),
                         labels={
@@ -66,8 +76,11 @@ def generate_static_map(feature, year):
 
 
 if __name__ == "__main__":
-    features = ["income_pp", "crimes_pp", "population"]
+    features_timedep = ["income_pp", "crimes_pp", "population"]
+    features_timeless = ["border_vic"]
     years = range(2013, 2019)
-    for feature in features:
+    for feature in features_timedep:
         for year in years:
             generate_static_map(feature, year)
+    for feature in features_timeless:
+        generate_static_map(feature, "")
