@@ -28,7 +28,7 @@ feature_info = {
         "label": "EW"
     },
     "border_vic": {
-        "title": "Grenznähe",
+        "title": "Entfernung zur Grenze",
         "label": "Km"
     }
 }

@@ -105,297 +105,298 @@
 108,05124,Wuppertal
 109,09663,Würzburg
 110,07320,Zweibrücken
-0,05334,Aachen
-2,07131,Ahrweiler
-3,09771,Aichach-Friedberg
-5,08425,Alb-Donau-Kreis
-6,16077,Altenburger Land
-8,07132,Altenkirchen (Westerwald)
-9,15081,Altmarkkreis Salzwedel
-12,09171,Altötting
-14,07331,Alzey-Worms
-15,09371,Amberg-Sulzbach
-20,03451,Ammerland
-21,15082,Anhalt-Bitterfeld
-26,09571,Ansbach
-30,09671,Aschaffenburg
-32,09772,Augsburg
-35,03452,Aurich
-37,07332,Bad Dürkheim
-38,09672,Bad Kissingen
-41,07133,Bad Kreuznach
-42,09173,Bad Tölz-Wolfratshausen
-44,09471,Bamberg
-45,12060,Barnim
-48,14625,Bautzen
-52,09472,Bayreuth
-58,09172,Berchtesgadener Land
-62,06431,Bergstraße
-63,07231,Bernkastel-Wittlich
-65,08426,Biberach
-66,07134,Birkenfeld
-67,08115,Böblingen
-69,08435,Bodenseekreis
-72,15083,Börde
-79,05554,Borken
-82,08315,Breisgau-Hochschwarzwald
-83,15084,Burgenlandkreis
-89,08235,Calw
-90,03351,Celle
-91,09372,Cham
-95,03453,Cloppenburg
-96,09473,Coburg
-98,07135,Cochem-Zell
-100,05558,Coesfeld
-102,03352,Cuxhaven
-103,09174,Dachau
-104,12061,Dahme-Spreewald
-108,06432,Darmstadt-Dieburg
-110,09271,Deggendorf
-111,03251,Diepholz
-113,09773,Dillingen an der Donau
-115,09279,Dingolfing-Landau
-117,01051,Dithmarschen
-119,09779,Donau-Ries
-121,07333,Donnersbergkreis
-123,05358,Düren
-127,09175,Ebersberg
-128,16061,Eichsfeld
-131,09176,Eichstätt
-132,07232,Eifelkreis Bitburg-Prüm
-134,12062,Elbe-Elster
-137,08316,Emmendingen
-138,03454,Emsland
-139,05954,Ennepe-Ruhr-Kreis
-141,08236,Enzkreis
-142,09177,Erding
-143,09572,Erlangen-Höchstadt
-145,14521,Erzgebirgskreis
-154,08116,Esslingen
-156,05366,Euskirchen
-158,09474,Forchheim
-161,09178,Freising
-162,08237,Freudenstadt
-166,09272,Freyung-Grafenau
-169,03455,Friesland
-170,06631,Fulda
-171,09179,Fürstenfeldbruck
-172,09573,Fürth
-173,09180,Garmisch-Partenkirchen
-174,07334,Germersheim
-175,06531,Gießen
-176,03151,Gifhorn
-177,08117,Göppingen
-178,14626,Görlitz
-184,03153,Goslar
-187,16067,Gotha
-188,03159,Göttingen
-192,03456,Grafschaft Bentheim
-193,16076,Greiz
-195,06433,Groß-Gerau
-196,09774,Günzburg
-198,05754,Gütersloh
-199,03252,Hameln-Pyrmont
-200,03241,Hannover
-201,03353,Harburg
-202,15085,Harz
-206,09674,Haßberge
-210,12063,Havelland
-213,03358,Heidekreis
-214,08135,Heidenheim
-215,08125,Heilbronn
-216,05370,Heinsberg
-219,03154,Helmstedt
-220,05758,Herford
-221,06632,Hersfeld-Rotenburg
-223,01053,Herzogtum Lauenburg
-224,16069,Hildburghausen
-225,03254,Hildesheim
-227,05958,Hochsauerlandkreis
-228,06434,Hochtaunuskreis
-230,09475,Hof
-235,08126,Hohenlohekreis
-237,03255,Holzminden
-238,05762,Höxter
-240,16070,Ilm-Kreis
-243,15086,Jerichower Land
-246,07335,Kaiserslautern
-247,08215,Karlsruhe
-248,06633,Kassel
-251,09273,Kelheim
-256,09675,Kitzingen
-257,05154,Kleve
-259,08335,Konstanz
-262,09476,Kronach
-264,09477,Kulmbach
-267,07336,Kusel
-268,16065,Kyffhäuserkreis
-271,06532,Lahn-Dill-Kreis
-274,09181,Landsberg am Lech
-275,09274,Landshut
-280,03457,Leer
-281,14729,Leipzig
-287,09478,Lichtenfels
-289,06533,Limburg-Weilburg
-291,09776,Lindau (Bodensee)
-292,05766,Lippe
-293,08336,Lörrach
-294,03354,Lüchow-Dannenberg
-295,08118,Ludwigsburg
-297,13076,Ludwigslust-Parchim
-303,03355,Lüneburg
-304,06435,Main-Kinzig-Kreis
-308,09677,Main-Spessart
-309,08128,Main-Tauber-Kreis
-311,06436,Main-Taunus-Kreis
-312,07339,Mainz-Bingen
-314,15087,Mansfeld-Südharz
-319,06534,Marburg-Biedenkopf
-321,05962,Märkischer Kreis
-322,12064,Märkisch-Oderland
-326,07137,Mayen-Koblenz
-328,13071,Mecklenburgische Seenplatte
-338,14627,Meißen
-342,10042,Merzig-Wadern
-343,05158,Mettmann
-344,09182,Miesbach
-345,09676,Miltenberg
-347,05770,Minden-Lübbecke
-348,14522,Mittelsachsen
-355,09183,Mühldorf am Inn
-358,09184,München
-361,08225,Neckar-Odenwald-Kreis
-363,09775,Neu-Ulm
-365,09185,Neuburg-Schrobenhausen
-367,09373,Neumarkt in der Oberpfalz
-369,10043,Neunkirchen
-370,09575,Neustadt an der Aisch-Bad Windsheim
-373,09374,Neustadt an der Waldnaab
-376,07138,Neuwied
-377,03256,Nienburg/Weser
-378,01054,Nordfriesland
-379,16062,Nordhausen
-380,14730,Nordsachsen
-386,13074,Nordwestmecklenburg
-391,03155,Northeim
-394,09574,Nürnberger Land
-399,09780,Oberallgäu
-400,05374,Oberbergischer Kreis
-401,12065,Oberhavel
-402,12066,Oberspreewald-Lausitz
-405,06437,Odenwaldkreis
-406,12067,Oder-Spree
-410,06438,Offenbach
-411,03458,Oldenburg
-412,05966,Olpe
-413,08317,Ortenaukreis
-418,03459,Osnabrück
-422,08136,Ostalbkreis
-424,09777,Ostallgäu
-427,03356,Osterholz
-428,01055,Ostholstein
-429,12068,Ostprignitz-Ruppin
-433,05774,Paderborn
-435,09275,Passau
-436,03157,Peine
-437,09186,Pfaffenhofen an der Ilm
-438,01056,Pinneberg
-439,01057,Plön
-440,12069,Potsdam-Mittelmark
-441,12070,Prignitz
-442,08216,Rastatt
-444,08436,Ravensburg
-448,05562,Recklinghausen
-451,09276,Regen
-453,09375,Regensburg
-454,08119,Rems-Murr-Kreis
-456,01058,Rendsburg-Eckernförde
-458,08415,Reutlingen
-459,05362,Rhein-Erft-Kreis
-460,06439,Rheingau-Taunus-Kreis
-462,07140,Rhein-Hunsrück-Kreis
-464,05378,Rheinisch-Bergischer Kreis
-465,05162,Rhein-Kreis Neuss
-467,07141,Rhein-Lahn-Kreis
-470,08226,Rhein-Neckar-Kreis
-471,07338,Rhein-Pfalz-Kreis
-472,05382,Rhein-Sieg-Kreis
-473,09673,Rhön-Grabfeld
-476,09187,Rosenheim
-479,13072,Rostock
-485,03357,Rotenburg (Wümme)
-487,09576,Roth
-489,09277,Rottal-Inn
-493,08325,Rottweil
-494,16074,Saale-Holzland-Kreis
-497,15088,Saalekreis
-501,16075,Saale-Orla-Kreis
-505,16073,Saalfeld-Rudolstadt
-507,10041,Saarbrücken
-509,10044,Saarlouis
-510,10045,Saarpfalz-Kreis
-512,14628,Sächsische Schweiz-Osterzgebirge
-516,15089,Salzlandkreis
-521,03257,Schaumburg
-523,01059,Schleswig-Flensburg
-524,16066,Schmalkalden-Meiningen
-526,08127,Schwäbisch Hall
-529,06634,Schwalm-Eder-Kreis
-533,09376,Schwandorf
-539,08326,Schwarzwald-Baar-Kreis
-540,09678,Schweinfurt
-542,01060,Segeberg
-543,05970,Siegen-Wittgenstein
-545,08437,Sigmaringen
-549,05974,Soest
-551,16068,Sömmerda
-552,16072,Sonneberg
-554,12071,Spree-Neiße
-558,10046,St. Wendel
-559,03359,Stade
-560,09188,Starnberg
-562,01061,Steinburg
-563,05566,Steinfurt
-566,15090,Stendal
-569,01062,Stormarn
-570,09278,Straubing-Bogen
-573,07337,Südliche Weinstraße
-574,07340,Südwestpfalz
-576,12072,Teltow-Fläming
-577,09377,Tirschenreuth
-579,09189,Traunstein
-581,07235,Trier-Saarburg
-583,08416,Tübingen
-584,08327,Tuttlingen
-585,12073,Uckermark
-590,03360,Uelzen
-591,05978,Unna
-594,16064,Unstrut-Hainich-Kreis
-597,09778,Unterallgäu
-598,03460,Vechta
-599,03361,Verden
-600,05166,Viersen
-602,06535,Vogelsbergkreis
-603,14523,Vogtlandkreis
-608,13075,Vorpommern-Greifswald
-616,13073,Vorpommern-Rügen
-622,07233,Vulkaneifel
-623,06635,Waldeck-Frankenberg
-626,08337,Waldshut
-628,05570,Warendorf
-630,16063,Wartburgkreis
-633,09190,Weilheim-Schongau
-635,16071,Weimarer Land
-637,09577,Weißenburg-Gunzenhausen
-639,06636,Werra-Meißner-Kreis
-641,05170,Wesel
-644,03461,Wesermarsch
-645,07143,Westerwaldkreis
-646,06440,Wetteraukreis
-648,15091,Wittenberg
-651,03462,Wittmund
-652,03158,Wolfenbüttel
-653,09479,Wunsiedel im Fichtelgebirge
-657,09679,Würzburg
-659,08417,Zollernalbkreis
-661,14524,Zwickau
+111,05334,Aachen
+113,07131,Ahrweiler
+114,09771,Aichach-Friedberg
+116,08425,Alb-Donau-Kreis
+117,16077,Altenburger Land
+119,07132,Altenkirchen (Westerwald)
+120,15081,Altmarkkreis Salzwedel
+123,09171,Altötting
+125,07331,Alzey-Worms
+126,09371,Amberg-Sulzbach
+131,03451,Ammerland
+132,15082,Anhalt-Bitterfeld
+137,09571,Ansbach
+141,09671,Aschaffenburg
+143,09772,Augsburg
+146,03452,Aurich
+148,07332,Bad Dürkheim
+149,09672,Bad Kissingen
+152,07133,Bad Kreuznach
+153,09173,Bad Tölz-Wolfratshausen
+155,09471,Bamberg
+156,12060,Barnim
+159,14625,Bautzen
+163,09472,Bayreuth
+169,09172,Berchtesgadener Land
+173,06431,Bergstraße
+174,07231,Bernkastel-Wittlich
+176,08426,Biberach
+177,07134,Birkenfeld
+178,08115,Böblingen
+180,08435,Bodenseekreis
+183,15083,Börde
+190,05554,Borken
+193,08315,Breisgau-Hochschwarzwald
+194,15084,Burgenlandkreis
+200,08235,Calw
+201,03351,Celle
+202,09372,Cham
+206,03453,Cloppenburg
+207,09473,Coburg
+209,07135,Cochem-Zell
+211,05558,Coesfeld
+213,03352,Cuxhaven
+214,09174,Dachau
+215,12061,Dahme-Spreewald
+219,06432,Darmstadt-Dieburg
+221,09271,Deggendorf
+222,03251,Diepholz
+224,09773,Dillingen an der Donau
+226,09279,Dingolfing-Landau
+228,01051,Dithmarschen
+230,09779,Donau-Ries
+232,07333,Donnersbergkreis
+234,05358,Düren
+238,09175,Ebersberg
+239,16061,Eichsfeld
+242,09176,Eichstätt
+243,07232,Eifelkreis Bitburg-Prüm
+245,12062,Elbe-Elster
+248,08316,Emmendingen
+249,03454,Emsland
+250,05954,Ennepe-Ruhr-Kreis
+252,08236,Enzkreis
+253,09177,Erding
+254,09572,Erlangen-Höchstadt
+256,14521,Erzgebirgskreis
+265,08116,Esslingen
+267,05366,Euskirchen
+269,09474,Forchheim
+272,09178,Freising
+273,08237,Freudenstadt
+277,09272,Freyung-Grafenau
+280,03455,Friesland
+281,06631,Fulda
+282,09179,Fürstenfeldbruck
+283,09573,Fürth
+284,09180,Garmisch-Partenkirchen
+285,07334,Germersheim
+286,06531,Gießen
+287,03151,Gifhorn
+288,08117,Göppingen
+289,14626,Görlitz
+295,03153,Goslar
+298,16067,Gotha
+299,03159,Göttingen
+303,03456,Grafschaft Bentheim
+304,16076,Greiz
+306,06433,Groß-Gerau
+307,09774,Günzburg
+309,05754,Gütersloh
+310,03252,Hameln-Pyrmont
+311,03241,Hannover
+312,03353,Harburg
+313,15085,Harz
+317,09674,Haßberge
+321,12063,Havelland
+324,03358,Heidekreis
+325,08135,Heidenheim
+326,08125,Heilbronn
+327,05370,Heinsberg
+330,03154,Helmstedt
+331,05758,Herford
+332,06632,Hersfeld-Rotenburg
+334,01053,Herzogtum Lauenburg
+335,16069,Hildburghausen
+336,03254,Hildesheim
+338,05958,Hochsauerlandkreis
+339,06434,Hochtaunuskreis
+341,09475,Hof
+346,08126,Hohenlohekreis
+348,03255,Holzminden
+349,05762,Höxter
+351,16070,Ilm-Kreis
+354,15086,Jerichower Land
+357,07335,Kaiserslautern
+358,08215,Karlsruhe
+359,06633,Kassel
+362,09273,Kelheim
+367,09675,Kitzingen
+368,05154,Kleve
+370,08335,Konstanz
+373,09476,Kronach
+375,09477,Kulmbach
+378,07336,Kusel
+379,16065,Kyffhäuserkreis
+382,06532,Lahn-Dill-Kreis
+385,09181,Landsberg am Lech
+386,09274,Landshut
+391,03457,Leer
+392,14729,Leipzig
+398,09478,Lichtenfels
+400,06533,Limburg-Weilburg
+402,09776,Lindau (Bodensee)
+403,05766,Lippe
+404,08336,Lörrach
+405,03354,Lüchow-Dannenberg
+406,08118,Ludwigsburg
+408,13076,Ludwigslust-Parchim
+414,03355,Lüneburg
+415,06435,Main-Kinzig-Kreis
+419,09677,Main-Spessart
+420,08128,Main-Tauber-Kreis
+422,06436,Main-Taunus-Kreis
+423,07339,Mainz-Bingen
+425,15087,Mansfeld-Südharz
+430,06534,Marburg-Biedenkopf
+432,05962,Märkischer Kreis
+433,12064,Märkisch-Oderland
+437,07137,Mayen-Koblenz
+439,13071,Mecklenburgische Seenplatte
+449,14627,Meißen
+453,10042,Merzig-Wadern
+454,05158,Mettmann
+455,09182,Miesbach
+456,09676,Miltenberg
+458,05770,Minden-Lübbecke
+459,14522,Mittelsachsen
+466,09183,Mühldorf am Inn
+469,09184,München
+472,08225,Neckar-Odenwald-Kreis
+474,09775,Neu-Ulm
+476,09185,Neuburg-Schrobenhausen
+478,09373,Neumarkt in der Oberpfalz
+480,10043,Neunkirchen
+481,09575,Neustadt an der Aisch-Bad Windsheim
+484,09374,Neustadt an der Waldnaab
+487,07138,Neuwied
+488,03256,Nienburg/Weser
+489,01054,Nordfriesland
+490,16062,Nordhausen
+491,14730,Nordsachsen
+497,13074,Nordwestmecklenburg
+502,03155,Northeim
+505,09574,Nürnberger Land
+510,09780,Oberallgäu
+511,05374,Oberbergischer Kreis
+512,12065,Oberhavel
+513,12066,Oberspreewald-Lausitz
+516,06437,Odenwaldkreis
+517,12067,Oder-Spree
+521,06438,Offenbach
+522,03458,Oldenburg
+523,05966,Olpe
+524,08317,Ortenaukreis
+529,03459,Osnabrück
+533,08136,Ostalbkreis
+535,09777,Ostallgäu
+538,03356,Osterholz
+539,01055,Ostholstein
+540,12068,Ostprignitz-Ruppin
+544,05774,Paderborn
+546,09275,Passau
+547,03157,Peine
+548,09186,Pfaffenhofen an der Ilm
+549,01056,Pinneberg
+550,01057,Plön
+551,12069,Potsdam-Mittelmark
+552,12070,Prignitz
+553,08216,Rastatt
+555,08436,Ravensburg
+559,05562,Recklinghausen
+562,09276,Regen
+564,09375,Regensburg
+565,08119,Rems-Murr-Kreis
+567,01058,Rendsburg-Eckernförde
+569,08415,Reutlingen
+570,05362,Rhein-Erft-Kreis
+571,06439,Rheingau-Taunus-Kreis
+573,07140,Rhein-Hunsrück-Kreis
+575,05378,Rheinisch-Bergischer Kreis
+576,05162,Rhein-Kreis Neuss
+578,07141,Rhein-Lahn-Kreis
+581,08226,Rhein-Neckar-Kreis
+582,07338,Rhein-Pfalz-Kreis
+583,05382,Rhein-Sieg-Kreis
+584,09673,Rhön-Grabfeld
+587,09187,Rosenheim
+590,13072,Rostock
+596,03357,Rotenburg (Wümme)
+598,09576,Roth
+600,09277,Rottal-Inn
+604,08325,Rottweil
+605,16074,Saale-Holzland-Kreis
+608,15088,Saalekreis
+612,16075,Saale-Orla-Kreis
+616,16073,Saalfeld-Rudolstadt
+618,10041,Saarbrücken
+620,10044,Saarlouis
+621,10045,Saarpfalz-Kreis
+623,14628,Sächsische Schweiz-Osterzgebirge
+627,15089,Salzlandkreis
+632,03257,Schaumburg
+634,01059,Schleswig-Flensburg
+635,16066,Schmalkalden-Meiningen
+637,08127,Schwäbisch Hall
+640,06634,Schwalm-Eder-Kreis
+644,09376,Schwandorf
+650,08326,Schwarzwald-Baar-Kreis
+651,09678,Schweinfurt
+653,01060,Segeberg
+654,05970,Siegen-Wittgenstein
+656,08437,Sigmaringen
+660,05974,Soest
+662,16068,Sömmerda
+663,16072,Sonneberg
+665,12071,Spree-Neiße
+669,10046,St. Wendel
+670,03359,Stade
+671,09188,Starnberg
+673,01061,Steinburg
+674,05566,Steinfurt
+677,15090,Stendal
+680,01062,Stormarn
+681,09278,Straubing-Bogen
+684,07337,Südliche Weinstraße
+685,07340,Südwestpfalz
+687,12072,Teltow-Fläming
+688,09377,Tirschenreuth
+690,09189,Traunstein
+692,07235,Trier-Saarburg
+694,08416,Tübingen
+695,08327,Tuttlingen
+696,12073,Uckermark
+701,03360,Uelzen
+702,05978,Unna
+705,16064,Unstrut-Hainich-Kreis
+708,09778,Unterallgäu
+709,03460,Vechta
+710,03361,Verden
+711,05166,Viersen
+713,06535,Vogelsbergkreis
+714,14523,Vogtlandkreis
+719,13075,Vorpommern-Greifswald
+727,13073,Vorpommern-Rügen
+733,07233,Vulkaneifel
+734,06635,Waldeck-Frankenberg
+737,08337,Waldshut
+739,05570,Warendorf
+741,16063,Wartburgkreis
+744,09190,Weilheim-Schongau
+746,16071,Weimarer Land
+748,09577,Weißenburg-Gunzenhausen
+750,06636,Werra-Meißner-Kreis
+752,05170,Wesel
+755,03461,Wesermarsch
+756,07143,Westerwaldkreis
+757,06440,Wetteraukreis
+759,15091,Wittenberg
+762,03462,Wittmund
+763,03158,Wolfenbüttel
+764,09479,Wunsiedel im Fichtelgebirge
+768,09679,Würzburg
+770,08417,Zollernalbkreis
+772,14524,Zwickau
+776,16056,Eisenach

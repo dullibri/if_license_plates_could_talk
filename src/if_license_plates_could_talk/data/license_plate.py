@@ -23,7 +23,7 @@ def prep_data():
                     <td>KREISSITZ</td>
                     <td>EINWOHNER</td>
                     <td>FLÄCHE</td>
-                    <td>BeVÖLKERUNGSDICHTE</td>
+                    <td>BEVÖLKERUNGSDICHTE</td>
                     <td>KARTE</td></tr>
                     <tr>"""
         tds = tr.find_all('td')
@@ -90,6 +90,9 @@ def prep_data():
     df["kreis_key"].replace({"11001": "11000"}, inplace=True)
 
     df.kreis_key = utils.fix_key(df.kreis_key)
+
+    df = df.append({"license_plate": "EA", "kreis_key": "16056",
+                    "kreis_name": "Eisenach"}, ignore_index=True)  # Manually add Eisenach
 
     return df
 

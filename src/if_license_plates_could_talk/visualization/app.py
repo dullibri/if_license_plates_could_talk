@@ -26,11 +26,23 @@ class VisApp:
         self.columns = {
             "crimes_pp": {
                 "title": "Erfasste Straftaten",
-                "color_continuous_scale": "gray_r"
+                "label": "Straftaten / EW",
+                "time_dep": True
             },
             "income_pp": {
-                "title": "Verfügbares Einkommen der priv. Haushalte",
-                "color_continuous_scale": "gray_r"
+                "title": "Verfügbares Einkommen der privaten Haushalte",
+                "label": "Euro / EW",
+                "time_dep": True
+            },
+            "population": {
+                "title": "Bevölkerung",
+                "label": "EW",
+                "time_dep": True
+            },
+            "border_vic": {
+                "title": "Entfernung zur Grenze",
+                "label": "Km",
+                "time_dep": False
             }
         }
 
@@ -45,10 +57,11 @@ class VisApp:
                 html.P("Feature:"),
                 dcc.Dropdown(
                     id="feature_select",
-                    options=[{
-                        "label": "Erfasste Straftaten", "value": "crimes_pp"}, {
-                        "label": "Verfügbares Einkommen der privaten Haushalte", "value": "income_pp"
-                    }],
+                    options=[
+                        {"label": "Erfasste Straftaten", "value": "crimes_pp"},
+                        {"label": "Verfügbares Einkommen der privaten Haushalte",
+                            "value": "income_pp"},
+                        {"label": "Entfernung zur Grenze", "value": "border_vic"}],
                     value="crimes_pp"
                 )],  style={"margin-top": "20px"}),
             dbc.Container([
@@ -121,20 +134,39 @@ class VisApp:
             dcc.Graph: Map component
         """
 
-        col = f"{feature}_{year}"
+        feature_info = self.columns[feature]
 
-        fig = px.choropleth(self.df, geojson=self.df.geometry, locations=self.df.index, color=col, scope="europe",
-                            color_continuous_scale=self.columns[feature]["color_continuous_scale"],
-                            range_color=(self.df[col].min(
-                            )*0.8, self.df[col].max()),
-                            hover_name="kreis_name",
-                            labels={
-                                f"crimes_pp_{year}": "Straftaten / EW",
-                                f"income_pp_{year}": "Euro / EW"
-                            })
-        fig.update_geos(fitbounds="locations", visible=False)
-        fig.update_layout(margin={"r": 0, "t": 0, "l": 0, "b": 0})
-        fig.update_layout(hoverlabel={"bgcolor": "white"})
+        if feature_info["time_dep"]:
+            col = f"{feature}_{year}"
+
+            fig = px.choropleth(self.df, geojson=self.df.geometry, locations=self.df.index, color=col, scope="europe",
+                                color_continuous_scale="gray_r",
+                                range_color=(self.df[col].min(
+                                )*0.8, self.df[col].max()),
+                                hover_name="kreis_name",
+                                hover_data=["kreis_key", col],
+                                labels={
+                                    f"crimes_pp_{year}": "Straftaten / EW",
+                                    f"income_pp_{year}": "Euro / EW"
+                                })
+            fig.update_geos(fitbounds="locations", visible=False)
+            fig.update_layout(margin={"r": 0, "t": 0, "l": 0, "b": 0})
+            fig.update_layout(hoverlabel={"bgcolor": "white"})
+        else:
+            col = feature
+
+            fig = px.choropleth(self.df, geojson=self.df.geometry, locations=self.df.index, color=col, scope="europe",
+                                color_continuous_scale="gray_r",
+                                range_color=(self.df[col].min(
+                                )*0.8, self.df[col].max()),
+                                hover_name="kreis_name",
+                                labels={
+                                    f"crimes_pp_{year}": "Straftaten / EW",
+                                    f"income_pp_{year}": "Euro / EW"
+                                })
+            fig.update_geos(fitbounds="locations", visible=False)
+            fig.update_layout(margin={"r": 0, "t": 0, "l": 0, "b": 0})
+            fig.update_layout(hoverlabel={"bgcolor": "white"})
 
         return dcc.Graph(
             id='map',
