@@ -52,7 +52,7 @@ class VisApp:
                 )],  style={"margin-top": "20px"}),
             dbc.Container([
                 html.P("Year:"),
-                dcc.Slider(id="year", min=2013, max=2018, value=2018, marks={2017: "2017", 2018: "2018"})], style={"margin-top": "20px"}),
+                dcc.Slider(id="year", min=2013, max=2018, value=2018, marks={y: f"{y}" for y in range(2013, 2019)})], style={"margin-top": "20px"}),
             html.Hr(),
             dcc.Loading(id="loading", type="circle",
                         children=[dbc.Container(id="output")]),

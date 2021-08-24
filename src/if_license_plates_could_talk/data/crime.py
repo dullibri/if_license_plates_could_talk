@@ -3,15 +3,6 @@ import os
 from . import utils
 
 
-def fraud_filter(df, feature_column="Straftat"):
-    fraud_features = ["Betrug §§ 263, 263a, 264, 264a, 265, 265a, 265b StGB",
-                      "Erschleichen von Leistungen § 265a StGB",
-                      "Urkundenfälschung §§ 267-271, 273-279, 281 StGB",
-                      "Betrug §§ 263, 263a, 264, 264a, 265, 265a-e StGB"
-                      ]
-    return
-
-
 def year_to_path(year):
     data_path = os.path.join(utils.path_to_data_dir(), "raw", "crime")
     path = str(year)
