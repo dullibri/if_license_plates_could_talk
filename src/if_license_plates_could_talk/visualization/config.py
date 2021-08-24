@@ -14,6 +14,11 @@ feature_info = {
         "label": "EW",
         "time_dep": True
     },
+    "prop_abitur": {
+        "title": "Anteil Schulabgänger/-innen mit allgem. Hochschulreife",
+        "label": "%",
+        "time_dep": True
+    },
     "border_vic": {
         "title": "Entfernung zur Grenze",
         "label": "Km",

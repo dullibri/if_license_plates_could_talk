@@ -4,6 +4,11 @@ from . import utils
 
 
 def prep_data():
+    """Preprocess data on income
+
+    Returns:
+        DataFrame: data on income
+    """
     path = os.path.join(utils.path_to_data_dir(),
                         "raw", "income", "82411-01-03-4.csv")
     df_raw = pd.read_csv(path, encoding="ISO-8859-1",

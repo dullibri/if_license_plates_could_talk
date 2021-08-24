@@ -31,16 +31,12 @@ def prep_data():
     df_piv = df_piv.rename(
         columns={str(i): f"population_{i}" for i in df_raw.year.unique()})
 
-    df = df_piv[[len(i) == 5 for i in df_piv.kreis_key]]
-
-    df_final = df.merge(
-        df_raw[["kreis_key", "kreis_name"]].drop_duplicates(), on="kreis_key")
-    df_final.drop(columns=["kreis_name"], inplace=True)
+    df = df_piv[[len(i) == 5 for i in df_piv.kreis_key]].copy()
 
     for year in range(2013, 2016):
-        df_final = utils.fix_goettingen(df_final, f"population_{year}")
+        df = utils.fix_goettingen(df, f"population_{year}")
 
-    return df_final
+    return df
 
 
 def load_data():

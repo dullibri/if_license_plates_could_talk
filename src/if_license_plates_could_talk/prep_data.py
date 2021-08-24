@@ -5,6 +5,7 @@ import data.population
 import data.license_plate
 import data.utils
 import data.border_vicinity
+import data.education
 import os
 
 
@@ -42,16 +43,23 @@ def prep_data():
 
     # border vicinity
 
-    df_border = data.border_vicinity.prep_data()
+    df_border = data.border_vicinity.load_data()
     df_border.to_csv(os.path.join(data.utils.path_to_data_dir(),
                      "processed", "border", "border.csv"))
 
-    # merge
+    # education
+
+    df_education = data.education.prep_data()
+    df_education.to_csv(os.path.join(
+        data.utils.path_to_data_dir(), "processed", "education", "education.csv"))
+
+    #  merge
 
     df = df_regions.merge(df_income, on="kreis_key", how="outer")
     df = df.merge(df_crime, on="kreis_key", how="outer")
     df = df.merge(df_population, on="kreis_key", how="outer")
     df = df.merge(df_border, on="kreis_key", how="outer")
+    df = df.merge(df_education, on="kreis_key", how="outer")
 
     # Calculate Crime Rates
 
@@ -68,4 +76,3 @@ def prep_data():
 
 if __name__ == "__main__":
     df = prep_data()
-    print(df.info())
