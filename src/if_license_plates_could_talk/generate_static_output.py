@@ -31,6 +31,12 @@ feature_info = {
 
 
 def generate_static_map(feature, year):
+    """Generate static maps
+
+    Args:
+        feature (str): feature column
+        year (int): [year
+    """
     col = f"{feature}_{year}"
     title = feature_info[feature]["title"]
     fig = px.choropleth(df_comb, geojson=df_comb.geometry, locations=df_comb.index, color=col, scope="europe",
