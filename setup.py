@@ -34,9 +34,14 @@ setuptools.setup(
         "scikit-learn",
         "scipy",
         "statsmodels",
-        "xlrd==2.0.1"
+        "xlrd",
+        "geopy",
+        "gunicorn"
     ],
     package_data={
         "": ["data", "geo"]
+    },
+    entry_points={
+        "console_scripts": ["ilpct=if_license_plates_could_talk.app:main"]
     }
 )

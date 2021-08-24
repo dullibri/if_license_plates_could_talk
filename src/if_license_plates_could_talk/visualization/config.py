@@ -30,7 +30,7 @@ feature_info = {
         "time_dep": True
     },
     "avg_hh": {
-        "title": "Durschnittliche Haushaltsgröße (2011)",
+        "title": "Durchschnittliche Haushaltsgröße (2011)",
         "label": "Personen",
         "time_dep": False
     }

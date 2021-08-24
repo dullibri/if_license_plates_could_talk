@@ -4,3 +4,5 @@ env
 data/~$data_desc.xlsx
 src/**/__pycache__
 src/**/*.pyc
+dist
+src/**/*.egg-info
