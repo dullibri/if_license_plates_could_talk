@@ -13,12 +13,13 @@ import data
 
 
 class VisApp:
+    """Dash application to visualize collected data"""
+
     def __init__(self):
-        """Setup Dash App"""
+        """Setup Dash aplication
+        """
         # setup data
         self.df = self.data_for_map()
-
-        self.fig = None
 
         # configuration for visualization
 
@@ -61,11 +62,23 @@ class VisApp:
         self.setup_callbacks()
 
     def run(self):
-        """Start Dash server in debug mode"""
+        """Start Dash server in debug mode
+
+        Returns:
+            None
+        """
         self.app.run_server(debug=True)
 
     def generate_output(self, feature, year):
-        """Generate map and histogram"""
+        """Generate output structure
+
+        Args:
+            feature (str): feature column to display
+            year (int): -
+
+        Returns:
+            [Component]: dash components to display map of germany with selected regional data.
+        """
         return [
             dbc.Row([
                 dbc.Col([
@@ -76,7 +89,11 @@ class VisApp:
         ]
 
     def setup_callbacks(self):
-        """Setup the callbacks for the Dash app"""
+        """Setup the callbacks for the Dash app
+
+        Returns:
+            None
+        """
         @self.app.callback(
             dash.dependencies.Output("output", "children"),
             [dash.dependencies.Input("feature_select", "value"), dash.dependencies.Input("year", "value")])
@@ -94,7 +111,16 @@ class VisApp:
         return df_comb
 
     def generate_map(self, feature, year):
-        """Generate the map visualization for the given column"""
+        """Generate map for visualization
+
+        Args:
+            feature (str): feature column
+            year (int): year
+
+        Returns:
+            dcc.Graph: Map component
+        """
+
         col = f"{feature}_{year}"
 
         fig = px.choropleth(self.df, geojson=self.df.geometry, locations=self.df.index, color=col, scope="europe",

@@ -3,16 +3,36 @@ import pandas as pd
 
 
 def fix_key(ser):
-    """Transform int to 5-digit str, padded with zeros. Ex: 101 -> 00101"""
+    """Transform int to 5-digit str, padded with zeros. Ex: 101 -> 00101
+
+    Args:
+        ser (Series): Series of ints 
+
+    Returns:
+        Series: Series of strings, 5 digits + padded with zeros
+    """
     return ser.astype(int).astype(str).str.zfill(5)
 
 
 def path_to_data_dir():
-    """Returns absolute path to data directory"""
+    """
+
+    Returns:
+        str: Absolute path to data directory
+    """
     return os.path.join(os.path.dirname(__file__), "..", "..", "..", "data")
 
 
 def fix_goettingen(df, col):
+    """In 2016, regions 3152 and 3156 merged to become Göttingen, 3159
+
+    Args:
+        df (DataFrame): [description]
+        col (str): [description]
+
+    Returns:
+        [type]: [description]
+    """
     df.kreis_key = pd.to_numeric(df.kreis_key)
     df = df.set_index("kreis_key")
     df.loc[3159, col] = pd.to_numeric(

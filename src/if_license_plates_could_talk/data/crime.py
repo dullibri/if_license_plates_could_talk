@@ -4,6 +4,14 @@ from . import utils
 
 
 def year_to_path(year):
+    """Compute path of data on crimes for the given year
+
+    Args:
+        year (int): year
+
+    Returns:
+        str: path to data file
+    """
     data_path = os.path.join(utils.path_to_data_dir(), "raw", "crime")
     path = str(year)
     files = os.listdir(os.path.join(data_path, "bka", path))
@@ -12,6 +20,11 @@ def year_to_path(year):
 
 
 def prep_data_2013():
+    """Preprocess data on crimes in 2013
+
+    Returns:
+        DataFrame: data on crimes in 2013
+    """
     df = pd.read_excel(year_to_path(2013), skiprows=6)[
         ["Unnamed: 1", "Unnamed: 2", "Fälle"]].dropna(subset=["Unnamed: 2"])
     df.rename(columns={
@@ -28,6 +41,14 @@ def prep_data_2013():
 
 
 def prep_data_14_20(year):
+    """Preprocess data on crimes in the specified year
+
+    Args:
+        year (int): year in the range 2014-2020
+
+    Returns:
+        DataFrame: data on crimes in the given year 
+    """
     df = pd.read_csv(year_to_path(year), encoding="ISO-8859-1",
                      delimiter=";", skiprows=1, thousands=",")
     cats = df.Straftat.unique()
@@ -45,6 +66,11 @@ def prep_data_14_20(year):
 
 
 def prep_data():
+    """Preprocess crime data
+
+    Returns:
+        DataFrame: crime data in the years 2013-2020
+    """
     df, cats = prep_data_2013()
 
     for i in range(2014, 2021):
@@ -58,6 +84,11 @@ def prep_data():
 
 
 def load_data():
+    """Load crime data from csv
+
+    Returns:
+       DataFrame : data on crimes
+    """
     df = pd.read_csv(os.path.join(utils.path_to_data_dir(), "processed",
                                   "crime", "crime.csv"), index_col=0)
     df.kreis_key = utils.fix_key(df.kreis_key)

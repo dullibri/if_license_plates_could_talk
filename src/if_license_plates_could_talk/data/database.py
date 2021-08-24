@@ -60,11 +60,23 @@ class DataBase:
         df_regions.to_sql("regions", self.con, if_exists="replace")
 
     def query(self, sql_query):
-        """Execute a query. Returns result as pandas Dataframe"""
+        """Execute a query.
+
+        Args:
+            sql_query (str): sql  query
+
+        Returns:
+            DataFrame: Result of query
+        """
         df = pd.read_sql(sql_query, self.con, index_col="index")
         return df
 
     def get_data(self):
+        """Load data from db. For details on columns, see data/processed/data_desc.csv
+
+        Returns:
+            DataFrame: Data on regions, income, crime and population
+        """
         df_regions = self.query("SELECT * FROM regions")
         df_income = self.query("SELECT * FROM income")
         df_crime = self.query("SELECT * FROM crime")
