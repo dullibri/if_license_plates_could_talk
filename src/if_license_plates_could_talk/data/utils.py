@@ -15,7 +15,7 @@ def fix_key(ser):
 
 
 def path_to_data_dir():
-    """
+    """Path to Data directory
 
     Returns:
         str: Absolute path to data directory
