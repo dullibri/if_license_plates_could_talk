@@ -8,6 +8,10 @@ German license plates' geographical information is used to link them to income a
 4. Merging the above data sets
 5. ...
 
+## Visualization
+
+Deployed to [Heroku](https://license-plates-talk.herokuapp.com/).
+
 ## Data sources:
 
 - License plates:
