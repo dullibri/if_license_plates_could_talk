@@ -29,7 +29,7 @@ class VisApp:
         # creating a dash app
         self.app = dash.Dash(__name__, external_stylesheets=[
                              dbc.themes.BOOTSTRAP])
-        self.app.title = "IF_LICENSE_PLATS_COULD_TALK"
+        self.app.title = "IF_LICENSE_PLATES_COULD_TALK"
         self.app.layout = dbc.Container([
             html.H1(children="IF_LICENSE_PLATES_COULD_TALK",
                     style={"margin-top": "30px"}),

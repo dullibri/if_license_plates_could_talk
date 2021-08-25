@@ -20,6 +20,6 @@ def load_data():
     """[summary]
     """
     df = pd.read_csv(os.path.join(utils.path_to_data_dir(), "processed",
-                     "border", "border.csv"), index_col=0)
+                     "border_vicinity", "border_vicinity.csv"), index_col=0)
     df.kreis_key = utils.fix_key(df.kreis_key)
     return df

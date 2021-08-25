@@ -4,10 +4,20 @@ feature_info = {
         "label": "Straftaten / EW",
         "time_dep": True
     },
+    "fraud_pp": {
+        "title": "Betrugsfälle",
+        "label": "Betrugsfälle / EW",
+        "time_dep": True
+    },
     "income_pp": {
         "title": "Verfügbares Einkommen der privaten Haushalte",
         "label": "Euro / EW",
         "time_dep": True
+    },
+    "avg_hh": {
+        "title": "Durchschnittliche Haushaltsgröße (2011)",
+        "label": "Personen",
+        "time_dep": False
     },
     "population": {
         "title": "Bevölkerung",
@@ -19,19 +29,14 @@ feature_info = {
         "label": "%",
         "time_dep": True
     },
+    "prop_no_haupt": {
+        "title": "Anteil Schulabgänger/-innen ohne Hauptschulabschluss",
+        "label": "%",
+        "time_dep": True
+    },
     "border_vic": {
         "title": "Entfernung zur Grenze",
         "label": "Km",
-        "time_dep": False
-    },
-    "fraud_pp": {
-        "title": "Betrugsfälle",
-        "label": "Betrugsfälle / EW",
-        "time_dep": True
-    },
-    "avg_hh": {
-        "title": "Durchschnittliche Haushaltsgröße (2011)",
-        "label": "Personen",
         "time_dep": False
     }
 }

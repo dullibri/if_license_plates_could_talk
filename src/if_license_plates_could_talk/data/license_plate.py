@@ -97,8 +97,11 @@ def prep_data():
     return df
 
 
-def load_data():
+def load_data(with_kreis_name=False):
     """Load data from csv stored in data/processed"""
+    cols = ["kreis_key", "license_plate"]
+    if with_kreis_name:
+        cols.append("kreis_name")
     df = pd.read_csv(os.path.join(utils.path_to_data_dir(), "processed",
-                     "license_plate", "license_plate.csv"), index_col=0, dtype={"kreis_key": "object"})
+                     "license_plate", "license_plate.csv"), index_col=0, dtype={"kreis_key": "object"})[cols]
     return df

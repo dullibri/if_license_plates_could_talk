@@ -35,9 +35,10 @@ def fix_goettingen(df, col, proportional=False):
     """
     df.kreis_key = pd.to_numeric(df.kreis_key)
     df = df.set_index("kreis_key")
-    if proportional:
+    if proportional:  # relative features should not be added naively
+        # Rough approximation using the bigger county
         df.loc[3159, col] = pd.to_numeric(df.loc[3156, col], errors="coerce")
-    else:
+    else:  # absolute features can be added
         df.loc[3159, col] = pd.to_numeric(
             df.loc[3152, col], errors="coerce") + pd.to_numeric(df.loc[3156, col], errors="coerce")
     df = df.reset_index()
