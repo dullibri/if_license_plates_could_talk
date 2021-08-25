@@ -34,15 +34,17 @@ class VisApp:
             dcc.Location(id="url", refresh=False),
             html.H1(children="IF_LICENSE_PLATES_COULD_TALK",
                     style={"margin-top": "30px"}),
-            dbc.Container(id="page-content", children=[
-                self.generate_nav_page(),
-                self.generate_scatter_page(),
-                self.generate_map_page()
+            dbc.Tabs(id="page-content", children=[
+                dbc.Tab(label="Maps", children=self.generate_map_page()),
+                dbc.Tab(label="Scatter plots",
+                        children=self.generate_scatter_page()),
+                dbc.Tab(label="Time Series",
+                        children=self.generate_time_series_page())
             ]),
         ])
         self.setup_scatter_callbacks()
         self.setup_map_callbacks()
-        self.setup_nav_callbacks()
+        self.setup_timeseries_callback()
 
     def run(self):
         """Start Dash server in debug mode
@@ -134,19 +136,42 @@ class VisApp:
             figure=fig
         )
 
-    def generate_time_series_page(self):
-        return dbc.Container(
-            [html.H2("Time series")]
+    def generate_timeseries_plot(self, feature, kreis):
+        featinfo = self.columns[feature]
+
+        df = self.df[self.df.kreis_key == kreis].melt()
+        df.columns = ["year", feature]
+        df = df[df.year.str.contains(feature)].copy()
+        df.year = pd.to_numeric(df.year.str.slice(start=-4))
+
+        fig = px.line(data_frame=df, x="year", y=feature)
+
+        return dcc.Graph(
+            id="timeseries",
+            figure=fig
         )
 
-    def generate_nav_page(self):
-        def gen_link(title, page, icon):
-            return dcc.Link(children=[html.P(html.I(className=f"bi-{icon}")), html.P(title)], href=f"/{page}")
-
-        return html.Div(id="nav", children=[dbc.Row([dbc.Col(gen_link("Maps", "map", "map")),
-                                                     dbc.Col(
-            gen_link("Scatter Plots", "scatter", "table")),
-            dbc.Col(gen_link("Time Series", "timeseries", "bar-chart-line"))])])
+    def generate_time_series_page(self):
+        return dbc.Container([
+            dbc.Container([
+                html.P("Feature:"),
+                dcc.Dropdown(
+                    id="timeseries_feature",
+                    options=[{"label": self.columns[feature]["title"],
+                              "value": feature} for feature in self.columns if self.columns[feature]["time_dep"]],
+                    value="crimes_pp"
+                )],  style={"margin-top": "20px"}),
+            dbc.Container([
+                html.P("Region:"),
+                dcc.Dropdown(
+                    id="timeseries_kreis",
+                    options=[{"label": row[1],
+                              "value": row[0]} for row in self.df.sort_values(by="kreis_name")[["kreis_key", "kreis_name"]].values],
+                    value="Hamburg"
+                )],  style={"margin-top": "20px"}),
+            html.Hr(),
+            dcc.Loading(id="timeseries_loading", type="circle",
+                        children=[dbc.Container(id="timeseries_output")])])
 
     def generate_map_output(self, feature, year):
         """Generate output structure
@@ -167,21 +192,6 @@ class VisApp:
             ])
         ]
 
-    def setup_nav_callbacks(self):
-        @ self.app.callback(dash.dependencies.Output('page-content', 'children'),
-                            [dash.dependencies.Input('url', 'pathname')])
-        def display_page(pathname):
-            if pathname == "/":
-                return self.generate_nav_page()
-            elif pathname == "/map":
-                return self.generate_map_page()
-            elif pathname == "/scatter":
-                return self.generate_scatter_page()
-            elif pathname == "/timeseries":
-                return self.generate_time_series_page()
-            else:
-                return "404"
-
     def setup_map_callbacks(self):
         """Setup the callbacks for the map page
 
@@ -191,8 +201,9 @@ class VisApp:
         @ self.app.callback(
             dash.dependencies.Output("map_output", "children"),
             [dash.dependencies.Input("map_feature_select", "value"), dash.dependencies.Input("map_year", "value")])
-        def update_map(feature, year):
-            return self.generate_map_output(feature, year)
+        def update(feature, year):
+            if feature != None:
+                return self.generate_map_output(feature, year)
 
     def setup_scatter_callbacks(self):
         """Setup the callbacks for the scatter page
@@ -201,8 +212,20 @@ class VisApp:
             dash.dependencies.Output("scatter_output", "children"),
             [dash.dependencies.Input("scatter_feature_x", "value"), dash.dependencies.Input("scatter_log_x", "value"), dash.dependencies.Input(
                 "scatter_feature_y", "value"), dash.dependencies.Input("scatter_log_y", "value"), dash.dependencies.Input("scatter_year", "value")])
-        def update_map(feature_x, log_x, feature_y, log_y, year):
-            return self.generate_scatter_plot(feature_x, log_x,  feature_y, log_y,  year)
+        def update(feature_x, log_x, feature_y, log_y, year):
+            if None not in [feature_x, log_x, feature_y, log_y]:
+                return self.generate_scatter_plot(feature_x, log_x,  feature_y, log_y,  year)
+
+    def setup_timeseries_callback(self):
+        """Setup the callbacks for the scatter page
+        """
+        @self.app.callback(
+            dash.dependencies.Output("timeseries_output", "children"),
+            [dash.dependencies.Input("timeseries_feature", "value"), dash.dependencies.Input(
+                "timeseries_kreis", "value")])
+        def update(feature, kreis):
+            if None not in [feature, kreis]:
+                return self.generate_timeseries_plot(feature, kreis)
 
     def data_for_map(self):
         """Load data for visualization"""

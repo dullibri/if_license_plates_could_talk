@@ -1,25 +1,7 @@
-#nav{
-    margin-top:25px;
+h1{
+    margin-bottom: 30px;
 }
 
-#nav a{
-    color: black;
-    display:block;
-    text-align:center;
-    width:100%;
-    padding-top:30px;
-    padding-bottom:20px;
-    background:white;
-    border-color:black;
-    border-style: solid;
-    border-width: 2px;
-    border-radius: 10px;
-    text-decoration: none;
-    margin-top:25px;
+a.nav-link, a.nav-link.active{
+    color : black;
 }
-
-#nav a:hover{
-    border-style:dotted;
-    text-decoration: none;
-}
-
