@@ -206,6 +206,13 @@ class VisApp:
             if feature != None:
                 return self.generate_map_output(feature, year)
 
+        @ self.app.callback(
+            dash.dependencies.Output("map_year", "disabled"),
+            [dash.dependencies.Input("map_feature_select", "value")])
+        def update(feature):
+            if feature != None:
+                return not self.columns[feature]["time_dep"]
+
     def setup_scatter_callbacks(self):
         """Setup the callbacks for the scatter page
         """
