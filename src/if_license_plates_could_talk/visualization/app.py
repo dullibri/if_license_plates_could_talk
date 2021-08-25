@@ -144,6 +144,8 @@ class VisApp:
         df = df[df.year.str.contains(feature)].copy()
         df.year = pd.to_numeric(df.year.str.slice(start=-4))
 
+        df.dropna()
+
         fig = px.line(data_frame=df, x="year", y=feature,
                       labels={feature: featinfo["label"]})
 
@@ -227,7 +229,7 @@ class VisApp:
     def setup_timeseries_callback(self):
         """Setup the callbacks for the scatter page
         """
-        @self.app.callback(
+        @ self.app.callback(
             dash.dependencies.Output("timeseries_output", "children"),
             [dash.dependencies.Input("timeseries_feature", "value"), dash.dependencies.Input(
                 "timeseries_kreis", "value")])
