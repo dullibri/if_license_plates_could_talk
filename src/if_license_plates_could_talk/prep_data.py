@@ -17,8 +17,8 @@ def prep_data():
         DataFrame: data indexed by license plate codes
     """
 
-    features = ["income", "population",
-                "license_plate", "regions", "education", "crime", "household", "border_vicinity"]
+    features = ["income", "population", "license_plate", "regions",
+                "education", "crime", "household", "border_vicinity"]
 
     def prep_feature(feature):
         print(feature)
