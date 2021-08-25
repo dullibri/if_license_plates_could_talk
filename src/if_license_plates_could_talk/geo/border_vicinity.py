@@ -23,12 +23,8 @@ class DistanceCalculator():
 
         self.border_shape = shape(self.border)
 
-        self.counter = 0
-
     def distance(self, kreis_key):
         """Calculate distance between county and border"""
-        self.counter += 1
-        print(self.counter)
         kreis_geom = self.df_geo[self.df_geo["RS"] == kreis_key]
         center_point = kreis_geom.to_crs(self.crs).centroid
         center_point.reset_index(drop=True, inplace=True)

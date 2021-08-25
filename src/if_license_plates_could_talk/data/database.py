@@ -26,7 +26,6 @@ class DataBase:
 
     def populate_db(self):
         """Populate database with processed data"""
-        # License Plates / Regions
 
         def load_data(feature):
             df = globals()[feature].load_data()
@@ -42,9 +41,11 @@ class DataBase:
         # Population
 
         df_population = load_data("population")
+
         # Crime
 
         df_crime = crime.load_data()
+
         # calculate crime rates
 
         df_crime_rates = df_crime.merge(df_population, on="kreis_key")
