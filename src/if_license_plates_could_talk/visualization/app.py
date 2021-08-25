@@ -144,7 +144,8 @@ class VisApp:
         df = df[df.year.str.contains(feature)].copy()
         df.year = pd.to_numeric(df.year.str.slice(start=-4))
 
-        fig = px.line(data_frame=df, x="year", y=feature)
+        fig = px.line(data_frame=df, x="year", y=feature,
+                      labels={feature: featinfo["label"]})
 
         return dcc.Graph(
             id="timeseries",
