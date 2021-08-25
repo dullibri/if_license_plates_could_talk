@@ -170,7 +170,7 @@ class VisApp:
                     id="timeseries_kreis",
                     options=[{"label": row[1],
                               "value": row[0]} for row in self.df.sort_values(by="kreis_name")[["kreis_key", "kreis_name"]].values],
-                    value="Hamburg"
+                    value="02000"
                 )],  style={"margin-top": "20px"}),
             html.Hr(),
             dcc.Loading(id="timeseries_loading", type="circle",
