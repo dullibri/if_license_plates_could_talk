@@ -38,7 +38,7 @@ class VisApp:
                 dbc.Tab(label="Maps", children=self.generate_map_page()),
                 dbc.Tab(label="Scatter plots",
                         children=self.generate_scatter_page()),
-                dbc.Tab(label="Time Series",
+                dbc.Tab(label="Time series",
                         children=self.generate_time_series_page())
             ]),
         ])
