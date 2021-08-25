@@ -32,39 +32,11 @@ class DataBase:
             df.to_sql(feature, self.con, if_exists="replace")
             return df
 
-        features_without_crime_pop = [
-            "license_plate", "income", "regions", "border_vicinity", "education", "household"]
+        features = [
+            "license_plate", "income", "regions", "border_vicinity", "education", "household", "population", "crime"]
 
-        for feature in features_without_crime_pop:
+        for feature in features:
             load_data(feature)
-
-        # Population
-
-        df_population = load_data("population")
-
-        # Crime
-
-        df_crime = crime.load_data()
-
-        # calculate crime rates
-
-        df_crime_rates = df_crime.merge(df_population, on="kreis_key")
-        years = list(filter(lambda y: f"population_{y}" in df_crime_rates.columns and f"crimes_{y}" in df_crime_rates.columns, range(2000, datetime.today(
-        ).year+2)))
-
-        for year in years:
-            df_crime_rates[f"crimes_pp_{year}"] = df_crime_rates[f"crimes_{year}"] / \
-                df_crime_rates[f"population_{year}"]
-            df_crime_rates[f"fraud_pp_{year}"] = df_crime_rates[f"fraud_{year}"] / \
-                df_crime_rates[f"population_{year}"]
-
-        cols = ["kreis_key"]
-        cols = cols + [f"crimes_{year}" for year in years]
-        cols = cols + [f"crimes_pp_{year}" for year in years]
-        cols = cols + [f"fraud_pp_{year}" for year in years]
-
-        df_crime_rates = df_crime_rates[cols]
-        df_crime_rates.to_sql("crime", self.con, if_exists="replace")
 
     def query(self, sql_query):
         """Execute a query.

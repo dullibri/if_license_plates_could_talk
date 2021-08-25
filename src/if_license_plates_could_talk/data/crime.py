@@ -1,6 +1,8 @@
 import pandas as pd
 import os
 from . import utils
+from . import population
+from datetime import datetime
 
 
 def fraud_filter(df, column="Straftat"):
@@ -119,7 +121,29 @@ def prep_data():
     cats_df = pd.DataFrame(pd.Series(cats).unique())
     cats_df.to_csv(os.path.join(utils.path_to_data_dir(),
                    "processed", "crime", "categories.csv"))
-    return df
+
+    # calculate crime rates
+
+    df_population = population.load_data()
+
+    df_crime_rates = df.merge(df_population, on="kreis_key")
+    years = list(filter(lambda y: f"population_{y}" in df_crime_rates.columns and f"crimes_{y}" in df_crime_rates.columns, range(2000, datetime.today(
+    ).year+2)))
+
+    for year in years:
+        df_crime_rates[f"crimes_pp_{year}"] = df_crime_rates[f"crimes_{year}"] / \
+            df_crime_rates[f"population_{year}"]
+        df_crime_rates[f"fraud_pp_{year}"] = df_crime_rates[f"fraud_{year}"] / \
+            df_crime_rates[f"population_{year}"]
+
+    cols = ["kreis_key"]
+    cols = cols + [f"crimes_{year}" for year in years]
+    cols = cols + [f"crimes_pp_{year}" for year in years]
+    cols = cols + [f"fraud_pp_{year}" for year in years]
+
+    df_crime_rates = df_crime_rates[cols]
+
+    return df_crime_rates
 
 
 def load_data():

@@ -31,6 +31,7 @@ class VisApp:
                              dbc.themes.BOOTSTRAP])
         self.app.title = "IF_LICENSE_PLATES_COULD_TALK"
         self.app.layout = dbc.Container([
+            dcc.Location(id="url", refresh=False),
             html.H1(children="IF_LICENSE_PLATES_COULD_TALK",
                     style={"margin-top": "30px"}),
             dbc.Container([
