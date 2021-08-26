@@ -11,7 +11,7 @@ def prep_data():
     """
 
     features = ["income", "population", "license_plate", "regions",
-                "education", "crime", "household", "border_vicinity"]
+                "education", "crime", "household",  "election", "border_vicinity"]
 
     def prep_feature(feature):
         print(feature)

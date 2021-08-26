@@ -53,10 +53,10 @@ def prep_data():
 
     df_raw = df_raw.reset_index()
 
-    df_raw["avg_hh"] = (df_raw["hh_1"] + 2*df_raw["hh_2"] + 3*df_raw["hh_3"] + 4 *
+    df_raw["hh_avg"] = (df_raw["hh_1"] + 2*df_raw["hh_2"] + 3*df_raw["hh_3"] + 4 *
                         df_raw["hh_4"] + 5*df_raw["hh_5"] + 6*df_raw["hh_6"]) / df_raw["hh_ges"]
 
-    return df_raw[["kreis_key", "avg_hh"]]
+    return df_raw[["kreis_key", "hh_ges", "hh_avg"]]
 
 
 def load_data():

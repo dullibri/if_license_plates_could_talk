@@ -14,7 +14,7 @@ feature_info = {
         "label": "Euro / EW",
         "time_dep": True
     },
-    "avg_hh": {
+    "hh_avg": {
         "title": "Durchschnittliche Haushaltsgröße (2011)",
         "label": "Personen",
         "time_dep": False
