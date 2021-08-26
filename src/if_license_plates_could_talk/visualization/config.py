@@ -24,6 +24,11 @@ feature_info = {
         "label": "EW",
         "time_dep": True
     },
+    "population_density": {
+        "title": "Bevölkerungsdichte",
+        "label": "EW / qkm",
+        "time_dep": True
+    },
     "prop_abitur": {
         "title": "Anteil Schulabgänger/-innen mit allgem. Hochschulreife",
         "label": "%",

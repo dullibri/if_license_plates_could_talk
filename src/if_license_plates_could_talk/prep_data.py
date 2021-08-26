@@ -24,7 +24,7 @@ def prep_data():
         print(feature)
         df = getattr(data, feature).prep_data()
         df.to_csv(os.path.join(data.utils.path_to_data_dir(),
-                               "processed", feature, f"{feature}.csv"))
+                  "processed", feature, f"{feature}.csv"))
         return df
 
     for feature in features:
