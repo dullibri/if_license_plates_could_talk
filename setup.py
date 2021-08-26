@@ -5,7 +5,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
 
 setuptools.setup(
     name="IF_LICENSE_PLATES_COULD_TALK",
-    version="0.0.5",
+    version="0.0.6",
     author="Moritz Hartlieb",
     description="German license plates' geographical information is used to link them to income and crime.",
     long_description=long_description,
@@ -37,9 +37,5 @@ setuptools.setup(
         "xlrd",
         "geopy",
         "gunicorn"
-    ],
-    include_package_data=True,
-    package_data={
-        "": ["*.csv", "*.xlsx", "*.db", "*.dbf", "*.prj", "*.shp", "*.shx"]
-    }
+    ]
 )
