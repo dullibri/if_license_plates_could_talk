@@ -141,7 +141,7 @@ class VisApp:
 
         df = self.df[self.df.kreis_key == kreis].melt()
         df.columns = ["year", feature]
-        df = df[df.year.str.contains(feature)].copy()
+        df = df[df.year.str.contains(feature+"_2")].copy()
         df.year = pd.to_numeric(df.year.str.slice(start=-4))
 
         df.dropna()
