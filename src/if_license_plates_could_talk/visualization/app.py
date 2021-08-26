@@ -52,7 +52,7 @@ class VisApp:
         Returns:
             None
         """
-        self.app.run_server(debug=True)
+        self.app.run_server()
 
     def generate_map_page(self):
         return dbc.Container([
