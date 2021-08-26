@@ -8,8 +8,8 @@ import plotly.express as px
 import pandas as pd
 import geopandas as gpd
 import dash_bootstrap_components as dbc
-import geo.utils
-import data
+from .. import geo
+from .. import data
 from . import config
 
 

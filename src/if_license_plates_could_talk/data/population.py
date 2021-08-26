@@ -1,7 +1,7 @@
 import pandas as pd
 import os
 from . import utils
-import geo.utils
+from .. import geo
 
 
 def prep_data():

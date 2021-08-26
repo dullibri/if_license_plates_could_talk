@@ -1,12 +1,5 @@
 import pandas as pd
-import data.crime
-import data.income
-import data.population
-import data.license_plate
-import data.utils
-import data.border_vicinity
-import data.education
-import data.household
+from . import data
 import os
 
 
@@ -29,7 +22,3 @@ def prep_data():
 
     for feature in features:
         prep_feature(feature)
-
-
-if __name__ == "__main__":
-    prep_data()

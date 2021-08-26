@@ -1,6 +1,7 @@
-import data
+from . import data
 import sys
 
-if __name__ == "__main__":
+
+def setup_db():
     data.db.populate_db()
     data.db.get_data()

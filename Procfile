@@ -1,1 +1,1 @@
-web: gunicorn --chdir src/if_license_plates_could_talk app:server
+web: gunicorn --chdir src if_license_plates_could_talk:server

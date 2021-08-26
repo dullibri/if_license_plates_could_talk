@@ -1,7 +1,15 @@
-import pandas as pd
 import os
+import pandas as pd
+from . import regions
+from . import population
+from . import license_plate
+from . import income
+from . import household
 from . import database
 from . import utils
+from . import border_vicinity
+from . import crime
+from . import education
 
 
 def load_data():

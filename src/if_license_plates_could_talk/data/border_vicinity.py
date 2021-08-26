@@ -1,6 +1,6 @@
-import geo.border_vicinity
 from . import regions
 from . import utils
+from .. import geo
 import os
 import pandas as pd
 

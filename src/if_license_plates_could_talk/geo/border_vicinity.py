@@ -1,7 +1,7 @@
 import geopy.distance
 from shapely.geometry import LinearRing, shape
 from . import utils
-import data
+from .. import data
 import geopandas as gpd
 import pandas as pd
 import numpy as np
