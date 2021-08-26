@@ -20,8 +20,7 @@ class DataBase:
 
     def __init__(self):
         """Initializing database, connecting to db, ..."""
-        path = os.path.join(os.path.dirname(__file__), "..",
-                            "data_files",  "data", "sqlite", "database.db")
+        path = os.path.join(utils.path_to_data_dir(), "sqlite", "database.db")
         self.con = sqlite3.connect(path)
 
     def populate_db(self):

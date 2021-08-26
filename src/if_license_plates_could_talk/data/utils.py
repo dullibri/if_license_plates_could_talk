@@ -20,7 +20,7 @@ def path_to_data_dir():
     Returns:
         str: Absolute path to data directory
     """
-    return os.path.join(os.path.dirname(__file__), "..", "data_files", "data")
+    return os.path.join(os.path.dirname(__file__), "..", "..", "..", "data")
 
 
 def fix_goettingen(df, col, proportional=False):
