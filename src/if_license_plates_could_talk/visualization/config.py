@@ -2,46 +2,79 @@ feature_info = {
     "crimes_pp": {
         "title": "Erfasste Straftaten",
         "label": "Straftaten / EW",
-        "time_dep": True
+        "time_dep": True,
+        "color": "gray_r"
     },
     "fraud_pp": {
         "title": "Betrugsfälle",
         "label": "Betrugsfälle / EW",
-        "time_dep": True
+        "time_dep": True,
+        "color": "gray_r"
     },
     "income_pp": {
         "title": "Verfügbares Einkommen der privaten Haushalte",
         "label": "Euro / EW",
-        "time_dep": True
+        "time_dep": True,
+        "color": "gray_r"
     },
     "hh_avg": {
         "title": "Durchschnittliche Haushaltsgröße (2011)",
         "label": "Personen",
-        "time_dep": False
+        "time_dep": False,
+        "color": "gray_r"
     },
     "population": {
         "title": "Bevölkerung",
         "label": "EW",
-        "time_dep": True
+        "time_dep": True,
+        "color": "gray_r"
     },
     "population_density": {
         "title": "Bevölkerungsdichte",
         "label": "EW / qkm",
-        "time_dep": True
+        "time_dep": True,
+        "color": "gray_r"
     },
     "prop_abitur": {
         "title": "Anteil Schulabgänger/-innen mit allgem. Hochschulreife",
         "label": "%",
-        "time_dep": True
+        "time_dep": True,
+        "color": "gray_r"
     },
     "prop_no_haupt": {
         "title": "Anteil Schulabgänger/-innen ohne Hauptschulabschluss",
         "label": "%",
-        "time_dep": True
+        "time_dep": True,
+        "color": "gray_r"
     },
     "border_vic": {
         "title": "Entfernung zur Grenze",
         "label": "Km",
-        "time_dep": False
-    }
+        "time_dep": False,
+        "color": "gray_r"
+    },
+    "ew_vot_rel_alternative_fuer_deutschland_2019": {
+        "title": "AFD-Stimmanteil, Europawahl 2019",
+        "label": "%",
+        "time_dep": False,
+        "color": "blues"
+    },
+    "ew_vot_rel_sozialdemokratische_partei_deutschlands_2019": {
+        "title": "SPD-Stimmanteil, Europawahl 2019",
+        "label": "%",
+        "time_dep": False,
+        "color": "reds"
+    },
+    "ew_vot_rel_buendnis_90_die_gruenen_2019": {
+        "title": "Grüne-Stimmanteil, Europawahl 2019",
+        "label": "%",
+        "time_dep": False,
+        "color": "greens"
+    },
+    "ew_vot_rel_christlich_demokratische_union_deutschlands_2019": {
+        "title": "CDU/CSU-Stimmanteil, Europawahl 2019",
+        "label": "%",
+        "time_dep": False,
+        "color": "greys"
+    },
 }

@@ -19,6 +19,7 @@ def prep_data():
 
     new_columns = list(election.columns[:10])
     partei_key = ""
+    partei_keys = []
     for i in range(10, len(election.columns)):
         clm = election.columns[i]
         if "Unnamed: " not in clm:
@@ -38,6 +39,7 @@ def prep_data():
 
             df_partei = df_partei.append(
                 {"partei_key": partei_key, "partei_name": clm}, ignore_index=True)
+            partei_keys.append("")
 
             new_columns.append(f"ew_vot_abs_{partei_key}_2019")
         else:
@@ -54,4 +56,24 @@ def prep_data():
 
     election = election.fillna(0)
 
+    print(election.columns)
+
+    # combine CDU / CSU
+
+    election['ew_vot_abs_christlich_demokratische_union_deutschlands_2019'] = election['ew_vot_abs_christlich_demokratische_union_deutschlands_2019'] + \
+        election['ew_vot_abs_christlich_soziale_union_in_bayern_e_v__2019']
+
+    interesting_parties = ["alternative_fuer_deutschland",
+                           'sozialdemokratische_partei_deutschlands', 'buendnis_90_die_gruenen', 'christlich_demokratische_union_deutschlands']
+    for party in interesting_parties:
+        election[f"ew_vot_rel_{party}_2019"] = election[f'ew_vot_abs_{party}_2019'] / \
+            election.ew_vot_2019
+
     return election
+
+
+def load_data():
+    df = pd.read_csv(os.path.join(utils.path_to_data_dir(),
+                     "processed", "election", "election.csv"), index_col=0)
+    df.kreis_key = utils.fix_key(df.kreis_key)
+    return df

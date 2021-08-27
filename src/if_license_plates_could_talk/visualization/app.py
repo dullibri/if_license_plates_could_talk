@@ -266,7 +266,7 @@ class VisApp:
             col = feature
 
         fig = px.choropleth(self.df, geojson=self.df.geometry, locations=self.df.index, color=col, scope="europe",
-                            color_continuous_scale="gray_r",
+                            color_continuous_scale=feature_info["color"],
                             range_color=(self.df[col].min(
                             )*0.8, self.df[col].max()),
                             hover_name="kreis_name",

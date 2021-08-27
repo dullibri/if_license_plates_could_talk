@@ -4,8 +4,8 @@ import pandas as pd
 import numpy as np
 import plotly.express as px
 import os
-import geo.utils
-from visualization.config import feature_info
+from . import geo
+from .visualization.config import feature_info
 
 df_geo = geo.utils.load_geodata()
 df = data.db.get_data()

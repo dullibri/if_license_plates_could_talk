@@ -11,6 +11,7 @@ from . import crime
 from . import regions
 from . import utils
 from . import education
+from . import election
 
 from datetime import datetime
 
@@ -32,7 +33,7 @@ class DataBase:
             return df
 
         features = [
-            "license_plate", "income", "regions", "border_vicinity", "education", "household", "population", "crime"]
+            "license_plate", "income", "regions", "border_vicinity", "education", "election", "household", "population", "crime"]
 
         for feature in features:
             load_data(feature)
@@ -56,7 +57,7 @@ class DataBase:
             DataFrame: Data on regions, income, crime and population
         """
         features = ["income", "crime", "population",
-                    "border_vicinity", "education",  "household"]
+                    "border_vicinity", "education",  "household", "election"]
 
         df_merged = self.query(f"SELECT * FROM regions")
 
