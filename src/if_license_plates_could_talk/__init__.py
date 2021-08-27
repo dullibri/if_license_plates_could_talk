@@ -1,4 +1,7 @@
-from . import visualization
+try:
+    from . import visualization
 
-app = visualization.app.VisApp()
-server = app.app.server
+    app = visualization.app.VisApp()
+    server = app.app.server
+except:
+    pass
