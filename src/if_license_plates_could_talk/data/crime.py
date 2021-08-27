@@ -4,9 +4,40 @@ from . import utils
 from . import population
 from datetime import datetime
 
+crime_categories = {
+    "crimes": ["Straftaten insgesamt"],
+    "fraud": [
+        "Betrug §§ 263, 263a, 264, 264a, 265, 265a, 265b StGB davon:", "Betrug §§ 263, 263a, 264, 264a, 265, 265a, 265b StGB",
+        "Urkundenfälschung §§ 267-271, 273-279, 281 StGB", "Betrug §§ 263, 263a, 264, 264a, 265, 265a-e StGB"],
+    "violence": ["Gefährliche und schwere Körperverletzung, Verstümmelung weiblicher Genitalien §§ 224, 226, 226a, 231 StGB",
+                 "Vorsätzliche einfache Körperverletzung § 223 StGB",
+                 "Gewaltkriminalität",
+                 "Tätlicher Angriff auf Vollstreckungsbeamte und gleichstehende Personen §§ 114, 115 StGB",
+                 "Vergewaltigung, sexuelle Nötigung und sexueller Übergriff im besonders schweren Fall einschl. mit Todesfolge §§ 177, 178 StGB",
+                 "Mord, Totschlag und Tötung auf Verlangen"],
+    "theft": ["Raub, räuberische Erpressung und räuberischer Angriff auf Kraftfahrer §§ 249-252, 255, 316a StGB", "Raub, räuberische Erpressung auf/gegen Geldinstitute, Postfilialen und -agenturen",
+              "Raub, räuberische Erpressung auf/gegen sonstige Zahlstellen und Geschäfte",
+              "Handtaschenraub",
+              "Sonstige Raubüberfälle auf Straßen, Wegen oder Plätzen",
+              "Raubüberfälle in Wohnungen",
+              "Diebstahl ohne erschwerende Umstände §§ 242, 247, 248a-c StGB und zwar:",
+              "Einfacher Ladendiebstahl",
+              "Diebstahl unter erschwerenden Umständen §§ 243-244a StGB und zwar:",
+              "Wohnungseinbruchdiebstahl §§ 244 Abs. 1 Nr. 3 und Abs. 4, 244a StGB",
+              "Tageswohnungseinbruchdiebstahl §§ 244 Abs. 1 Nr. 3 und Abs. 4, 244a StGB",
+              "Diebstahl insgesamt und zwar:",
+              "Diebstahl insgesamt von Kraftwagen einschl. unbefugte Ingebrauchnahme",
+              "Diebstahl insgesamt von Mopeds und Krafträdern einschl. unbefugte Ingebrauchnahme",
+              "Diebstahl insgesamt von Fahrrädern einschl. unbefugte Ingebrauchnahme",
+              "Diebstahl insgesamt an/aus Kraftfahrzeugen",
+              "Taschendiebstahl insgesamt"
+              ],
+    "drug": ["Rauschgiftdelikte (soweit nicht bereits mit anderer Schlüsselzahl erfasst)"]
+}
 
-def fraud_filter(df, column="Straftat"):
-    """Construct filter for fraud crimes
+
+def crime_filter(df, categories, column="Straftat"):
+    """Construct filter for crimes listed in [categories]
 
     Args:
         df ([type]): [description]
@@ -15,11 +46,8 @@ def fraud_filter(df, column="Straftat"):
     Returns:
         [type]: [description]
     """
-    fraud_cats = [
-        "Betrug §§ 263, 263a, 264, 264a, 265, 265a, 265b StGB davon:", "Betrug §§ 263, 263a, 264, 264a, 265, 265a, 265b StGB",
-        "Urkundenfälschung §§ 267-271, 273-279, 281 StGB", "Betrug §§ 263, 263a, 264, 264a, 265, 265a-e StGB"]
-    filt = df[column] == fraud_cats[0]
-    for cat in fraud_cats:
+    filt = df[column] == categories[0]
+    for cat in categories:
         filt = filt | (df[column] == cat)
     return filt
 
@@ -54,19 +82,22 @@ def prep_data_2013():
 
     df.kreis_key = utils.fix_key(df.kreis_key)
 
-    df_ges = df[df.Straftat ==
-                "Straftaten insgesamt"][["kreis_key", "crimes_2013"]]
+    df = df[["Straftat", "kreis_key", "crimes_2013"]]
 
-    df_ges.crimes_2013 = pd.to_numeric(df_ges.crimes_2013, errors="coerce")
+    df_ges = pd.DataFrame()
 
-    df_fraud = df[fraud_filter(df)]
-    df_fraud = df_fraud.groupby("kreis_key").sum().reset_index()
-    df_fraud = df_fraud.rename(columns={"crimes_2013": "fraud_2013"})
+    for cat in crime_categories:
+        df_cat = df[crime_filter(df, crime_categories[cat])]
+        df_cat = df_cat.groupby("kreis_key").sum().reset_index()
+        df_cat = df_cat.rename(columns={"crimes_2013": f"{cat}_2013"})
+        if not df_ges.empty:
+            df_ges = df_ges.merge(df_cat, on="kreis_key", how="outer")
+        else:
+            df_ges = df_cat
 
-    df_ges = df_ges.merge(df_fraud, on="kreis_key")
+        df_ges = utils.fix_goettingen(df_ges, f"{cat}_2013")
 
     df_ges = utils.fix_goettingen(df_ges, "crimes_2013")
-    df_ges = utils.fix_goettingen(df_ges, "fraud_2013")
 
     return df_ges, list(cats)
 
@@ -81,7 +112,6 @@ def prep_data_14_20(year):
         DataFrame: data on crimes in the given year
     """
     crime_clm = f"crimes_{year}"
-    fraud_clm = f"fraud_{year}"
 
     df = pd.read_csv(year_to_path(year), encoding="ISO-8859-1",
                      delimiter=";", skiprows=1, thousands=",")
@@ -90,18 +120,19 @@ def prep_data_14_20(year):
               "erfasste Fälle": crime_clm, "Gemeindeschluessel": "kreis_key", "erfasste Faelle": crime_clm}, inplace=True)
     df.kreis_key = utils.fix_key(df.kreis_key)
 
-    df_ges = df[df.Straftat == "Straftaten insgesamt"]
-    df_ges = df_ges[["kreis_key", crime_clm]]
+    df_ges = pd.DataFrame()
 
-    df_fraud = df[["kreis_key", "Straftat", crime_clm]][fraud_filter(df)]
-    df_fraud = df_fraud.groupby("kreis_key").sum().reset_index()
-    df_fraud = df_fraud.rename(columns={crime_clm: fraud_clm})
-
-    df_ges = df_ges.merge(df_fraud, on="kreis_key")
-
-    if year <= 2016:
-        df_ges = utils.fix_goettingen(df_ges, crime_clm)
-        df_ges = utils.fix_goettingen(df_ges, fraud_clm)
+    for cat in crime_categories:
+        df_cat = df[["kreis_key", "Straftat", crime_clm]
+                    ][crime_filter(df, crime_categories[cat])]
+        df_cat = df_cat.groupby("kreis_key").sum().reset_index()
+        df_cat = df_cat.rename(columns={crime_clm: f"{cat}_{year}"})
+        if not df_ges.empty:
+            df_ges = df_ges.merge(df_cat, on="kreis_key")
+        else:
+            df_ges = df_cat
+        if year <= 2016:
+            df_ges = utils.fix_goettingen(df_ges, f"{cat}_{year}")
 
     return df_ges, list(cats)
 
@@ -130,16 +161,14 @@ def prep_data():
     years = list(filter(lambda y: f"population_{y}" in df_crime_rates.columns and f"crimes_{y}" in df_crime_rates.columns, range(2000, datetime.today(
     ).year+2)))
 
-    for year in years:
-        df_crime_rates[f"crimes_pp_{year}"] = df_crime_rates[f"crimes_{year}"] / \
-            df_crime_rates[f"population_{year}"]
-        df_crime_rates[f"fraud_pp_{year}"] = df_crime_rates[f"fraud_{year}"] / \
-            df_crime_rates[f"population_{year}"]
-
     cols = ["kreis_key"]
-    cols = cols + [f"crimes_{year}" for year in years]
-    cols = cols + [f"crimes_pp_{year}" for year in years]
-    cols = cols + [f"fraud_pp_{year}" for year in years]
+
+    for cat in crime_categories:
+        for year in years:
+            df_crime_rates[f"{cat}_pp_{year}"] = df_crime_rates[f"{cat}_{year}"] / \
+                df_crime_rates[f"population_{year}"]
+        cols = cols + [f"{cat}_{year}" for year in years]
+        cols = cols + [f"{cat}_pp_{year}" for year in years]
 
     df_crime_rates = df_crime_rates[cols]
 

@@ -265,7 +265,7 @@ class VisApp:
         else:
             col = feature
 
-        fig = px.choropleth(self.df, geojson=self.df.geometry, locations=self.df.index, color=col, scope="europe",
+        fig = px.choropleth(self.df.fillna(0), geojson=self.df.geometry, locations=self.df.index, color=col, scope="europe",
                             color_continuous_scale=feature_info["color"],
                             range_color=(self.df[col].min(
                             )*0.8, self.df[col].max()),
@@ -273,7 +273,7 @@ class VisApp:
                             hover_data=[col],
                             labels={
                                 col: feature_info["label"]
-                            })
+        })
         fig.update_geos(fitbounds="locations", visible=False)
         fig.update_layout(margin={"r": 0, "t": 0, "l": 0, "b": 0})
         fig.update_layout(hoverlabel={"bgcolor": "white"})

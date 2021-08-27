@@ -11,11 +11,29 @@ feature_info = {
         "time_dep": True,
         "color": "gray_r"
     },
+    "theft_pp": {
+        "title": "Diebstähle",
+        "label": "Diebstähle / EW",
+        "time_dep": True,
+        "color": "gray_r"
+    },
+    "violence_pp": {
+        "title": "Gewaltkriminalität",
+        "label": "Straftaten / EW",
+        "time_dep": True,
+        "color": "gray_r"
+    },
+    "drug_pp": {
+        "title": "Rauschgiftdelikte",
+        "label": "Fälle / EW",
+        "time_dep": True,
+        "color": "gray_r"
+    },
     "income_pp": {
         "title": "Verfügbares Einkommen der privaten Haushalte",
         "label": "Euro / EW",
         "time_dep": True,
-        "color": "gray_r"
+        "color": "gray"
     },
     "hh_avg": {
         "title": "Durchschnittliche Haushaltsgröße (2011)",
