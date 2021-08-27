@@ -77,4 +77,16 @@ feature_info = {
         "time_dep": False,
         "color": "greys"
     },
+    "ew_vot_rel_freie_demokratische_partei_2019": {
+        "title": "FDP-Stimmanteil, Europawahl 2019",
+        "label": "%",
+        "time_dep": False,
+        "color": ["white", "yellow"]
+    },
+    "ew_vot_rel_die_linke_2019": {
+        "title": "Linke-Stimmanteil, Europawahl 2019",
+        "label": "%",
+        "time_dep": False,
+        "color": "reds"
+    },
 }

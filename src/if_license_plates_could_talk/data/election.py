@@ -10,8 +10,11 @@ def prep_data():
         utils.path_to_data_dir(), "raw", "election", "ew19_kerg.csv")
     election = pd.read_csv(election_path, skiprows=[0, 1, 3, 4], delimiter=";")
     election.dropna(axis=1, inplace=True, how="all")
-    election.columns = ["kreis_key",  "kreis_name", "bl_key", "ew_eli_2019", "ew_eli_2014", "ew_vot_2019", "ew_vot_2014",
-                        "ew_invalid_2019", "ew_invalid_2014", "ew_valid_2019", "ew_valid_2014"] + list(election.columns[11:])
+
+    general_columns = ["kreis_key",  "kreis_name", "bl_key", "ew_eli_2019", "ew_eli_2014", "ew_vot_2019", "ew_vot_2014",
+                       "ew_invalid_2019", "ew_invalid_2014", "ew_valid_2019", "ew_valid_2014"]
+
+    election.columns = general_columns + list(election.columns[11:])
     election.drop("kreis_name", axis=1, inplace=True)
     election.dropna(subset=["kreis_key"], inplace=True)
 
@@ -60,14 +63,17 @@ def prep_data():
 
     # combine CDU / CSU
 
-    election['ew_vot_abs_christlich_demokratische_union_deutschlands_2019'] = election['ew_vot_abs_christlich_demokratische_union_deutschlands_2019'] + \
-        election['ew_vot_abs_christlich_soziale_union_in_bayern_e_v__2019']
+    for y in [2014, 2019]:
+        election[f'ew_vot_abs_christlich_demokratische_union_deutschlands_{y}'] = election[f'ew_vot_abs_christlich_demokratische_union_deutschlands_{y}'] + \
+            election[f'ew_vot_abs_christlich_soziale_union_in_bayern_e_v__{y}']
 
     interesting_parties = ["alternative_fuer_deutschland",
-                           'sozialdemokratische_partei_deutschlands', 'buendnis_90_die_gruenen', 'christlich_demokratische_union_deutschlands']
+                           'sozialdemokratische_partei_deutschlands', 'buendnis_90_die_gruenen', 'christlich_demokratische_union_deutschlands', "freie_demokratische_partei", "die_linke"]
     for party in interesting_parties:
         election[f"ew_vot_rel_{party}_2019"] = election[f'ew_vot_abs_{party}_2019'] / \
             election.ew_vot_2019
+
+    party_cols = [f"ew_vot_rel_{party}_2019" for party in interesting_parties]
 
     return election
 
