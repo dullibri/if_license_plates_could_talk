@@ -29,7 +29,7 @@ def load_data():
     """
     df = pd.read_csv(os.path.join(utils.path_to_data_dir(), "processed",
                                   "regions", "regions.csv"), index_col=0)
-    df.east = df.east.astype(str)
+    df.east = df.east.astype(bool)
     df.kreis_key = utils.fix_key(df.kreis_key)
 
     return df

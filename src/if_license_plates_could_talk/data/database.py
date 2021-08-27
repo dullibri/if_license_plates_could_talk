@@ -65,6 +65,10 @@ class DataBase:
             df_feat = self.query(f"SELECT * FROM {feature}")
             df_merged = df_merged.merge(df_feat, on="kreis_key", how="outer")
 
+        # No Boolean data type in sqlie
+
+        df_merged.east = df_merged.east.astype(bool)
+
         df_merged.to_csv(os.path.join(
             utils.path_to_data_dir(), "processed", "merged.csv"))
 
