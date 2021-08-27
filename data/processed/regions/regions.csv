@@ -1,402 +1,402 @@
-,kreis_key,kreis_name
-0,09361,Amberg
-1,09561,Ansbach
-2,09661,Aschaffenburg
-3,09761,Augsburg
-4,08211,Baden-Baden
-5,09461,Bamberg
-6,09462,Bayreuth
-7,11000,Berlin
-8,05711,Bielefeld
-9,05911,Bochum
-11,05314,Bonn
-12,05512,Bottrop
-13,12051,Brandenburg an der Havel
-14,03101,Braunschweig
-15,04011,Bremen
-16,04012,Bremerhaven
-17,14511,Chemnitz
-18,09463,Coburg
-20,12052,Cottbus
-21,06411,Darmstadt
-22,03401,Delmenhorst
-23,15001,Dessau-Roßlau
-25,05913,Dortmund
-26,14612,Dresden
-27,05112,Duisburg
-28,05111,Düsseldorf
-29,03402,Emden
-30,16051,Erfurt
-31,09562,Erlangen
-32,05113,Essen
-33,01001,Flensburg
-34,07311,Frankenthal
-35,12053,Frankfurt
-36,06412,Frankfurt am Main
-37,08311,Freiburg im Breisgau
-38,09563,Fürth
-39,05513,Gelsenkirchen
-40,16052,Gera
-41,05914,Hagen
-42,15002,Halle
-43,02000,Hamburg
-44,05915,Hamm
-45,08221,Heidelberg
-46,08121,Heilbronn
-47,05916,Herne
-49,09464,Hof
-50,09161,Ingolstadt
-51,16053,Jena
-52,07312,Kaiserslautern
-53,08212,Karlsruhe
-54,06611,Kassel
-55,09762,Kaufbeuren
-56,09763,Kempten
-57,01002,Kiel
-58,07111,Koblenz
-59,05315,Köln
-60,05114,Krefeld
-61,07313,Landau in der Pfalz
-62,09261,Landshut
-63,14713,Leipzig
-64,05316,Leverkusen
-66,01003,Lübeck
-67,07314,Ludwigshafen am Rhein
-68,15003,Magdeburg
-69,07315,Mainz
-70,08222,Mannheim
-71,09764,Memmingen
-72,05116,Mönchengladbach
-73,05117,Mülheim an der Ruhr
-74,09162,München
-75,05515,Münster
-76,01004,Neumünster
-77,07316,Neustadt an der Weinstraße
-78,09564,Nürnberg
-79,05119,Oberhausen
-80,06413,Offenbach am Main
-81,03403,Oldenburg
-82,03404,Osnabrück
-83,09262,Passau
-84,08231,Pforzheim
-85,07317,Pirmasens
-86,12054,Potsdam
-87,09362,Regensburg
-88,05120,Remscheid
-89,09163,Rosenheim
-90,13003,Rostock
-91,03102,Salzgitter
-92,09565,Schwabach
-93,09662,Schweinfurt
-94,13004,Schwerin
-95,05122,Solingen
-96,07318,Speyer
-97,09263,Straubing
-98,08111,Stuttgart
-99,16054,Suhl
-100,07211,Trier
-101,08421,Ulm
-102,09363,Weiden in der Oberpfalz
-103,16055,Weimar
-104,06414,Wiesbaden
-105,03405,Wilhelmshaven
-106,03103,Wolfsburg
-107,07319,Worms
-108,05124,Wuppertal
-109,09663,Würzburg
-110,07320,Zweibrücken
-111,05334,Aachen
-113,07131,Ahrweiler
-114,09771,Aichach-Friedberg
-116,08425,Alb-Donau-Kreis
-117,16077,Altenburger Land
-119,07132,Altenkirchen (Westerwald)
-120,15081,Altmarkkreis Salzwedel
-123,09171,Altötting
-125,07331,Alzey-Worms
-126,09371,Amberg-Sulzbach
-131,03451,Ammerland
-132,15082,Anhalt-Bitterfeld
-137,09571,Ansbach
-141,09671,Aschaffenburg
-143,09772,Augsburg
-146,03452,Aurich
-148,07332,Bad Dürkheim
-149,09672,Bad Kissingen
-152,07133,Bad Kreuznach
-153,09173,Bad Tölz-Wolfratshausen
-155,09471,Bamberg
-156,12060,Barnim
-159,14625,Bautzen
-163,09472,Bayreuth
-169,09172,Berchtesgadener Land
-173,06431,Bergstraße
-174,07231,Bernkastel-Wittlich
-176,08426,Biberach
-177,07134,Birkenfeld
-178,08115,Böblingen
-180,08435,Bodenseekreis
-183,15083,Börde
-190,05554,Borken
-193,08315,Breisgau-Hochschwarzwald
-194,15084,Burgenlandkreis
-200,08235,Calw
-201,03351,Celle
-202,09372,Cham
-206,03453,Cloppenburg
-207,09473,Coburg
-209,07135,Cochem-Zell
-211,05558,Coesfeld
-213,03352,Cuxhaven
-214,09174,Dachau
-215,12061,Dahme-Spreewald
-219,06432,Darmstadt-Dieburg
-221,09271,Deggendorf
-222,03251,Diepholz
-224,09773,Dillingen an der Donau
-226,09279,Dingolfing-Landau
-228,01051,Dithmarschen
-230,09779,Donau-Ries
-232,07333,Donnersbergkreis
-234,05358,Düren
-238,09175,Ebersberg
-239,16061,Eichsfeld
-242,09176,Eichstätt
-243,07232,Eifelkreis Bitburg-Prüm
-245,12062,Elbe-Elster
-248,08316,Emmendingen
-249,03454,Emsland
-250,05954,Ennepe-Ruhr-Kreis
-252,08236,Enzkreis
-253,09177,Erding
-254,09572,Erlangen-Höchstadt
-256,14521,Erzgebirgskreis
-265,08116,Esslingen
-267,05366,Euskirchen
-269,09474,Forchheim
-272,09178,Freising
-273,08237,Freudenstadt
-277,09272,Freyung-Grafenau
-280,03455,Friesland
-281,06631,Fulda
-282,09179,Fürstenfeldbruck
-283,09573,Fürth
-284,09180,Garmisch-Partenkirchen
-285,07334,Germersheim
-286,06531,Gießen
-287,03151,Gifhorn
-288,08117,Göppingen
-289,14626,Görlitz
-295,03153,Goslar
-298,16067,Gotha
-299,03159,Göttingen
-303,03456,Grafschaft Bentheim
-304,16076,Greiz
-306,06433,Groß-Gerau
-307,09774,Günzburg
-309,05754,Gütersloh
-310,03252,Hameln-Pyrmont
-311,03241,Hannover
-312,03353,Harburg
-313,15085,Harz
-317,09674,Haßberge
-321,12063,Havelland
-324,03358,Heidekreis
-325,08135,Heidenheim
-326,08125,Heilbronn
-327,05370,Heinsberg
-330,03154,Helmstedt
-331,05758,Herford
-332,06632,Hersfeld-Rotenburg
-334,01053,Herzogtum Lauenburg
-335,16069,Hildburghausen
-336,03254,Hildesheim
-338,05958,Hochsauerlandkreis
-339,06434,Hochtaunuskreis
-341,09475,Hof
-346,08126,Hohenlohekreis
-348,03255,Holzminden
-349,05762,Höxter
-351,16070,Ilm-Kreis
-354,15086,Jerichower Land
-357,07335,Kaiserslautern
-358,08215,Karlsruhe
-359,06633,Kassel
-362,09273,Kelheim
-367,09675,Kitzingen
-368,05154,Kleve
-370,08335,Konstanz
-373,09476,Kronach
-375,09477,Kulmbach
-378,07336,Kusel
-379,16065,Kyffhäuserkreis
-382,06532,Lahn-Dill-Kreis
-385,09181,Landsberg am Lech
-386,09274,Landshut
-391,03457,Leer
-392,14729,Leipzig
-398,09478,Lichtenfels
-400,06533,Limburg-Weilburg
-402,09776,Lindau (Bodensee)
-403,05766,Lippe
-404,08336,Lörrach
-405,03354,Lüchow-Dannenberg
-406,08118,Ludwigsburg
-408,13076,Ludwigslust-Parchim
-414,03355,Lüneburg
-415,06435,Main-Kinzig-Kreis
-419,09677,Main-Spessart
-420,08128,Main-Tauber-Kreis
-422,06436,Main-Taunus-Kreis
-423,07339,Mainz-Bingen
-425,15087,Mansfeld-Südharz
-430,06534,Marburg-Biedenkopf
-432,05962,Märkischer Kreis
-433,12064,Märkisch-Oderland
-437,07137,Mayen-Koblenz
-439,13071,Mecklenburgische Seenplatte
-449,14627,Meißen
-453,10042,Merzig-Wadern
-454,05158,Mettmann
-455,09182,Miesbach
-456,09676,Miltenberg
-458,05770,Minden-Lübbecke
-459,14522,Mittelsachsen
-466,09183,Mühldorf am Inn
-469,09184,München
-472,08225,Neckar-Odenwald-Kreis
-474,09775,Neu-Ulm
-476,09185,Neuburg-Schrobenhausen
-478,09373,Neumarkt in der Oberpfalz
-480,10043,Neunkirchen
-481,09575,Neustadt an der Aisch-Bad Windsheim
-484,09374,Neustadt an der Waldnaab
-487,07138,Neuwied
-488,03256,Nienburg/Weser
-489,01054,Nordfriesland
-490,16062,Nordhausen
-491,14730,Nordsachsen
-497,13074,Nordwestmecklenburg
-502,03155,Northeim
-505,09574,Nürnberger Land
-510,09780,Oberallgäu
-511,05374,Oberbergischer Kreis
-512,12065,Oberhavel
-513,12066,Oberspreewald-Lausitz
-516,06437,Odenwaldkreis
-517,12067,Oder-Spree
-521,06438,Offenbach
-522,03458,Oldenburg
-523,05966,Olpe
-524,08317,Ortenaukreis
-529,03459,Osnabrück
-533,08136,Ostalbkreis
-535,09777,Ostallgäu
-538,03356,Osterholz
-539,01055,Ostholstein
-540,12068,Ostprignitz-Ruppin
-544,05774,Paderborn
-546,09275,Passau
-547,03157,Peine
-548,09186,Pfaffenhofen an der Ilm
-549,01056,Pinneberg
-550,01057,Plön
-551,12069,Potsdam-Mittelmark
-552,12070,Prignitz
-553,08216,Rastatt
-555,08436,Ravensburg
-559,05562,Recklinghausen
-562,09276,Regen
-564,09375,Regensburg
-565,08119,Rems-Murr-Kreis
-567,01058,Rendsburg-Eckernförde
-569,08415,Reutlingen
-570,05362,Rhein-Erft-Kreis
-571,06439,Rheingau-Taunus-Kreis
-573,07140,Rhein-Hunsrück-Kreis
-575,05378,Rheinisch-Bergischer Kreis
-576,05162,Rhein-Kreis Neuss
-578,07141,Rhein-Lahn-Kreis
-581,08226,Rhein-Neckar-Kreis
-582,07338,Rhein-Pfalz-Kreis
-583,05382,Rhein-Sieg-Kreis
-584,09673,Rhön-Grabfeld
-587,09187,Rosenheim
-590,13072,Rostock
-596,03357,Rotenburg (Wümme)
-598,09576,Roth
-600,09277,Rottal-Inn
-604,08325,Rottweil
-605,16074,Saale-Holzland-Kreis
-608,15088,Saalekreis
-612,16075,Saale-Orla-Kreis
-616,16073,Saalfeld-Rudolstadt
-618,10041,Saarbrücken
-620,10044,Saarlouis
-621,10045,Saarpfalz-Kreis
-623,14628,Sächsische Schweiz-Osterzgebirge
-627,15089,Salzlandkreis
-632,03257,Schaumburg
-634,01059,Schleswig-Flensburg
-635,16066,Schmalkalden-Meiningen
-637,08127,Schwäbisch Hall
-640,06634,Schwalm-Eder-Kreis
-644,09376,Schwandorf
-650,08326,Schwarzwald-Baar-Kreis
-651,09678,Schweinfurt
-653,01060,Segeberg
-654,05970,Siegen-Wittgenstein
-656,08437,Sigmaringen
-660,05974,Soest
-662,16068,Sömmerda
-663,16072,Sonneberg
-665,12071,Spree-Neiße
-669,10046,St. Wendel
-670,03359,Stade
-671,09188,Starnberg
-673,01061,Steinburg
-674,05566,Steinfurt
-677,15090,Stendal
-680,01062,Stormarn
-681,09278,Straubing-Bogen
-684,07337,Südliche Weinstraße
-685,07340,Südwestpfalz
-687,12072,Teltow-Fläming
-688,09377,Tirschenreuth
-690,09189,Traunstein
-692,07235,Trier-Saarburg
-694,08416,Tübingen
-695,08327,Tuttlingen
-696,12073,Uckermark
-701,03360,Uelzen
-702,05978,Unna
-705,16064,Unstrut-Hainich-Kreis
-708,09778,Unterallgäu
-709,03460,Vechta
-710,03361,Verden
-711,05166,Viersen
-713,06535,Vogelsbergkreis
-714,14523,Vogtlandkreis
-719,13075,Vorpommern-Greifswald
-727,13073,Vorpommern-Rügen
-733,07233,Vulkaneifel
-734,06635,Waldeck-Frankenberg
-737,08337,Waldshut
-739,05570,Warendorf
-741,16063,Wartburgkreis
-744,09190,Weilheim-Schongau
-746,16071,Weimarer Land
-748,09577,Weißenburg-Gunzenhausen
-750,06636,Werra-Meißner-Kreis
-752,05170,Wesel
-755,03461,Wesermarsch
-756,07143,Westerwaldkreis
-757,06440,Wetteraukreis
-759,15091,Wittenberg
-762,03462,Wittmund
-763,03158,Wolfenbüttel
-764,09479,Wunsiedel im Fichtelgebirge
-768,09679,Würzburg
-770,08417,Zollernalbkreis
-772,14524,Zwickau
-776,16056,Eisenach
+,kreis_key,kreis_name,east
+0,09361,Amberg,False
+1,09561,Ansbach,False
+2,09661,Aschaffenburg,False
+3,09761,Augsburg,False
+4,08211,Baden-Baden,False
+5,09461,Bamberg,False
+6,09462,Bayreuth,False
+7,11000,Berlin,False
+8,05711,Bielefeld,False
+9,05911,Bochum,False
+11,05314,Bonn,False
+12,05512,Bottrop,False
+13,12051,Brandenburg an der Havel,True
+14,03101,Braunschweig,False
+15,04011,Bremen,False
+16,04012,Bremerhaven,False
+17,14511,Chemnitz,True
+18,09463,Coburg,False
+20,12052,Cottbus,True
+21,06411,Darmstadt,False
+22,03401,Delmenhorst,False
+23,15001,Dessau-Roßlau,True
+25,05913,Dortmund,False
+26,14612,Dresden,True
+27,05112,Duisburg,False
+28,05111,Düsseldorf,False
+29,03402,Emden,False
+30,16051,Erfurt,True
+31,09562,Erlangen,False
+32,05113,Essen,False
+33,01001,Flensburg,False
+34,07311,Frankenthal,False
+35,12053,Frankfurt,True
+36,06412,Frankfurt am Main,False
+37,08311,Freiburg im Breisgau,False
+38,09563,Fürth,False
+39,05513,Gelsenkirchen,False
+40,16052,Gera,True
+41,05914,Hagen,False
+42,15002,Halle,True
+43,02000,Hamburg,False
+44,05915,Hamm,False
+45,08221,Heidelberg,False
+46,08121,Heilbronn,False
+47,05916,Herne,False
+49,09464,Hof,False
+50,09161,Ingolstadt,False
+51,16053,Jena,True
+52,07312,Kaiserslautern,False
+53,08212,Karlsruhe,False
+54,06611,Kassel,False
+55,09762,Kaufbeuren,False
+56,09763,Kempten,False
+57,01002,Kiel,False
+58,07111,Koblenz,False
+59,05315,Köln,False
+60,05114,Krefeld,False
+61,07313,Landau in der Pfalz,False
+62,09261,Landshut,False
+63,14713,Leipzig,True
+64,05316,Leverkusen,False
+66,01003,Lübeck,False
+67,07314,Ludwigshafen am Rhein,False
+68,15003,Magdeburg,True
+69,07315,Mainz,False
+70,08222,Mannheim,False
+71,09764,Memmingen,False
+72,05116,Mönchengladbach,False
+73,05117,Mülheim an der Ruhr,False
+74,09162,München,False
+75,05515,Münster,False
+76,01004,Neumünster,False
+77,07316,Neustadt an der Weinstraße,False
+78,09564,Nürnberg,False
+79,05119,Oberhausen,False
+80,06413,Offenbach am Main,False
+81,03403,Oldenburg,False
+82,03404,Osnabrück,False
+83,09262,Passau,False
+84,08231,Pforzheim,False
+85,07317,Pirmasens,False
+86,12054,Potsdam,True
+87,09362,Regensburg,False
+88,05120,Remscheid,False
+89,09163,Rosenheim,False
+90,13003,Rostock,True
+91,03102,Salzgitter,False
+92,09565,Schwabach,False
+93,09662,Schweinfurt,False
+94,13004,Schwerin,True
+95,05122,Solingen,False
+96,07318,Speyer,False
+97,09263,Straubing,False
+98,08111,Stuttgart,False
+99,16054,Suhl,True
+100,07211,Trier,False
+101,08421,Ulm,False
+102,09363,Weiden in der Oberpfalz,False
+103,16055,Weimar,True
+104,06414,Wiesbaden,False
+105,03405,Wilhelmshaven,False
+106,03103,Wolfsburg,False
+107,07319,Worms,False
+108,05124,Wuppertal,False
+109,09663,Würzburg,False
+110,07320,Zweibrücken,False
+111,05334,Aachen,False
+113,07131,Ahrweiler,False
+114,09771,Aichach-Friedberg,False
+116,08425,Alb-Donau-Kreis,False
+117,16077,Altenburger Land,True
+119,07132,Altenkirchen (Westerwald),False
+120,15081,Altmarkkreis Salzwedel,True
+123,09171,Altötting,False
+125,07331,Alzey-Worms,False
+126,09371,Amberg-Sulzbach,False
+131,03451,Ammerland,False
+132,15082,Anhalt-Bitterfeld,True
+137,09571,Ansbach,False
+141,09671,Aschaffenburg,False
+143,09772,Augsburg,False
+146,03452,Aurich,False
+148,07332,Bad Dürkheim,False
+149,09672,Bad Kissingen,False
+152,07133,Bad Kreuznach,False
+153,09173,Bad Tölz-Wolfratshausen,False
+155,09471,Bamberg,False
+156,12060,Barnim,True
+159,14625,Bautzen,True
+163,09472,Bayreuth,False
+169,09172,Berchtesgadener Land,False
+173,06431,Bergstraße,False
+174,07231,Bernkastel-Wittlich,False
+176,08426,Biberach,False
+177,07134,Birkenfeld,False
+178,08115,Böblingen,False
+180,08435,Bodenseekreis,False
+183,15083,Börde,True
+190,05554,Borken,False
+193,08315,Breisgau-Hochschwarzwald,False
+194,15084,Burgenlandkreis,True
+200,08235,Calw,False
+201,03351,Celle,False
+202,09372,Cham,False
+206,03453,Cloppenburg,False
+207,09473,Coburg,False
+209,07135,Cochem-Zell,False
+211,05558,Coesfeld,False
+213,03352,Cuxhaven,False
+214,09174,Dachau,False
+215,12061,Dahme-Spreewald,True
+219,06432,Darmstadt-Dieburg,False
+221,09271,Deggendorf,False
+222,03251,Diepholz,False
+224,09773,Dillingen an der Donau,False
+226,09279,Dingolfing-Landau,False
+228,01051,Dithmarschen,False
+230,09779,Donau-Ries,False
+232,07333,Donnersbergkreis,False
+234,05358,Düren,False
+238,09175,Ebersberg,False
+239,16061,Eichsfeld,True
+242,09176,Eichstätt,False
+243,07232,Eifelkreis Bitburg-Prüm,False
+245,12062,Elbe-Elster,True
+248,08316,Emmendingen,False
+249,03454,Emsland,False
+250,05954,Ennepe-Ruhr-Kreis,False
+252,08236,Enzkreis,False
+253,09177,Erding,False
+254,09572,Erlangen-Höchstadt,False
+256,14521,Erzgebirgskreis,True
+265,08116,Esslingen,False
+267,05366,Euskirchen,False
+269,09474,Forchheim,False
+272,09178,Freising,False
+273,08237,Freudenstadt,False
+277,09272,Freyung-Grafenau,False
+280,03455,Friesland,False
+281,06631,Fulda,False
+282,09179,Fürstenfeldbruck,False
+283,09573,Fürth,False
+284,09180,Garmisch-Partenkirchen,False
+285,07334,Germersheim,False
+286,06531,Gießen,False
+287,03151,Gifhorn,False
+288,08117,Göppingen,False
+289,14626,Görlitz,True
+295,03153,Goslar,False
+298,16067,Gotha,True
+299,03159,Göttingen,False
+303,03456,Grafschaft Bentheim,False
+304,16076,Greiz,True
+306,06433,Groß-Gerau,False
+307,09774,Günzburg,False
+309,05754,Gütersloh,False
+310,03252,Hameln-Pyrmont,False
+311,03241,Hannover,False
+312,03353,Harburg,False
+313,15085,Harz,True
+317,09674,Haßberge,False
+321,12063,Havelland,True
+324,03358,Heidekreis,False
+325,08135,Heidenheim,False
+326,08125,Heilbronn,False
+327,05370,Heinsberg,False
+330,03154,Helmstedt,False
+331,05758,Herford,False
+332,06632,Hersfeld-Rotenburg,False
+334,01053,Herzogtum Lauenburg,False
+335,16069,Hildburghausen,True
+336,03254,Hildesheim,False
+338,05958,Hochsauerlandkreis,False
+339,06434,Hochtaunuskreis,False
+341,09475,Hof,False
+346,08126,Hohenlohekreis,False
+348,03255,Holzminden,False
+349,05762,Höxter,False
+351,16070,Ilm-Kreis,True
+354,15086,Jerichower Land,True
+357,07335,Kaiserslautern,False
+358,08215,Karlsruhe,False
+359,06633,Kassel,False
+362,09273,Kelheim,False
+367,09675,Kitzingen,False
+368,05154,Kleve,False
+370,08335,Konstanz,False
+373,09476,Kronach,False
+375,09477,Kulmbach,False
+378,07336,Kusel,False
+379,16065,Kyffhäuserkreis,True
+382,06532,Lahn-Dill-Kreis,False
+385,09181,Landsberg am Lech,False
+386,09274,Landshut,False
+391,03457,Leer,False
+392,14729,Leipzig,True
+398,09478,Lichtenfels,False
+400,06533,Limburg-Weilburg,False
+402,09776,Lindau (Bodensee),False
+403,05766,Lippe,False
+404,08336,Lörrach,False
+405,03354,Lüchow-Dannenberg,False
+406,08118,Ludwigsburg,False
+408,13076,Ludwigslust-Parchim,True
+414,03355,Lüneburg,False
+415,06435,Main-Kinzig-Kreis,False
+419,09677,Main-Spessart,False
+420,08128,Main-Tauber-Kreis,False
+422,06436,Main-Taunus-Kreis,False
+423,07339,Mainz-Bingen,False
+425,15087,Mansfeld-Südharz,True
+430,06534,Marburg-Biedenkopf,False
+432,05962,Märkischer Kreis,False
+433,12064,Märkisch-Oderland,True
+437,07137,Mayen-Koblenz,False
+439,13071,Mecklenburgische Seenplatte,True
+449,14627,Meißen,True
+453,10042,Merzig-Wadern,False
+454,05158,Mettmann,False
+455,09182,Miesbach,False
+456,09676,Miltenberg,False
+458,05770,Minden-Lübbecke,False
+459,14522,Mittelsachsen,True
+466,09183,Mühldorf am Inn,False
+469,09184,München,False
+472,08225,Neckar-Odenwald-Kreis,False
+474,09775,Neu-Ulm,False
+476,09185,Neuburg-Schrobenhausen,False
+478,09373,Neumarkt in der Oberpfalz,False
+480,10043,Neunkirchen,False
+481,09575,Neustadt an der Aisch-Bad Windsheim,False
+484,09374,Neustadt an der Waldnaab,False
+487,07138,Neuwied,False
+488,03256,Nienburg/Weser,False
+489,01054,Nordfriesland,False
+490,16062,Nordhausen,True
+491,14730,Nordsachsen,True
+497,13074,Nordwestmecklenburg,True
+502,03155,Northeim,False
+505,09574,Nürnberger Land,False
+510,09780,Oberallgäu,False
+511,05374,Oberbergischer Kreis,False
+512,12065,Oberhavel,True
+513,12066,Oberspreewald-Lausitz,True
+516,06437,Odenwaldkreis,False
+517,12067,Oder-Spree,True
+521,06438,Offenbach,False
+522,03458,Oldenburg,False
+523,05966,Olpe,False
+524,08317,Ortenaukreis,False
+529,03459,Osnabrück,False
+533,08136,Ostalbkreis,False
+535,09777,Ostallgäu,False
+538,03356,Osterholz,False
+539,01055,Ostholstein,False
+540,12068,Ostprignitz-Ruppin,True
+544,05774,Paderborn,False
+546,09275,Passau,False
+547,03157,Peine,False
+548,09186,Pfaffenhofen an der Ilm,False
+549,01056,Pinneberg,False
+550,01057,Plön,False
+551,12069,Potsdam-Mittelmark,True
+552,12070,Prignitz,True
+553,08216,Rastatt,False
+555,08436,Ravensburg,False
+559,05562,Recklinghausen,False
+562,09276,Regen,False
+564,09375,Regensburg,False
+565,08119,Rems-Murr-Kreis,False
+567,01058,Rendsburg-Eckernförde,False
+569,08415,Reutlingen,False
+570,05362,Rhein-Erft-Kreis,False
+571,06439,Rheingau-Taunus-Kreis,False
+573,07140,Rhein-Hunsrück-Kreis,False
+575,05378,Rheinisch-Bergischer Kreis,False
+576,05162,Rhein-Kreis Neuss,False
+578,07141,Rhein-Lahn-Kreis,False
+581,08226,Rhein-Neckar-Kreis,False
+582,07338,Rhein-Pfalz-Kreis,False
+583,05382,Rhein-Sieg-Kreis,False
+584,09673,Rhön-Grabfeld,False
+587,09187,Rosenheim,False
+590,13072,Rostock,True
+596,03357,Rotenburg (Wümme),False
+598,09576,Roth,False
+600,09277,Rottal-Inn,False
+604,08325,Rottweil,False
+605,16074,Saale-Holzland-Kreis,True
+608,15088,Saalekreis,True
+612,16075,Saale-Orla-Kreis,True
+616,16073,Saalfeld-Rudolstadt,True
+618,10041,Saarbrücken,False
+620,10044,Saarlouis,False
+621,10045,Saarpfalz-Kreis,False
+623,14628,Sächsische Schweiz-Osterzgebirge,True
+627,15089,Salzlandkreis,True
+632,03257,Schaumburg,False
+634,01059,Schleswig-Flensburg,False
+635,16066,Schmalkalden-Meiningen,True
+637,08127,Schwäbisch Hall,False
+640,06634,Schwalm-Eder-Kreis,False
+644,09376,Schwandorf,False
+650,08326,Schwarzwald-Baar-Kreis,False
+651,09678,Schweinfurt,False
+653,01060,Segeberg,False
+654,05970,Siegen-Wittgenstein,False
+656,08437,Sigmaringen,False
+660,05974,Soest,False
+662,16068,Sömmerda,True
+663,16072,Sonneberg,True
+665,12071,Spree-Neiße,True
+669,10046,St. Wendel,False
+670,03359,Stade,False
+671,09188,Starnberg,False
+673,01061,Steinburg,False
+674,05566,Steinfurt,False
+677,15090,Stendal,True
+680,01062,Stormarn,False
+681,09278,Straubing-Bogen,False
+684,07337,Südliche Weinstraße,False
+685,07340,Südwestpfalz,False
+687,12072,Teltow-Fläming,True
+688,09377,Tirschenreuth,False
+690,09189,Traunstein,False
+692,07235,Trier-Saarburg,False
+694,08416,Tübingen,False
+695,08327,Tuttlingen,False
+696,12073,Uckermark,True
+701,03360,Uelzen,False
+702,05978,Unna,False
+705,16064,Unstrut-Hainich-Kreis,True
+708,09778,Unterallgäu,False
+709,03460,Vechta,False
+710,03361,Verden,False
+711,05166,Viersen,False
+713,06535,Vogelsbergkreis,False
+714,14523,Vogtlandkreis,True
+719,13075,Vorpommern-Greifswald,True
+727,13073,Vorpommern-Rügen,True
+733,07233,Vulkaneifel,False
+734,06635,Waldeck-Frankenberg,False
+737,08337,Waldshut,False
+739,05570,Warendorf,False
+741,16063,Wartburgkreis,True
+744,09190,Weilheim-Schongau,False
+746,16071,Weimarer Land,True
+748,09577,Weißenburg-Gunzenhausen,False
+750,06636,Werra-Meißner-Kreis,False
+752,05170,Wesel,False
+755,03461,Wesermarsch,False
+756,07143,Westerwaldkreis,False
+757,06440,Wetteraukreis,False
+759,15091,Wittenberg,True
+762,03462,Wittmund,False
+763,03158,Wolfenbüttel,False
+764,09479,Wunsiedel im Fichtelgebirge,False
+768,09679,Würzburg,False
+770,08417,Zollernalbkreis,False
+772,14524,Zwickau,True
+776,16056,Eisenach,True

@@ -18,6 +18,8 @@ def prep_data():
     election.drop("kreis_name", axis=1, inplace=True)
     election.dropna(subset=["kreis_key"], inplace=True)
 
+    general_columns.remove("kreis_name")
+
     df_partei = pd.DataFrame()
 
     new_columns = list(election.columns[:10])
@@ -59,23 +61,23 @@ def prep_data():
 
     election = election.fillna(0)
 
-    print(election.columns)
+    interesting_parties = ["alternative_fuer_deutschland",
+                           'sozialdemokratische_partei_deutschlands', 'buendnis_90_die_gruenen', 'christlich_demokratische_union_deutschlands', "freie_demokratische_partei", "die_linke"]
 
     # combine CDU / CSU
 
     for y in [2014, 2019]:
         election[f'ew_vot_abs_christlich_demokratische_union_deutschlands_{y}'] = election[f'ew_vot_abs_christlich_demokratische_union_deutschlands_{y}'] + \
             election[f'ew_vot_abs_christlich_soziale_union_in_bayern_e_v__{y}']
+        for party in interesting_parties:
+            election[f"ew_vot_rel_{party}_{y}"] = election[f'ew_vot_abs_{party}_{y}'] / \
+                election[f"ew_vot_{y}"]
 
-    interesting_parties = ["alternative_fuer_deutschland",
-                           'sozialdemokratische_partei_deutschlands', 'buendnis_90_die_gruenen', 'christlich_demokratische_union_deutschlands', "freie_demokratische_partei", "die_linke"]
-    for party in interesting_parties:
-        election[f"ew_vot_rel_{party}_2019"] = election[f'ew_vot_abs_{party}_2019'] / \
-            election.ew_vot_2019
+    cols_to_return = general_columns + \
+        [f"ew_vot_{relabs}_{party}_{y}" for party in interesting_parties for relabs in [
+            "rel", "abs"] for y in [2014, 2019]]
 
-    party_cols = [f"ew_vot_rel_{party}_2019" for party in interesting_parties]
-
-    return election
+    return election[cols_to_return]
 
 
 def load_data():

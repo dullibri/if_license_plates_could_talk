@@ -122,7 +122,7 @@ class VisApp:
         log_y = log_y == "log"
 
         fig = px.scatter(data_frame=self.df,
-                         x=col_x, y=col_y, hover_data=["kreis_name"],
+                         x=col_x, y=col_y, color="east",  hover_data=["kreis_name"],
                          labels={col_x: featinfo_x["label"],
                                  col_y: featinfo_y["label"]},
                          log_x=log_x,
