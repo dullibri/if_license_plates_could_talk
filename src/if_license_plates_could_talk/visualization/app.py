@@ -268,9 +268,10 @@ class VisApp:
         fig = px.choropleth(self.df.fillna(0), geojson=self.df.geometry, locations=self.df.index, color=col, scope="europe",
                             color_continuous_scale=feature_info["color"],
                             range_color=(self.df[col].min(
-                            )*0.8, self.df[col].max()),
+                            ), self.df[col].max()),
                             hover_name="kreis_name",
                             hover_data=[col],
+                            color_discrete_map=feature_info["color"],
                             labels={
                                 col: feature_info["label"]
         })

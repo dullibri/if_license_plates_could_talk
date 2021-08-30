@@ -107,4 +107,17 @@ feature_info = {
         "time_dep": False,
         "color": "reds"
     },
+    "ew_winner_2019": {
+        "title": "Europa-Wahl 2019",
+        "label": "Partei",
+        "time_dep": False,
+        "color": {
+            "alternative_fuer_deutschland": "lightblue",
+            'sozialdemokratische_partei_deutschlands': "red",
+            'buendnis_90_die_gruenen': "lightgreen",
+            'christlich_demokratische_union_deutschlands': "darkgray",
+            "freie_demokratische_partei": "yellow",
+            "die_linke": "red"
+        }
+    }
 }

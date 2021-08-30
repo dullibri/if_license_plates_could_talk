@@ -72,10 +72,15 @@ def prep_data():
         for party in interesting_parties:
             election[f"ew_vot_rel_{party}_{y}"] = election[f'ew_vot_abs_{party}_{y}'] / \
                 election[f"ew_vot_{y}"]
+        party_vot_cols = [
+            f"ew_vot_rel_{party}_{y}" for party in interesting_parties]
+
+        election[f"ew_winner_{y}"] = election[party_vot_cols].idxmax(
+            axis=1).str.slice(11, -5)
 
     cols_to_return = general_columns + \
         [f"ew_vot_{relabs}_{party}_{y}" for party in interesting_parties for relabs in [
-            "rel", "abs"] for y in [2014, 2019]]
+            "rel", "abs"] for y in [2014, 2019]] + ["ew_winner_2014"] + ["ew_winner_2019"]
 
     return election[cols_to_return]
 
